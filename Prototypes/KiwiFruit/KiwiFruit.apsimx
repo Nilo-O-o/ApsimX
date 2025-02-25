@@ -2407,14 +2407,108 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.PMF.Phen.DAWSPhase, Models",
-                  "Start": "Dormant",
-                  "End": "BudBreak",
-                  "IsEmerged": false,
-                  "DAWStoProgress": 90,
-                  "Name": "SpringDormancy",
+                  "$type": "Models.Functions.ExpressionFunction, Models",
+                  "Expression": "(4/7.0^2)*[IWeather].MeanT*(7.0-[IWeather].MeanT)",
+                  "Name": "CillUnits",
                   "ResourceName": null,
                   "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.PMF.Phen.GenericPhase, Models",
+                  "Start": "Endodormancy",
+                  "End": "Ecodormancy",
+                  "IsEmerged": false,
+                  "Name": "Dormancy",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.SubtractFunction, Models",
+                      "Name": "Target",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 52.6,
+                          "Units": "chilling days",
+                          "Name": "BaseTarget",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.VariableReference, Models",
+                          "VariableName": "[Phenology].AccumulatedChillingUnitBeforeWinterPruning",
+                          "Name": "AccumulatedChillingUnitBeforeWinterPruning",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.SubDailyInterpolation, Models",
+                      "agregationMethod": 0,
+                      "Name": "Progression",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.HourlySinPpAdjusted, Models",
+                          "Name": "InterpolationMethod",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.SigmoidFunction, Models",
+                          "Name": "Response",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 1.0,
+                              "Units": "constant",
+                              "Name": "Ymax",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 12.42,
+                              "Units": "oC",
+                              "Name": "Xo",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": -3.865,
+                              "Units": "unitless",
+                              "Name": "b",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
                   "Enabled": true,
                   "ReadOnly": false
                 },
@@ -2461,18 +2555,6 @@
                   "IsEmerged": false,
                   "DAWStoProgress": 340,
                   "Name": "LeafDrop",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.PMF.Phen.DAWSPhase, Models",
-                  "Start": "BareTree",
-                  "End": "SpringDormant",
-                  "IsEmerged": false,
-                  "DAWStoProgress": 366,
-                  "Name": "WinterDormancy",
                   "ResourceName": null,
                   "Children": [],
                   "Enabled": true,
