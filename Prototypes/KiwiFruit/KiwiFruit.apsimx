@@ -63638,7 +63638,7 @@
                       "Children": [
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1400.0,
+                          "FixedValue": 1430.0,
                           "Units": "GDH",
                           "Name": "FixedChillTarget",
                           "ResourceName": null,
@@ -63648,7 +63648,7 @@
                         },
                         {
                           "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Phenology].FractionAccumulatedChillingPreEndo",
+                          "VariableName": "[Phenology].AccumulatedChillingPreEndo",
                           "Name": "FractionAccumulatedChillingPreEndo",
                           "ResourceName": null,
                           "Children": [],
@@ -63682,7 +63682,7 @@
                     },
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 578.0,
+                      "FixedValue": 510.0,
                       "Units": "oC hours",
                       "Name": "Target",
                       "ResourceName": null,
@@ -63938,51 +63938,32 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.Functions.MultiplyFunction, Models",
-                  "Name": "FractionAccumulatedChillingPreEndo",
+                  "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                  "AccumulateEventName": "[Clock].EndOfDay",
+                  "StartStageName": "",
+                  "EndStageName": "StartEndo",
+                  "StartEventName": null,
+                  "EndEventName": null,
+                  "StartDate": "24-May",
+                  "EndDate": "",
+                  "ReduceStageName": "EndChilling",
+                  "ReduceEventName": null,
+                  "ReduceEventDate": "",
+                  "FractionRemovedOnReduce": 1.0,
+                  "FractionRemovedOnCut": 0.0,
+                  "FractionRemovedOnHarvest": 0.0,
+                  "FractionRemovedOnGraze": 0.0,
+                  "FractionRemovedOnPrune": 0.0,
+                  "DailyIncrement": 0.0,
+                  "Name": "AccumulatedChillingPreEndo",
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 1.0,
-                      "Units": null,
-                      "Name": "C2",
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Phenology].ChillModelHourly",
+                      "Name": "HourlyChill",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                      "AccumulateEventName": "[Clock].EndOfDay",
-                      "StartStageName": "",
-                      "EndStageName": "StartEndo",
-                      "StartEventName": null,
-                      "EndEventName": null,
-                      "StartDate": "24-May",
-                      "EndDate": "",
-                      "ReduceStageName": "EndChilling",
-                      "ReduceEventName": null,
-                      "ReduceEventDate": "",
-                      "FractionRemovedOnReduce": 1.0,
-                      "FractionRemovedOnCut": 0.0,
-                      "FractionRemovedOnHarvest": 0.0,
-                      "FractionRemovedOnGraze": 0.0,
-                      "FractionRemovedOnPrune": 0.0,
-                      "DailyIncrement": 0.0,
-                      "Name": "AccumulatedChillingPreEndo",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Phenology].ChillModelHourly",
-                          "Name": "HourlyChill",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
                       "Enabled": true,
                       "ReadOnly": false
                     }
@@ -70143,7 +70124,7 @@
             "[KiwiFruit].Phenology.MaxBBP",
             "[KiwiFruit].Phenology.Flowering.ProgressThroughPhase",
             "[KiwiFruit].Phenology.FloweringDOY",
-            "[KiwiFruit].Phenology.FractionAccumulatedChillingPreEndo",
+            "[KiwiFruit].Phenology.AccumulatedChillingPreEndo",
             "[KiwiFruit].Phenology.EndoDormancy.Target",
             "[KiwiFruit].Phenology.AccumulatedChill",
             "[Clock].Today.Year"
@@ -70198,8 +70179,8 @@
               "Inverted": false,
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
-              "Minimum": 239.99998000000005,
-              "Maximum": 340.0,
+              "Minimum": 239.999995,
+              "Maximum": 310.0,
               "Interval": "NaN"
             },
             {
@@ -70210,7 +70191,7 @@
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
               "Minimum": 239.999995,
-              "Maximum": 340.0,
+              "Maximum": 310.0,
               "Interval": "NaN"
             }
           ],
@@ -70252,7 +70233,7 @@
                   "$type": "Models.Regression, Models",
                   "ForEachSeries": false,
                   "showOneToOne": true,
-                  "showEquation": false,
+                  "showEquation": true,
                   "Name": "Regression",
                   "ResourceName": null,
                   "Children": [],
