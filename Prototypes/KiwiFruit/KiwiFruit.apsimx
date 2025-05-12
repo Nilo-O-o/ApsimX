@@ -63638,7 +63638,7 @@
                       "Children": [
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1430.0,
+                          "FixedValue": 1310.0,
                           "Units": "GDH",
                           "Name": "FixedChillTarget",
                           "ResourceName": null,
@@ -63682,7 +63682,7 @@
                     },
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 510.0,
+                      "FixedValue": 810.0,
                       "Units": "oC hours",
                       "Name": "Target",
                       "ResourceName": null,
@@ -63944,7 +63944,7 @@
                   "EndStageName": "StartEndo",
                   "StartEventName": null,
                   "EndEventName": null,
-                  "StartDate": "24-May",
+                  "StartDate": "01-May",
                   "EndDate": "",
                   "ReduceStageName": "EndChilling",
                   "ReduceEventName": null,
@@ -70179,8 +70179,8 @@
               "Inverted": false,
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
-              "Minimum": 239.999995,
-              "Maximum": 310.0,
+              "Minimum": 200.0,
+              "Maximum": 350.0,
               "Interval": "NaN"
             },
             {
@@ -70190,8 +70190,8 @@
               "Inverted": false,
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
-              "Minimum": 239.999995,
-              "Maximum": 310.0,
+              "Minimum": 199.99999000000003,
+              "Maximum": 350.0,
               "Interval": "NaN"
             }
           ],
