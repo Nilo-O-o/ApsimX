@@ -1,5 +1,5 @@
 ﻿// An APSIMInputFile is either a ".met" file or a ".out" file.
-// They are both text files that share the same format. 
+// They are both text files that share the same format.
 // These classes are used to read/write these files and create an object instance of them.
 
 
@@ -29,7 +29,7 @@ namespace APSIM.Shared.Utilities
         };
 
         /// <summary>
-        /// List of common OpenXML (office '07) excel file extensions. 
+        /// List of common OpenXML (office '07) excel file extensions.
         /// </summary>
         private static readonly string[] openXmlExtensions = new string[]
         {
@@ -88,23 +88,17 @@ namespace APSIM.Shared.Utilities
                     // The call to CreateOpenXmlReader should throw if this is untrue.
                     //
                     // Reading from a OpenXml Excel file (2007 format; *.xlsx)
+                    System.Text.Encoding.RegisterProvider(System.Text.CodePagesEncodingProvider.Instance);
                     excelReader = ExcelReaderFactory.CreateOpenXmlReader(stream);
-
-                DataSet result;
+                var worksheets = GetWorkSheetNames(fileName);
+                var sheetIndex = worksheets.FindIndex((s) => s == sheetName);
+                if (sheetIndex < 0)
+                    return null;
+                ExcelDataSetConfiguration cfg = new() { FilterSheet = (_, ind) => ind == sheetIndex };
                 if (headerRow)
-                    // Read all sheets from the EXCEL file as a data set
-                    // excelReader.IsFirstRowAsColumnNames = true;
-                    result = excelReader.AsDataSet(new ExcelDataSetConfiguration()
-                    {
-                        ConfigureDataTable = (_) => new ExcelDataTableConfiguration()
-                        {
-                            UseHeaderRow = true
-                        }
-                    });
-                else
-                    result = excelReader.AsDataSet();
+                    cfg.ConfigureDataTable = (_) => new() { UseHeaderRow = true };
 
-                return result.Tables[sheetName];
+                return excelReader.AsDataSet(cfg).Tables[sheetName];
             }
         }
     }

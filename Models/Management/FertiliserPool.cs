@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using APSIM.Numerics;
 using APSIM.Shared.Utilities;
 using Models.Core;
 using Models.Core.ApsimFile;
@@ -16,7 +17,7 @@ public class FertiliserPool : Model
 {
     private readonly ISummary summary;
     private readonly Fertiliser fertiliser;
-    private readonly IFunction releaseRate;
+    private IFunction releaseRate;
     private readonly IEnumerable<(ISolute solute, double fraction)> solutesToApply;
     private readonly double depthTop;
     private readonly double depthBottom;
@@ -24,6 +25,8 @@ public class FertiliserPool : Model
     private readonly double[] cumThickness;
     private double[] deltaArray;
     private double minimumAmount;
+
+    private double initialAmount;
 
     /// <summary>Amount of fertiliser in pool.</summary>
     public string FertiliserTypeName { get; private set; }
@@ -58,16 +61,9 @@ public class FertiliserPool : Model
         this.depthBottom = depthBottom;
         this.doOutput = doOutput;
 
-        // find and clone fertiliser release function (child of FertiliserType) so that the release rate function
-        // can hold state that is specific to this fertiliser application
-        releaseRate = fertiliserType.FindChild<IFunction>("Release");
-        if (releaseRate == null)
-            throw new Exception($"Cannot find a release rate function for fertiliser type: {fertiliserType.Name}");
-        releaseRate = releaseRate.Clone();
-        Structure.Add(releaseRate, this);
-
         Name = fertiliserType.Name;
         FertiliserTypeName = fertiliserType.Name;
+        initialAmount = amount;
         Amount = amount;
         cumThickness = SoilUtilities.ToCumThickness(thickness);
 
@@ -84,6 +80,15 @@ public class FertiliserPool : Model
     }
 
     /// <summary>
+    /// Set the release function.
+    /// </summary>
+    /// <param name="f">The function.</param>
+    public void SetReleaseFunction(IFunction f)
+    {
+        releaseRate = f;
+    }
+
+    /// <summary>
     /// Perform daily release of fertiliser to solute pools.
     /// </summary>
     /// <returns>The amount of fertiliser (kg/ha) applied</returns>
@@ -93,7 +98,8 @@ public class FertiliserPool : Model
         double rate = releaseRate.Value();
 
         // Determine the amount to add and remove it from our state variable.
-        double amountToAdd = Amount * MathUtilities.Constrain(rate, 0, 1);
+        double amountToAdd = initialAmount * MathUtilities.Constrain(rate, 0, 1);
+        amountToAdd = MathUtilities.Constrain(amountToAdd, 0, Amount);
         Amount -= amountToAdd;
         if (Amount <= minimumAmount)
         {
