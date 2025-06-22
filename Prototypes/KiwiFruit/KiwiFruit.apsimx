@@ -153920,19 +153920,6 @@
               "ReadOnly": false
             },
             {
-              "$type": "Models.Management.BiomassRemovalEvents, Models",
-              "PlantToRemoveBiomassFrom": "KiwiFruit",
-              "RemovalType": 3,
-              "StageToSet": null,
-              "RemovalDatesInput": null,
-              "BiomassRemovals": [],
-              "Name": "OnPrune",
-              "ResourceName": null,
-              "Children": [],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
               "$type": "Models.Manager, Models",
               "CodeArray": [
                 "using Models.Core;",
@@ -155428,6 +155415,70 @@
                 }
               ],
               "Name": "Operations",
+              "ResourceName": null,
+              "Children": [],
+              "Enabled": true,
+              "ReadOnly": false
+            },
+            {
+              "$type": "Models.Management.BiomassRemovalEvents, Models",
+              "PlantToRemoveBiomassFrom": "KiwiFruit",
+              "RemovalType": 3,
+              "StageToSet": null,
+              "RemovalDatesInput": null,
+              "BiomassRemovals": [
+                {
+                  "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                  "PlantName": "KiwiFruit",
+                  "OrganName": "Trunk",
+                  "TypeString": "Pruning",
+                  "LiveToRemove": 0.0,
+                  "DeadToRemove": 0.0,
+                  "LiveToResidue": 0.0,
+                  "DeadToResidue": 0.0
+                },
+                {
+                  "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                  "PlantName": "KiwiFruit",
+                  "OrganName": "Leaf",
+                  "TypeString": "Pruning",
+                  "LiveToRemove": 0.0,
+                  "DeadToRemove": 0.0,
+                  "LiveToResidue": 0.0,
+                  "DeadToResidue": 0.0
+                },
+                {
+                  "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                  "PlantName": "KiwiFruit",
+                  "OrganName": "Stem",
+                  "TypeString": "Pruning",
+                  "LiveToRemove": 0.0,
+                  "DeadToRemove": 0.0,
+                  "LiveToResidue": 0.0,
+                  "DeadToResidue": 0.0
+                },
+                {
+                  "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                  "PlantName": "KiwiFruit",
+                  "OrganName": "Root",
+                  "TypeString": "Pruning",
+                  "LiveToRemove": 0.0,
+                  "DeadToRemove": 0.0,
+                  "LiveToResidue": 0.0,
+                  "DeadToResidue": 0.0
+                },
+                {
+                  "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                  "PlantName": "KiwiFruit",
+                  "OrganName": "Fruit",
+                  "TypeString": "Pruning",
+                  "LiveToRemove": 0.0,
+                  "DeadToRemove": 0.0,
+                  "LiveToResidue": 0.0,
+                  "DeadToResidue": 0.0
+                }
+              ],
+              "Name": "OnPrune",
               "ResourceName": null,
               "Children": [],
               "Enabled": true,
