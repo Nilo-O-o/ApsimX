@@ -409,6 +409,10 @@ namespace UserInterface.Classes
                     if (plantModels != null)
                         DropDownOptions = plantModels.Select(plant => plant.Name).ToArray();
                     break;
+                case DisplayType.StrumTreeTypes:
+                    DisplayMethod = PropertyType.DropDown;
+                    DropDownOptions = new string[2] { "Ever green", "Deciduous" };
+                    break;
 
                 // Should never happen - presenter should handle this(?)
                 //case DisplayType.SubModel:
