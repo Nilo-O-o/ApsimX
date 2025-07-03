@@ -3985,7 +3985,7 @@
           "AnnotationLocation": 0,
           "DisabledSeries": [],
           "LegendOutsideGraph": false,
-          "Name": "ProportionCU",
+          "Name": "ProportionBB",
           "ResourceName": null,
           "Children": [
             {
@@ -4003,7 +4003,7 @@
               "LineThickness": 0,
               "TableName": "Report",
               "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.Phenology.ProportionCU",
+              "YFieldName": "KiwiFruit.Phenology.ProportionBB",
               "X2FieldName": null,
               "Y2FieldName": null,
               "ShowInLegend": false,
@@ -44525,46 +44525,6 @@
               "CumulativeX": false,
               "Filter": null,
               "Name": "Predicted",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.EventNamesOnGraph, Models",
-                  "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                  "SimulationName": "KiwiTest",
-                  "Name": "EventNamesOnGraph",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Series, Models",
-              "Type": 1,
-              "XAxis": 3,
-              "YAxis": 0,
-              "ColourArgb": -16777216,
-              "FactorToVaryColours": null,
-              "FactorToVaryMarkers": "SimulationName",
-              "FactorToVaryLines": null,
-              "Marker": 11,
-              "MarkerSize": 0,
-              "Line": 4,
-              "LineThickness": 0,
-              "TableName": "BB",
-              "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.Phenology.ProportionBB",
-              "X2FieldName": null,
-              "Y2FieldName": null,
-              "ShowInLegend": false,
-              "IncludeSeriesNameInLegend": false,
-              "Cumulative": false,
-              "CumulativeX": false,
-              "Filter": null,
-              "Name": "Observed",
               "ResourceName": null,
               "Children": [
                 {
@@ -110270,46 +110230,6 @@
               ],
               "Enabled": true,
               "ReadOnly": false
-            },
-            {
-              "$type": "Models.Series, Models",
-              "Type": 1,
-              "XAxis": 3,
-              "YAxis": 0,
-              "ColourArgb": -16777216,
-              "FactorToVaryColours": null,
-              "FactorToVaryMarkers": "SimulationName",
-              "FactorToVaryLines": null,
-              "Marker": 11,
-              "MarkerSize": 0,
-              "Line": 4,
-              "LineThickness": 0,
-              "TableName": "ObsAllData",
-              "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.Phenology.ProportionBB",
-              "X2FieldName": null,
-              "Y2FieldName": null,
-              "ShowInLegend": true,
-              "IncludeSeriesNameInLegend": false,
-              "Cumulative": false,
-              "CumulativeX": false,
-              "Filter": null,
-              "Name": "Observed",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.EventNamesOnGraph, Models",
-                  "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                  "SimulationName": "KiwiTest",
-                  "Name": "EventNamesOnGraph",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": false,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": false,
-              "ReadOnly": false
             }
           ],
           "Enabled": true,
@@ -111145,85 +111065,6 @@
           ],
           "Enabled": true,
           "ReadOnly": false
-        },
-        {
-          "$type": "Models.Graph, Models",
-          "Caption": null,
-          "Axis": [
-            {
-              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-              "Title": "",
-              "Position": 0,
-              "Inverted": false,
-              "CrossesAtZero": false,
-              "LabelOnOneLine": false,
-              "Minimum": "NaN",
-              "Maximum": "NaN",
-              "Interval": null
-            },
-            {
-              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-              "Title": "Clock.Today",
-              "Position": 3,
-              "Inverted": false,
-              "CrossesAtZero": false,
-              "LabelOnOneLine": false,
-              "Minimum": null,
-              "Maximum": null,
-              "Interval": null
-            }
-          ],
-          "LegendPosition": 5,
-          "LegendOrientation": 0,
-          "AnnotationLocation": 0,
-          "DisabledSeries": [],
-          "LegendOutsideGraph": false,
-          "Name": "PlantPopulation",
-          "ResourceName": null,
-          "Children": [
-            {
-              "$type": "Models.Series, Models",
-              "Type": 1,
-              "XAxis": 3,
-              "YAxis": 0,
-              "ColourArgb": -11094807,
-              "FactorToVaryColours": null,
-              "FactorToVaryMarkers": null,
-              "FactorToVaryLines": null,
-              "Marker": 11,
-              "MarkerSize": 0,
-              "Line": 0,
-              "LineThickness": 0,
-              "TableName": "Report",
-              "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.SowingData.BudNumber",
-              "X2FieldName": null,
-              "Y2FieldName": null,
-              "ShowInLegend": true,
-              "IncludeSeriesNameInLegend": false,
-              "Cumulative": false,
-              "CumulativeX": false,
-              "Filter": null,
-              "Name": "Predicted",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.EventNamesOnGraph, Models",
-                  "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                  "SimulationName": "KiwiTest",
-                  "Name": "EventNamesOnGraph",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            }
-          ],
-          "Enabled": true,
-          "ReadOnly": false
         }
       ],
       "Enabled": true,
@@ -111805,58 +111646,197 @@
                 },
                 {
                   "$type": "Models.Functions.PhaseLookup, Models",
-                  "Name": "ProportionCU",
+                  "Name": "ProportionBB",
                   "ResourceName": null,
                   "Children": [
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "StartEndo",
-                      "End": "EndChilling",
-                      "Name": "Dormant",
+                      "End": "BudBreak",
+                      "Name": "Phase",
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.MultiplyFunction, Models",
-                          "Name": "FractionBB",
+                          "$type": "Models.Functions.AddFunction, Models",
+                          "Name": "PBBControlHC",
                           "ResourceName": null,
                           "Children": [
                             {
-                              "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 0.009,
-                              "Units": null,
-                              "Name": "C1",
+                              "$type": "Models.Functions.MultiplyFunction, Models",
+                              "Name": "ControlFraction",
                               "ResourceName": null,
-                              "Children": [],
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 0.0003,
+                                  "Units": null,
+                                  "Name": "C1",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                                  "AccumulateEventName": "[Clock].StartOfDay",
+                                  "NameOfPlantToLink": null,
+                                  "StartStageName": "",
+                                  "EndStageName": "",
+                                  "StartEventName": null,
+                                  "EndEventName": null,
+                                  "StartDate": "19-Mar",
+                                  "EndDate": "1-Aug",
+                                  "ReduceStageName": "EndFlowering",
+                                  "FractionRemovedOnStage": 1.0,
+                                  "ReduceEventName": null,
+                                  "FractionRemovedOnEvent": 0.0,
+                                  "ReduceDates": null,
+                                  "FractionRemovedOnDate": 0.0,
+                                  "FractionRemovedOnCut": 0.0,
+                                  "FractionRemovedOnHarvest": 0.0,
+                                  "FractionRemovedOnGraze": 0.0,
+                                  "FractionRemovedOnPrune": 0.0,
+                                  "Name": "Sum",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Phenology].ChillModelHourly",
+                                      "Name": "HourlyTemp",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
                               "Enabled": true,
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                              "AccumulateEventName": "[Clock].StartOfDay",
-                              "NameOfPlantToLink": null,
-                              "StartStageName": "",
-                              "EndStageName": "",
-                              "StartEventName": null,
-                              "EndEventName": null,
-                              "StartDate": "19-Mar",
-                              "EndDate": "1-Aug",
-                              "ReduceStageName": "EndFlowering",
-                              "FractionRemovedOnStage": 1.0,
-                              "ReduceEventName": null,
-                              "FractionRemovedOnEvent": 0.0,
-                              "ReduceDates": null,
-                              "FractionRemovedOnDate": 0.0,
-                              "FractionRemovedOnCut": 0.0,
-                              "FractionRemovedOnHarvest": 0.0,
-                              "FractionRemovedOnGraze": 0.0,
-                              "FractionRemovedOnPrune": 0.0,
-                              "Name": "Sum",
+                              "$type": "Models.Functions.LessThanFunction, Models",
+                              "Name": "HCFraction",
                               "ResourceName": null,
                               "Children": [
                                 {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 0.0,
+                                  "Units": null,
+                                  "Name": "Zero",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
                                   "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Phenology].ChillModelHourly",
-                                  "Name": "HourlyTemp",
+                                  "VariableName": "[Phenology].ChillingAtHC",
+                                  "Name": "ChillingAtHC",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.MultiplyFunction, Models",
+                                  "Name": "HCEffect",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.SubtractFunction, Models",
+                                      "Name": "SubtractFunction",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 1.0,
+                                          "Units": null,
+                                          "Name": "one",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Phenology].HCSensitivityChill",
+                                          "Name": "HCSensitivityChill",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    },
+                                    {
+                                      "$type": "Models.Functions.DivideFunction, Models",
+                                      "Name": "DivideFunction",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 10000.0,
+                                          "Units": null,
+                                          "Name": "C2",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                                          "AccumulateEventName": "[Clock].StartOfDay",
+                                          "NameOfPlantToLink": null,
+                                          "StartStageName": "",
+                                          "EndStageName": "",
+                                          "StartEventName": null,
+                                          "EndEventName": null,
+                                          "StartDate": "19-Mar",
+                                          "EndDate": "1-Aug",
+                                          "ReduceStageName": "EndFlowering",
+                                          "FractionRemovedOnStage": 1.0,
+                                          "ReduceEventName": null,
+                                          "FractionRemovedOnEvent": 0.0,
+                                          "ReduceDates": null,
+                                          "FractionRemovedOnDate": 0.0,
+                                          "FractionRemovedOnCut": 0.0,
+                                          "FractionRemovedOnHarvest": 0.0,
+                                          "FractionRemovedOnGraze": 0.0,
+                                          "FractionRemovedOnPrune": 0.0,
+                                          "Name": "Sum",
+                                          "ResourceName": null,
+                                          "Children": [
+                                            {
+                                              "$type": "Models.Functions.VariableReference, Models",
+                                              "VariableName": "[Phenology].ChillModelHourly",
+                                              "Name": "HourlyTemp",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            }
+                                          ],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 0.0,
+                                  "Units": null,
+                                  "Name": "Zeroo",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
@@ -111933,7 +111913,7 @@
                             },
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Phenology].ProportionCU.Dormant.FractionBB",
+                              "VariableName": "[Phenology].ProportionBB",
                               "Name": "Ymax",
                               "ResourceName": null,
                               "Children": [],
@@ -112390,8 +112370,8 @@
                   "EndEventName": null,
                   "StartDate": "19-Mar",
                   "EndDate": "",
-                  "ReduceStageName": "",
-                  "FractionRemovedOnStage": "NaN",
+                  "ReduceStageName": "BudBreak",
+                  "FractionRemovedOnStage": 1.0,
                   "ReduceEventName": null,
                   "FractionRemovedOnEvent": 0.0,
                   "ReduceDates": null,
@@ -112546,7 +112526,7 @@
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "StartFlowering",
                   "ReSetEvent": "EndFlowering",
-                  "Name": "MaxBB",
+                  "Name": "MaxBBP",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -112561,7 +112541,7 @@
                     },
                     {
                       "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Phenology].BrokenBuds",
+                      "VariableName": "[Phenology].ProportionBB",
                       "Name": "PostEventValue",
                       "ResourceName": null,
                       "Children": [],
@@ -119191,8 +119171,6 @@
             "[KiwiFruit].Phenology.BudBurstDOY",
             "[KiwiFruit].Phenology.EndoDormancy.ProgressThroughPhase",
             "[KiwiFruit].Phenology.EcoDormancy.ProgressThroughPhase",
-            "[KiwiFruit].Phenology.ProportionCU",
-            "[KiwiFruit].Phenology.MaxBB",
             "[KiwiFruit].Phenology.EarlyLeaf.ProgressThroughPhase",
             "[KiwiFruit].Phenology.Flowering.ProgressThroughPhase",
             "[KiwiFruit].Phenology.FloweringDOY",
@@ -119204,7 +119182,10 @@
             "[KiwiFruit].Leaf.Canopy.LAI",
             "[KiwiFruit].Leaf.Phyllochron",
             "[KiwiFruit].Phenology.ChillingAtHC",
-            "[KiwiFruit].SowingData.BudNumber"
+            "[KiwiFruit].SowingData.BudNumber",
+            "[KiwiFruit].Phenology.ProportionBB",
+            "[KiwiFruit].Phenology.ProportionBB.Phase.PBBControlHC",
+            "[KiwiFruit].Phenology.MaxBBP"
           ],
           "EventNames": [
             "[Clock].DoReport"
@@ -119219,7 +119200,7 @@
         {
           "$type": "Models.Report, Models",
           "VariableNames": [
-            "[KiwiFruit].Phenology.MaxBB",
+            "[KiwiFruit].Phenology.MaxBBP",
             "[KiwiFruit].Phenology.FloweringDOY",
             "[Clock].Today.Year",
             "[KiwiFruit].Phenology.CurrentStageName"
