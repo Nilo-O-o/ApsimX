@@ -38,10 +38,10 @@ namespace Models.Functions
         /// -----------------------------------------------------------------------------------------------------------
      
         private double AccumulatedValue = 0;
-
-        private bool AccumulateToday = false;
-
-        private bool startDatePassed = false;
+        /// <summary>
+        /// will accumulate today
+        /// </summary>
+        public bool AccumulateToday { get; set; } = false;
 
         private IEnumerable<IFunction> ChildFunctions;
 
@@ -152,7 +152,7 @@ namespace Models.Functions
                 parentPhenology = FindAllAncestors<Plant>().FirstOrDefault()?.Phenology;
             }
 
-            if (!String.IsNullOrEmpty(StartEventName))
+            if ((!String.IsNullOrEmpty(StartEventName))||(!String.IsNullOrEmpty(StartDate))||(!String.IsNullOrEmpty(StartStageName)))
             {
                 AccumulateToday = false;
             }
@@ -208,45 +208,34 @@ namespace Models.Functions
         private void OnAccumulateEvent(object sender, EventArgs e)
         {
 
-            if (!String.IsNullOrEmpty(StartDate))
+            if (!String.IsNullOrEmpty(StartDate) && (AccumulateToday == false))
             {
-                DateTime startDate = new DateTime();
-                if (startDatePassed == false)
+                DateTime startDate = DateUtilities.GetDate(StartDate, clock.Today.Year);
+                if (clock.Today == startDate)
                 {
-                    startDate = DateUtilities.GetDate(StartDate, clock.Today.Year);
-                    AccumulateToday = false;
+                    if (!String.IsNullOrEmpty(EndStageName))
+                    {
+                        if (!parentPhenology.Beyond(EndStageName))
+                        {
+                            AccumulateToday = true;
+                        }
+                    }
+                    else
+                    {
+                        AccumulateToday = true;
+                    }
                 }
-                
-                if (DateTime.Compare(clock.Today, startDate) > 0)
+            }
+
+            if (!String.IsNullOrEmpty(EndDate) && (AccumulateToday == true))
+            {
+                DateTime endDate = DateUtilities.GetDate(EndDate, clock.Today.Year);
+                if (clock.Today == endDate)
                 {
-                    AccumulateToday = true;
-                    startDatePassed = true;
+                    AccumulateToday = false;
                 }
             }
             
-            if ((!String.IsNullOrEmpty(EndDate))&&(startDatePassed==true))
-            {
-                DateTime endDate = DateUtilities.GetDate(EndDate, clock.Today.Year);
-                if (DateTime.Compare(clock.Today, endDate) > 0)
-                {
-                    AccumulateToday = false;
-                    startDatePassed = false;
-                }
-            }
-
-            if (!String.IsNullOrEmpty(StartStageName))
-            {
-                AccumulateToday = parentPhenology.Beyond(StartStageName);
-            }
-
-            if (!String.IsNullOrEmpty(EndStageName))
-            {
-                if (parentPhenology.Beyond(EndStageName))
-                {
-                    AccumulateToday = false;
-                }
-            }
-
             if (ChildFunctions == null)
                 ChildFunctions = FindAllChildren<IFunction>().ToList();
 
@@ -283,6 +272,22 @@ namespace Models.Functions
         [EventSubscribe("PhaseChanged")]
         private void OnPhaseChanged(object sender, PhaseChangedType phaseChange)
         {
+            if (!String.IsNullOrEmpty(StartStageName))
+            {
+                if (phaseChange.StageName == StartStageName)
+                    {
+                        AccumulateToday = true;
+                    }
+            }
+
+            if (!String.IsNullOrEmpty(EndStageName))
+            {
+                if (phaseChange.StageName == EndStageName)
+                {
+                    AccumulateToday = false;
+                }
+            }
+
             if (!String.IsNullOrEmpty(ReduceStageName))
             {
                 if (phaseChange.StageName == ReduceStageName)
@@ -301,7 +306,6 @@ namespace Models.Functions
         private void OnEndEvent(object sender, EventArgs args)
         {
             AccumulateToday = false;
-            startDatePassed = false;
         }
 
         private void OnRemoveEvent(object sender, EventArgs args)
@@ -375,6 +379,7 @@ namespace Models.Functions
             if ((parentPhenology != null)&&String.IsNullOrEmpty(NameOfPlantToLink))
             {
                 AccumulatedValue = 0;
+                AccumulateToday = false;
             }
         }
 
@@ -389,41 +394,19 @@ namespace Models.Functions
         [EventSubscribe("EndOfDay")]
         private void OnEndOfDay(object sender, EventArgs e)
         {
-            if (pruneToday)
-            {
-                AccumulatedValue -= FractionRemovedOnPrune * AccumulatedValue;
-                pruneToday = false;
-            }
-            if (grazeToday)
-            {
-                AccumulatedValue -= FractionRemovedOnGraze * AccumulatedValue;
-                grazeToday = false;
-            }
-            if (cutToday)
-            {
-                AccumulatedValue -= FractionRemovedOnCut * AccumulatedValue;
-                cutToday = false;
-            }
-            if (harvestToday)
-            {
-                AccumulatedValue -= FractionRemovedOnHarvest * AccumulatedValue;
-                harvestToday = false;
-            }
-            if (reduceDateToday)
-            {
-                AccumulatedValue -= FractionRemovedOnDate * AccumulatedValue;
-                reduceDateToday = false;
-            }
-            if(reduceEventToday)
-            {
-                AccumulatedValue -= FractionRemovedOnEvent * AccumulatedValue;
-                reduceEventToday = false;
-            }
-            if(reduceStageToday)
-            {
-                AccumulatedValue -= FractionRemovedOnStage * AccumulatedValue;
-                reduceStageToday = false;
-            }
+            if (pruneToday) { reduce(FractionRemovedOnPrune, ref pruneToday); }
+            if (grazeToday) { reduce(FractionRemovedOnGraze, ref grazeToday); }
+            if (cutToday) { reduce(FractionRemovedOnCut, ref cutToday); }
+            if (harvestToday) { reduce(FractionRemovedOnHarvest, ref harvestToday); }
+            if (reduceDateToday) { reduce(FractionRemovedOnDate, ref reduceDateToday); }
+            if (reduceEventToday) { reduce(FractionRemovedOnEvent, ref reduceEventToday); }
+            if (reduceStageToday) { reduce(FractionRemovedOnStage, ref reduceStageToday); }
+        }
+
+        private void reduce(double fractionRemoved, ref bool reduceFlag)
+        {
+            AccumulatedValue -= fractionRemoved * AccumulatedValue;
+            reduceFlag = false;
         }
     }
 }
