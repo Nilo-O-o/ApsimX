@@ -1,11 +1,12 @@
 {
   "$type": "Models.Core.Simulations, Models",
-  "Version": 197,
+  "Version": 195,
   "Name": "Simulations",
   "ResourceName": null,
   "Children": [
     {
       "$type": "Models.Storage.DataStore, Models",
+      "useFirebird": false,
       "CustomFileName": null,
       "Name": "DataStore",
       "ResourceName": null,
@@ -79,7 +80,6 @@
           "Slope": 0.0,
           "AspectAngle": 0.0,
           "Altitude": 50.0,
-          "CanopyType": null,
           "Name": "Field",
           "ResourceName": null,
           "Children": [
@@ -425,6 +425,8 @@
                     0.457070570557793,
                     0.452331759845006
                   ],
+                  "InitialPAWmm": 361.2454283127387,
+                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -1402,7 +1404,6 @@
           "Slope": 0.0,
           "AspectAngle": 0.0,
           "Altitude": 50.0,
-          "CanopyType": null,
           "Name": "Field",
           "ResourceName": null,
           "Children": [
@@ -1746,6 +1747,8 @@
                     0.457070570557793,
                     0.452331759845006
                   ],
+                  "InitialPAWmm": 361.2454283127387,
+                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -2584,7 +2587,6 @@
           "Slope": 0.0,
           "AspectAngle": 0.0,
           "Altitude": 50.0,
-          "CanopyType": null,
           "Name": "Field",
           "ResourceName": null,
           "Children": [
@@ -2928,6 +2930,8 @@
                     0.457070570557793,
                     0.452331759845006
                   ],
+                  "InitialPAWmm": 361.2454283127387,
+                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
