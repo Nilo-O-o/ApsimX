@@ -430,8 +430,6 @@
                         0.17,
                         0.17
                       ],
-                      "InitialPAWmm": 114.00000000000003,
-                      "RelativeTo": "LL15",
                       "FilledFromTop": false,
                       "Name": "Water",
                       "ResourceName": null,
@@ -2374,8 +2372,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -4859,8 +4855,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -7227,8 +7221,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -9595,8 +9587,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -11962,8 +11952,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -14329,8 +14317,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -16696,8 +16682,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -19063,8 +19047,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -21430,8 +21412,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -23797,8 +23777,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -26164,8 +26142,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -28531,8 +28507,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -30911,8 +30885,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -33293,8 +33265,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -35662,8 +35632,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -38029,8 +37997,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -40396,8 +40362,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -42915,8 +42879,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -45325,8 +45287,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -47792,8 +47752,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -50164,8 +50122,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -52696,8 +52652,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -55057,8 +55011,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -57271,8 +57223,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -59880,8 +59830,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -62648,8 +62596,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -65416,8 +65362,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -68280,8 +68224,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -71144,8 +71086,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -74008,8 +73948,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -76872,8 +76810,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -79736,8 +79672,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -82600,8 +82534,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -85464,8 +85396,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -88328,8 +88258,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -91192,8 +91120,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -94056,8 +93982,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -96920,8 +96844,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -99784,8 +99706,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -102648,8 +102568,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -105512,8 +105430,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -108390,8 +108306,6 @@
                     0.17,
                     0.17
                   ],
-                  "InitialPAWmm": 114.00000000000003,
-                  "RelativeTo": "LL15",
                   "FilledFromTop": false,
                   "Name": "Water",
                   "ResourceName": null,
@@ -111678,6 +111592,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                                  "AccumulateToday": false,
                                   "AccumulateEventName": "[Clock].StartOfDay",
                                   "NameOfPlantToLink": null,
                                   "StartStageName": "",
@@ -111790,6 +111705,7 @@
                                         },
                                         {
                                           "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                                          "AccumulateToday": false,
                                           "AccumulateEventName": "[Clock].StartOfDay",
                                           "NameOfPlantToLink": null,
                                           "StartStageName": "",
@@ -111877,6 +111793,7 @@
                           "Children": [
                             {
                               "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                              "AccumulateToday": false,
                               "AccumulateEventName": "[Clock].StartOfDay",
                               "NameOfPlantToLink": null,
                               "StartStageName": "EndChilling",
@@ -112305,7 +112222,7 @@
                     },
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 300.0,
+                      "FixedValue": 700.0,
                       "Units": "GDH",
                       "Name": "Target",
                       "ResourceName": null,
@@ -112362,6 +112279,7 @@
                 },
                 {
                   "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                  "AccumulateToday": false,
                   "AccumulateEventName": "[Clock].DoReportCalculations",
                   "NameOfPlantToLink": "KiwiFruit",
                   "StartStageName": "",
@@ -112398,6 +112316,7 @@
                 },
                 {
                   "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                  "AccumulateToday": false,
                   "AccumulateEventName": "[Clock].DoReportCalculations",
                   "NameOfPlantToLink": "KiwiFruit",
                   "StartStageName": "",
@@ -115239,6 +115158,7 @@
                                   "Children": [
                                     {
                                       "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                                      "AccumulateToday": false,
                                       "AccumulateEventName": "[Clock].StartOfDay",
                                       "NameOfPlantToLink": null,
                                       "StartStageName": "BudBreak",
