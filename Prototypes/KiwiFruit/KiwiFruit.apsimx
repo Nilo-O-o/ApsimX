@@ -111652,8 +111652,8 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "StartEndo",
-                      "End": "BudBreak",
-                      "Name": "Phase",
+                      "End": "EndFlowering",
+                      "Name": "StartEndoToEndFlowering",
                       "ResourceName": null,
                       "Children": [
                         {
@@ -111913,7 +111913,7 @@
                             },
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Phenology].ProportionBB",
+                              "VariableName": "[Phenology].MaxBBP",
                               "Name": "Ymax",
                               "ResourceName": null,
                               "Children": [],
@@ -115455,15 +115455,6 @@
                           "ReadOnly": false
                         }
                       ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Memo, Models",
-                      "Text": "A two stage phyllochron (i.e. 100ÃƒÂƒÃ‚ÂƒÃƒÂ‚Ã‚Â¢ÃƒÂƒÃ‚Â¢ÃƒÂ‚Ã‚Â‚ÃƒÂ‚Ã‚Â¬ÃƒÂƒÃ‚Â¢ÃƒÂ‚Ã‚Â€ÃƒÂ‚Ã‚Âœ50ÃƒÂƒÃ‚ÂƒÃƒÂ‚Ã‚Â‚ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â°Cd) is an empirical fit to get faster leaf appearance of the first 3 leaves. The \r\n50ÃƒÂƒÃ‚ÂƒÃƒÂ‚Ã‚Â‚ÃƒÂƒÃ‚Â‚ÃƒÂ‚Ã‚Â°Cd for the fourth and later-formed leaves is estimated from measured values of the 2014-2015 October sowing date treatment ([Khaembah_etal_2017]). ",
-                      "Name": "Memo",
-                      "ResourceName": null,
-                      "Children": [],
                       "Enabled": true,
                       "ReadOnly": false
                     }
@@ -119184,7 +119175,6 @@
             "[KiwiFruit].Phenology.ChillingAtHC",
             "[KiwiFruit].SowingData.BudNumber",
             "[KiwiFruit].Phenology.ProportionBB",
-            "[KiwiFruit].Phenology.ProportionBB.Phase.PBBControlHC",
             "[KiwiFruit].Phenology.MaxBBP"
           ],
           "EventNames": [
