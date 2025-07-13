@@ -213,17 +213,8 @@ namespace Models.Functions
                 DateTime startDate = DateUtilities.GetDate(StartDate, clock.Today.Year);
                 if (clock.Today == startDate)
                 {
-                    if (!String.IsNullOrEmpty(EndStageName))
-                    {
-                        if (!parentPhenology.Beyond(EndStageName))
-                        {
-                            AccumulateToday = true;
-                        }
-                    }
-                    else
-                    {
-                        AccumulateToday = true;
-                    }
+                    AccumulateToday = true;
+                    
                 }
             }
 
@@ -254,7 +245,7 @@ namespace Models.Functions
                 foreach (string date in ReduceDates)
                 {
                     DateTime reduceDate = DateUtilities.GetDate(date, clock.Today.Year);
-                    if (DateTime.Compare(clock.Today, reduceDate) == 0)
+                    if (clock.Today == reduceDate)
                     {
                         if (!Double.IsNaN(FractionRemovedOnDate))
                         {
