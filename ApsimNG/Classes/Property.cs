@@ -14,6 +14,8 @@ using Models.Management;
 using Models.PMF;
 using Models.Storage;
 using Models.Surface;
+using Models.Soils;
+
 namespace UserInterface.Classes
 {
     public enum PropertyType
@@ -409,9 +411,11 @@ namespace UserInterface.Classes
                     if (plantModels != null)
                         DropDownOptions = plantModels.Select(plant => plant.Name).ToArray();
                     break;
-                case DisplayType.StrumTreeTypes:
+                case DisplayType.SoilCrop:
                     DisplayMethod = PropertyType.DropDown;
-                    DropDownOptions = new string[2] { "Ever green", "Deciduous" };
+                    Water water = model.FindInScope<Water>();
+                    if (water != null)
+                        DropDownOptions = water.AllowedRelativeTo.ToArray();
                     break;
 
                 // Should never happen - presenter should handle this(?)
