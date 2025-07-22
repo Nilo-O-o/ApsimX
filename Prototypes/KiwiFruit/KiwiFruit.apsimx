@@ -108500,7 +108500,7 @@
         {
           "$type": "Models.Clock, Models",
           "Start": "2019-01-01T00:00:00",
-          "End": "2024-06-30T00:00:00",
+          "End": "2023-06-30T00:00:00",
           "Name": "Clock",
           "ResourceName": null,
           "Children": [],
@@ -110043,7 +110043,7 @@
                 "        {",
                 "            if (Clock.Today.Date == SowingDate)",
                 "            {",
-                "                KiwiFruit.Sow(cultivar: CropToSow, population: 9, depth: InitialRootDepth, rowSpacing: 500);}            ",
+                "                KiwiFruit.Sow(cultivar: CropToSow, population: 1, depth: InitialRootDepth, rowSpacing: 500);}            ",
                 "            ",
                 "            ",
                 "        }",
@@ -111344,7 +111344,7 @@
           "AnnotationLocation": 0,
           "DisabledSeries": [],
           "LegendOutsideGraph": false,
-          "Name": "NodeNumber",
+          "Name": "LeafNumber",
           "ResourceName": null,
           "Children": [
             {
@@ -111362,7 +111362,7 @@
               "LineThickness": 0,
               "TableName": "Report",
               "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.Leaf.NodeNumber",
+              "YFieldName": "KiwiFruit.Leaf.LeafNumber",
               "X2FieldName": null,
               "Y2FieldName": null,
               "ShowInLegend": true,
@@ -111370,7 +111370,47 @@
               "Cumulative": false,
               "CumulativeX": false,
               "Filter": null,
-              "Name": "Predicted",
+              "Name": "OneVegetativeShootLeafNumber",
+              "ResourceName": null,
+              "Children": [
+                {
+                  "$type": "Models.EventNamesOnGraph, Models",
+                  "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
+                  "SimulationName": "HW-Budbreak2020Control",
+                  "Name": "EventNamesOnGraph",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                }
+              ],
+              "Enabled": true,
+              "ReadOnly": false
+            },
+            {
+              "$type": "Models.Series, Models",
+              "Type": 1,
+              "XAxis": 3,
+              "YAxis": 0,
+              "ColourArgb": -2793984,
+              "FactorToVaryColours": null,
+              "FactorToVaryMarkers": null,
+              "FactorToVaryLines": null,
+              "Marker": 11,
+              "MarkerSize": 0,
+              "Line": 0,
+              "LineThickness": 0,
+              "TableName": "Report",
+              "XFieldName": "Clock.Today",
+              "YFieldName": "KiwiFruit.Phenology.TotalCaneLeaves",
+              "X2FieldName": null,
+              "Y2FieldName": null,
+              "ShowInLegend": true,
+              "IncludeSeriesNameInLegend": false,
+              "Cumulative": false,
+              "CumulativeX": false,
+              "Filter": null,
+              "Name": "TotalCaneLeaves",
               "ResourceName": null,
               "Children": [
                 {
@@ -111423,7 +111463,7 @@
           "AnnotationLocation": 0,
           "DisabledSeries": [],
           "LegendOutsideGraph": false,
-          "Name": "Phyllochron",
+          "Name": "LeafAppearanceRate",
           "ResourceName": null,
           "Children": [
             {
@@ -111435,13 +111475,13 @@
               "FactorToVaryColours": null,
               "FactorToVaryMarkers": null,
               "FactorToVaryLines": null,
-              "Marker": 11,
+              "Marker": 0,
               "MarkerSize": 0,
-              "Line": 0,
+              "Line": 4,
               "LineThickness": 0,
               "TableName": "Report",
-              "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.Leaf.Phyllochron",
+              "XFieldName": "IWeather.MeanT",
+              "YFieldName": "KiwiFruit.Leaf.LeafAppearanceRate",
               "X2FieldName": null,
               "Y2FieldName": null,
               "ShowInLegend": true,
@@ -111449,7 +111489,7 @@
               "Cumulative": false,
               "CumulativeX": false,
               "Filter": null,
-              "Name": "Predicted",
+              "Name": "LeafAppearanceRate",
               "ResourceName": null,
               "Children": [
                 {
@@ -111502,7 +111542,7 @@
           "AnnotationLocation": 0,
           "DisabledSeries": [],
           "LegendOutsideGraph": false,
-          "Name": "LAI",
+          "Name": "CanopyLAI",
           "ResourceName": null,
           "Children": [
             {
@@ -111528,7 +111568,7 @@
               "Cumulative": false,
               "CumulativeX": false,
               "Filter": null,
-              "Name": "Predicted",
+              "Name": "CanopyLAI",
               "ResourceName": null,
               "Children": [
                 {
@@ -111581,7 +111621,7 @@
           "AnnotationLocation": 0,
           "DisabledSeries": [],
           "LegendOutsideGraph": false,
-          "Name": "FN",
+          "Name": "Test",
           "ResourceName": null,
           "Children": [
             {
@@ -111599,7 +111639,7 @@
               "LineThickness": 0,
               "TableName": "Report",
               "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.Leaf.FN",
+              "YFieldName": "KiwiFruit.SowingData.Population",
               "X2FieldName": null,
               "Y2FieldName": null,
               "ShowInLegend": true,
@@ -112214,8 +112254,8 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "StartEndo",
-                      "End": "EndFlowering",
-                      "Name": "StartEndoToEndFlowering",
+                      "End": "FruitMature",
+                      "Name": "StartEndoToFruitMature",
                       "ResourceName": null,
                       "Children": [
                         {
@@ -112249,7 +112289,7 @@
                                   "EndEventName": null,
                                   "StartDate": "19-Mar",
                                   "EndDate": "1-Aug",
-                                  "ReduceStageName": "EndFlowering",
+                                  "ReduceStageName": "FruitMature",
                                   "FractionRemovedOnStage": 1.0,
                                   "ReduceEventName": null,
                                   "FractionRemovedOnEvent": 0.0,
@@ -112362,7 +112402,7 @@
                                           "EndEventName": null,
                                           "StartDate": "19-Mar",
                                           "EndDate": "1-Aug",
-                                          "ReduceStageName": "EndFlowering",
+                                          "ReduceStageName": "FruitMature",
                                           "FractionRemovedOnStage": 1.0,
                                           "ReduceEventName": null,
                                           "FractionRemovedOnEvent": 0.0,
@@ -112430,78 +112470,97 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndChilling",
-                      "End": "EndFlowering",
+                      "End": "FruitMature",
                       "Name": "Vegetative",
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.SigmoidFunction, Models",
-                          "Name": "SigmoidFunction",
+                          "$type": "Models.Functions.MultiplyFunction, Models",
+                          "Name": "MultiplyFunction",
                           "ResourceName": null,
                           "Children": [
                             {
-                              "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                              "AccumulateToday": false,
-                              "AccumulateEventName": "[Clock].StartOfDay",
-                              "NameOfPlantToLink": null,
-                              "StartStageName": "EndChilling",
-                              "EndStageName": "StartFlowering",
-                              "StartEventName": null,
-                              "EndEventName": null,
-                              "StartDate": null,
-                              "EndDate": null,
-                              "ReduceStageName": "EndFlowering",
-                              "FractionRemovedOnStage": 1.0,
-                              "ReduceEventName": null,
-                              "FractionRemovedOnEvent": 0.0,
-                              "ReduceDates": null,
-                              "FractionRemovedOnDate": 0.0,
-                              "FractionRemovedOnCut": 0.0,
-                              "FractionRemovedOnHarvest": 0.0,
-                              "FractionRemovedOnGraze": 0.0,
-                              "FractionRemovedOnPrune": 0.0,
-                              "Name": "XValue",
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 20.0,
+                              "Units": null,
+                              "Name": "TotalDormantBuds",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.SigmoidFunction, Models",
+                              "Name": "SigmoidFunction",
                               "ResourceName": null,
                               "Children": [
                                 {
+                                  "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                                  "AccumulateToday": false,
+                                  "AccumulateEventName": "[Clock].StartOfDay",
+                                  "NameOfPlantToLink": null,
+                                  "StartStageName": "EndChilling",
+                                  "EndStageName": "EndFlowering",
+                                  "StartEventName": null,
+                                  "EndEventName": null,
+                                  "StartDate": null,
+                                  "EndDate": null,
+                                  "ReduceStageName": "FruitMature",
+                                  "FractionRemovedOnStage": 1.0,
+                                  "ReduceEventName": null,
+                                  "FractionRemovedOnEvent": 0.0,
+                                  "ReduceDates": null,
+                                  "FractionRemovedOnDate": 0.0,
+                                  "FractionRemovedOnCut": 0.0,
+                                  "FractionRemovedOnHarvest": 0.0,
+                                  "FractionRemovedOnGraze": 0.0,
+                                  "FractionRemovedOnPrune": 0.0,
+                                  "Name": "XValue",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Phenology].HeatModelHourlyFlwr",
+                                      "Name": "HourlyTemp",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
                                   "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Phenology].HeatModelHourlyFlwr",
-                                  "Name": "HourlyTemp",
+                                  "VariableName": "[Phenology].ProportionBB",
+                                  "Name": "Ymax",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 450.0,
+                                  "Units": null,
+                                  "Name": "Xo",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 50.0,
+                                  "Units": null,
+                                  "Name": "b",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
                                   "ReadOnly": false
                                 }
                               ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Phenology].MaxBBP",
-                              "Name": "Ymax",
-                              "ResourceName": null,
-                              "Children": [],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 450.0,
-                              "Units": null,
-                              "Name": "Xo",
-                              "ResourceName": null,
-                              "Children": [],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 50.0,
-                              "Units": null,
-                              "Name": "b",
-                              "ResourceName": null,
-                              "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             }
@@ -113118,7 +113177,7 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "StartFlowering",
-                  "ReSetEvent": "EndFlowering",
+                  "ReSetEvent": "FruitMature",
                   "Name": "MaxBBP",
                   "ResourceName": null,
                   "Children": [
@@ -113142,6 +113201,33 @@
                       "ReadOnly": false
                     }
                   ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.ExpressionFunction, Models",
+                  "Expression": "0.7 * [Phenology].BrokenBuds * (1 * [Leaf].LeafNumber)",
+                  "Name": "VegetativeShootsLeaves",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.ExpressionFunction, Models",
+                  "Expression": "0.3 * [Phenology].BrokenBuds * (0.5*[Leaf].LeafNumber)",
+                  "Name": "FruitingShootsLeaves",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.ExpressionFunction, Models",
+                  "Expression": "[Phenology].VegetativeShootsLeaves + [Phenology].FruitingShootsLeaves",
+                  "Name": "TotalCaneLeaves",
+                  "ResourceName": null,
+                  "Children": [],
                   "Enabled": true,
                   "ReadOnly": false
                 },
@@ -113973,7 +114059,7 @@
                             },
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Leaf].NodeNumber",
+                              "VariableName": "[Leaf].LeafNumber",
                               "Name": "XValue",
                               "ResourceName": null,
                               "Children": [],
@@ -114113,7 +114199,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Leaf].NodeNumber",
+                                  "VariableName": "[Leaf].LeafNumber",
                                   "Name": "XValue",
                                   "ResourceName": null,
                                   "Children": [],
@@ -115048,7 +115134,7 @@
                             },
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Leaf].NodeNumber",
+                              "VariableName": "[Leaf].LeafNumber",
                               "Name": "XValue",
                               "ResourceName": null,
                               "Children": [],
@@ -115239,7 +115325,7 @@
                         },
                         {
                           "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Leaf].NodeNumber",
+                          "VariableName": "[Leaf].LeafNumber",
                           "Name": "XValue",
                           "ResourceName": null,
                           "Children": [],
@@ -115669,13 +115755,135 @@
                   "ReadOnly": false
                 },
                 {
+                  "$type": "Models.Functions.LinearInterpolationFunction, Models",
+                  "Name": "ThawInverse",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.XYPairs, Models",
+                      "X": [
+                        13.0,
+                        20.0,
+                        28.0,
+                        35.0,
+                        "NaN",
+                        "NaN"
+                      ],
+                      "Y": [
+                        0.13,
+                        0.33,
+                        0.36,
+                        0.36,
+                        "NaN",
+                        "NaN"
+                      ],
+                      "Name": "XYPairs",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Graph, Models",
+                          "Caption": null,
+                          "Axis": [
+                            {
+                              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                              "Title": "Y",
+                              "Position": 0,
+                              "Inverted": false,
+                              "CrossesAtZero": false,
+                              "LabelOnOneLine": false,
+                              "Minimum": "NaN",
+                              "Maximum": "NaN",
+                              "Interval": "NaN"
+                            },
+                            {
+                              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                              "Title": "X",
+                              "Position": 0,
+                              "Inverted": false,
+                              "CrossesAtZero": false,
+                              "LabelOnOneLine": false,
+                              "Minimum": "NaN",
+                              "Maximum": "NaN",
+                              "Interval": "NaN"
+                            },
+                            {
+                              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                              "Title": ".Simulations.Replacements.KiwiFruit.Leaf.DeltaLAI.Vegetative.Delta.RelativeArea.XYPairs.X",
+                              "Position": 3,
+                              "Inverted": false,
+                              "CrossesAtZero": false,
+                              "LabelOnOneLine": false,
+                              "Minimum": null,
+                              "Maximum": null,
+                              "Interval": null
+                            }
+                          ],
+                          "LegendPosition": 5,
+                          "LegendOrientation": 0,
+                          "AnnotationLocation": 0,
+                          "DisabledSeries": [],
+                          "LegendOutsideGraph": false,
+                          "Name": "Graph",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Series, Models",
+                              "Type": 1,
+                              "XAxis": 3,
+                              "YAxis": 0,
+                              "ColourArgb": -65536,
+                              "FactorToVaryColours": null,
+                              "FactorToVaryMarkers": null,
+                              "FactorToVaryLines": null,
+                              "Marker": 11,
+                              "MarkerSize": 0,
+                              "Line": 0,
+                              "LineThickness": 0,
+                              "TableName": null,
+                              "XFieldName": ".Simulations.Replacements.KiwiFruit.Leaf.DeltaLAI.Vegetative.Delta.RelativeArea.XYPairs.X",
+                              "YFieldName": ".Simulations.Replacements.KiwiFruit.Leaf.DeltaLAI.Vegetative.Delta.RelativeArea.XYPairs.Y",
+                              "X2FieldName": null,
+                              "Y2FieldName": null,
+                              "ShowInLegend": false,
+                              "IncludeSeriesNameInLegend": false,
+                              "Cumulative": false,
+                              "CumulativeX": false,
+                              "Filter": null,
+                              "Name": "Series",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Phenology].HeatModelHourlyFlwr",
+                      "Name": "XValue",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
                   "$type": "Models.Functions.PhaseLookup, Models",
                   "Name": "DeltaLAI",
                   "ResourceName": null,
                   "Children": [
                     {
                       "$type": "Models.Memo, Models",
-                      "Text": "DeltaLAI describes the LAI variation over the cycle and is calculated using the Area of Largest Leaf, relative leaf area, plant number, branch number and leaf appearance rate (thermal time/phyllochron).",
+                      "Text": "DeltaLAI describes the LAI variation over the cycle and is calculated using the Area of Largest Leaf, relative leaf area, number of shoots, and leaf appearance rate (thermal time/phyllochron).",
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
@@ -115695,18 +115903,47 @@
                           "ResourceName": null,
                           "Children": [
                             {
-                              "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Leaf].AreaLargestLeaf",
-                              "Name": "AreaLargestLeaf",
+                              "$type": "Models.Functions.MultiplyFunction, Models",
+                              "Name": "VineShoots",
                               "ResourceName": null,
-                              "Children": [],
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 1.0,
+                                  "Units": "",
+                                  "Name": "CaneNum",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 1.0,
+                                  "Units": "",
+                                  "Name": "OneShoot",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.VariableReference, Models",
+                                  "VariableName": "[Phenology].BrokenBuds",
+                                  "Name": "ShootNumber",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
                               "Enabled": true,
                               "ReadOnly": false
                             },
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[KiwiFruit].SowingData.BudNumber",
-                              "Name": "PlantNumber",
+                              "VariableName": "[Leaf].AreaLargestLeaf",
+                              "Name": "AreaLargestLeaf",
                               "ResourceName": null,
                               "Children": [],
                               "Enabled": true,
@@ -115721,15 +115958,19 @@
                                   "$type": "Models.Functions.XYPairs, Models",
                                   "X": [
                                     0.0,
-                                    8.0,
+                                    10.0,
+                                    15.0,
+                                    20.0,
                                     30.0,
-                                    "NaN"
+                                    50.0
                                   ],
                                   "Y": [
                                     0.0,
+                                    0.9,
                                     1.0,
-                                    0.0,
-                                    "NaN"
+                                    0.9,
+                                    0.7,
+                                    0.4
                                   ],
                                   "Name": "XYPairs",
                                   "ResourceName": null,
@@ -115819,7 +116060,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Leaf].NodeNumber",
+                                  "VariableName": "[Leaf].LeafNumber",
                                   "Name": "XValue",
                                   "ResourceName": null,
                                   "Children": [],
@@ -115831,96 +116072,11 @@
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.SigmoidFunction, Models",
+                              "$type": "Models.Functions.ExpressionFunction, Models",
+                              "Expression": "exp(([Leaf].LeafNumber - [KiwiFruit].Leaf.LeafAppearanceRate)*[Leaf].ThawInverse)/(1+exp(([Leaf].LeafNumber - [KiwiFruit].Leaf.LeafAppearanceRate)*[Leaf].ThawInverse))",
                               "Name": "SigmoidalGrowth",
                               "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.SubtractFunction, Models",
-                                  "Name": "XValue",
-                                  "ResourceName": null,
-                                  "Children": [
-                                    {
-                                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                                      "AccumulateToday": false,
-                                      "AccumulateEventName": "[Clock].StartOfDay",
-                                      "NameOfPlantToLink": null,
-                                      "StartStageName": "BudBreak",
-                                      "EndStageName": "FruitMature",
-                                      "StartEventName": null,
-                                      "EndEventName": null,
-                                      "StartDate": null,
-                                      "EndDate": null,
-                                      "ReduceStageName": "BareTree",
-                                      "FractionRemovedOnStage": 1.0,
-                                      "ReduceEventName": null,
-                                      "FractionRemovedOnEvent": 0.0,
-                                      "ReduceDates": null,
-                                      "FractionRemovedOnDate": 0.0,
-                                      "FractionRemovedOnCut": 0.0,
-                                      "FractionRemovedOnHarvest": 0.0,
-                                      "FractionRemovedOnGraze": 0.0,
-                                      "FractionRemovedOnPrune": 0.0,
-                                      "Name": "TT",
-                                      "ResourceName": null,
-                                      "Children": [
-                                        {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[Phenology].HeatModelHourlyFlwr",
-                                          "Name": "HourlyTemp",
-                                          "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        }
-                                      ],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    },
-                                    {
-                                      "$type": "Models.Functions.VariableReference, Models",
-                                      "VariableName": "[KiwiFruit].Leaf.Phyllochron",
-                                      "Name": "Phyllochron",
-                                      "ResourceName": null,
-                                      "Children": [],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    }
-                                  ],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 1.0,
-                                  "Units": null,
-                                  "Name": "Ymax",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 33.0,
-                                  "Units": null,
-                                  "Name": "b",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 100.0,
-                                  "Units": null,
-                                  "Name": "Xo",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
+                              "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             },
@@ -115934,10 +116090,12 @@
                                   "X": [
                                     0.29016278842752025,
                                     0.8144947817745277,
-                                    2.0
+                                    2.0,
+                                    5.0
                                   ],
                                   "Y": [
                                     0.0,
+                                    1.0,
                                     1.0,
                                     1.0
                                   ],
@@ -115981,149 +116139,13 @@
                   "FractionRemovedOnHarvest": 0.0,
                   "FractionRemovedOnGraze": 0.0,
                   "FractionRemovedOnPrune": 1.0,
-                  "Name": "NodeNumber",
+                  "Name": "LeafGrowthAccumulatedTT",
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.DivideFunction, Models",
-                      "Name": "DeltaNode",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Phenology].HeatModelHourlyFlwr",
-                          "Name": "ThermalTime",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
-                          "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Leaf].Phyllochron",
-                          "Name": "Phyllochron",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.SubDailyInterpolation, Models",
-                  "InterpolationMethod": null,
-                  "agregationMethod": 1,
-                  "Name": "PhyllochronRate",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.XYPairs, Models",
-                      "X": [
-                        0.0,
-                        12.0,
-                        20.0,
-                        28.0,
-                        30.0,
-                        35.0,
-                        35.5,
-                        36.0,
-                        37.0
-                      ],
-                      "Y": [
-                        0.025,
-                        0.025,
-                        0.04,
-                        0.08,
-                        0.05,
-                        0.025,
-                        0.025,
-                        0.025,
-                        0.025
-                      ],
-                      "Name": "Response",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Graph, Models",
-                          "Caption": null,
-                          "Axis": [
-                            {
-                              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                              "Title": null,
-                              "Position": 3,
-                              "Inverted": false,
-                              "CrossesAtZero": false,
-                              "LabelOnOneLine": false,
-                              "Minimum": null,
-                              "Maximum": null,
-                              "Interval": null
-                            },
-                            {
-                              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                              "Title": null,
-                              "Position": 0,
-                              "Inverted": false,
-                              "CrossesAtZero": false,
-                              "LabelOnOneLine": false,
-                              "Minimum": null,
-                              "Maximum": null,
-                              "Interval": null
-                            }
-                          ],
-                          "LegendPosition": 5,
-                          "LegendOrientation": 0,
-                          "AnnotationLocation": 0,
-                          "DisabledSeries": [],
-                          "LegendOutsideGraph": false,
-                          "Name": "PhyllochronRate",
-                          "ResourceName": null,
-                          "Children": [
-                            {
-                              "$type": "Models.Series, Models",
-                              "Type": 0,
-                              "XAxis": 3,
-                              "YAxis": 0,
-                              "ColourArgb": 0,
-                              "FactorToVaryColours": null,
-                              "FactorToVaryMarkers": null,
-                              "FactorToVaryLines": null,
-                              "Marker": 0,
-                              "MarkerSize": 0,
-                              "Line": 0,
-                              "LineThickness": 0,
-                              "TableName": "Report",
-                              "XFieldName": null,
-                              "YFieldName": null,
-                              "X2FieldName": null,
-                              "Y2FieldName": null,
-                              "ShowInLegend": false,
-                              "IncludeSeriesNameInLegend": false,
-                              "Cumulative": false,
-                              "CumulativeX": false,
-                              "Filter": null,
-                              "Name": "Series",
-                              "ResourceName": null,
-                              "Children": [],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            }
-                          ],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.HourlySinPpAdjusted, Models",
-                      "Name": "InterpolationMethod",
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Phenology].HeatModelHourlyFlwr",
+                      "Name": "TT",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -116134,83 +116156,126 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.Functions.PhaseLookup, Models",
-                  "Name": "Phyllochron",
+                  "$type": "Models.Functions.AccumulateFunction, Models",
+                  "StartStageName": "BudBreak",
+                  "EndStageName": "FruitMature",
+                  "ResetStageName": "BareTree",
+                  "FractionRemovedOnCut": 0.0,
+                  "FractionRemovedOnHarvest": 0.0,
+                  "FractionRemovedOnGraze": 0.0,
+                  "FractionRemovedOnPrune": 1.0,
+                  "Name": "LeafNumber",
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.PhaseLookupValue, Models",
-                      "Start": "StartEndo",
-                      "End": "BudBreak",
-                      "Name": "PreVegetative",
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Leaf].LeafAppearanceRate",
+                      "Name": "LeafAppearanceRate",
                       "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 25.0,
-                          "Units": null,
-                          "Name": "Constant",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.LinearInterpolationFunction, Models",
+                  "Name": "LeafAppearanceRate",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.XYPairs, Models",
+                      "X": [
+                        0.0,
+                        8.0,
+                        12.0,
+                        20.0,
+                        28.0,
+                        30.0,
+                        32.0,
+                        35.0
                       ],
+                      "Y": [
+                        0.0,
+                        0.0,
+                        0.25,
+                        0.35,
+                        0.8,
+                        0.55,
+                        0.45,
+                        0.35
+                      ],
+                      "Name": "XYPairs",
+                      "ResourceName": null,
+                      "Children": [],
                       "Enabled": true,
                       "ReadOnly": false
                     },
                     {
-                      "$type": "Models.Functions.PhaseLookupValue, Models",
-                      "Start": "BudBreak",
-                      "End": "BareTree",
-                      "Name": "Vegetative",
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Phenology].HeatModelHourlyFlwr",
+                      "Name": "XValue",
                       "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.AddFunction, Models",
-                          "Name": "AddFunction",
-                          "ResourceName": null,
-                          "Children": [
-                            {
-                              "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 25.0,
-                              "Units": null,
-                              "Name": "Constant",
-                              "ResourceName": null,
-                              "Children": [],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.AccumulateFunction, Models",
-                              "StartStageName": "BudBreak",
-                              "EndStageName": "FruitMature",
-                              "ResetStageName": "BareTree",
-                              "FractionRemovedOnCut": 0.0,
-                              "FractionRemovedOnHarvest": 0.0,
-                              "FractionRemovedOnGraze": 0.0,
-                              "FractionRemovedOnPrune": 1.0,
-                              "Name": "Phyllochron",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[KiwiFruit].Leaf.PhyllochronRate",
-                                  "Name": "PhyllochronRate",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            }
-                          ],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.LinearInterpolationFunction, Models",
+                  "Name": "SpecificAreaRate",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Memo, Models",
+                      "Text": "",
+                      "Name": "Memo",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.XYPairs, Models",
+                      "X": [
+                        0.0,
+                        11.0,
+                        12.0,
+                        16.0,
+                        20.0,
+                        25.0,
+                        28.0,
+                        30.0,
+                        35.0
                       ],
+                      "Y": [
+                        0.015,
+                        0.15,
+                        0.17,
+                        0.25,
+                        0.32,
+                        0.35,
+                        0.32,
+                        0.25,
+                        0.15
+                      ],
+                      "Name": "XYPairs",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Phenology].HeatModelHourlyFlwr",
+                      "Name": "XValue",
+                      "ResourceName": null,
+                      "Children": [],
                       "Enabled": true,
                       "ReadOnly": false
                     }
@@ -116224,39 +116289,21 @@
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                      "Name": "UnStressedSpecificArea",
+                      "$type": "Models.Functions.AccumulateFunction, Models",
+                      "StartStageName": "BudBreak",
+                      "EndStageName": "FruitMature",
+                      "ResetStageName": "BareTree",
+                      "FractionRemovedOnCut": 0.0,
+                      "FractionRemovedOnHarvest": 0.0,
+                      "FractionRemovedOnGraze": 0.0,
+                      "FractionRemovedOnPrune": 1.0,
+                      "Name": "SpecificArea",
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Memo, Models",
-                          "Text": "",
-                          "Name": "Memo",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
-                          "$type": "Models.Functions.XYPairs, Models",
-                          "X": [
-                            0.0,
-                            40.0
-                          ],
-                          "Y": [
-                            0.015,
-                            0.019
-                          ],
-                          "Name": "XYPairs",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
                           "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Leaf].NodeNumber",
-                          "Name": "XValue",
+                          "VariableName": "[Leaf].SpecificAreaRate",
+                          "Name": "SpecificAreaRate",
                           "ResourceName": null,
                           "Children": [],
                           "Enabled": true,
@@ -116574,7 +116621,7 @@
                                     },
                                     {
                                       "$type": "Models.Functions.VariableReference, Models",
-                                      "VariableName": "[Leaf].NodeNumber",
+                                      "VariableName": "[Leaf].LeafNumber",
                                       "Name": "XValue",
                                       "ResourceName": null,
                                       "Children": [],
@@ -117395,7 +117442,7 @@
                             },
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Leaf].NodeNumber",
+                              "VariableName": "[Leaf].LeafNumber",
                               "Name": "XValue",
                               "ResourceName": null,
                               "Children": [],
@@ -119471,7 +119518,7 @@
                             },
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Leaf].NodeNumber",
+                              "VariableName": "[Leaf].LeafNumber",
                               "Name": "XValue",
                               "ResourceName": null,
                               "Children": [],
@@ -119909,9 +119956,10 @@
         {
           "$type": "Models.Report, Models",
           "VariableNames": [
-            "[KiwiFruit].Leaf.NodeNumber",
+            "[KiwiFruit].Leaf.LeafNumber",
             "[Clock].Today",
             "[Clock].Today.DayOfYear",
+            "[IWeather].MeanT",
             "[KiwiFruit].Phenology.Stage",
             "[KiwiFruit].Phenology.CurrentStageName",
             "[KiwiFruit].Phenology.BrokenBuds",
@@ -119927,17 +119975,18 @@
             "[Clock].Today.Year",
             "[KiwiFruit].Leaf.DeltaLAI",
             "[KiwiFruit].Leaf.Canopy.LAI",
-            "[KiwiFruit].Leaf.Phyllochron",
             "[KiwiFruit].Phenology.ChillingAtHC",
             "[KiwiFruit].SowingData.BudNumber",
+            "[KiwiFruit].SowingData.Population",
             "[KiwiFruit].Phenology.ProportionBB",
             "[KiwiFruit].Phenology.MaxBBP",
             "[KiwiFruit].Phenology.Photoperiod",
             "[KiwiFruit].Leaf.FN",
-            "[KiwiFruit].Leaf.DeltaLAI.Vegetative.Delta.PlantNumber",
             "[KiwiFruit].Leaf.DeltaLAI.Vegetative.Delta.SigmoidalGrowth",
-            "[KiwiFruit].Leaf.PhyllochronRate",
-            "[KiwiFruit].Phenology.ChillModelHourly"
+            "[KiwiFruit].Leaf.LeafAppearanceRate",
+            "[KiwiFruit].Phenology.HeatModelHourlyFlwr",
+            "[KiwiFruit].Phenology.TotalCaneLeaves",
+            "[KiwiFruit].Leaf.LeafGrowthAccumulatedTT"
           ],
           "EventNames": [
             "[Clock].DoReport"
