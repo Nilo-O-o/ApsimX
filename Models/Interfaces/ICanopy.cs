@@ -64,7 +64,7 @@ namespace Models.Interfaces
         /// <summary>The thickness</summary>
         public double thickness;
 
-        /// <summary>The amount or radiation on green area</summary>
+        /// <summary>The amount of radiation on green area</summary>
         public double AmountOnGreen;
 
         ///  <summary>The amount of radiation on dead area</summary>
