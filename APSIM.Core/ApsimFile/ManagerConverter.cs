@@ -205,10 +205,15 @@ internal class ManagerConverter
         for (int i = 0; i < lines.Count; i++)
         {
             var line = Clean(lines[i]);
+
+            if (line.Contains("[EventSubscribe"))
+                break;
+
             Match match = Regex.Match(line, pattern);
             if (match.Groups["TypeName"].Value != string.Empty &&
                 match.Groups["TypeName"].Value != "as" &&
                 match.Groups["TypeName"].Value != "return" &&
+                match.Groups["TypeName"].Value != "namespace" &&
                 match.Groups["InstanceName"].Value != string.Empty &&
                 match.Groups["InstanceName"].Value != "get" &&
                 match.Groups["InstanceName"].Value != "set" &&
@@ -317,7 +322,11 @@ internal class ManagerConverter
             declarationLineBuilder.Append(newDeclaration.TypeName);
             declarationLineBuilder.Append(' ');
             declarationLineBuilder.Append(newDeclaration.InstanceName);
-            declarationLineBuilder.Append(';');
+            if (!newDeclaration.InstanceName.EndsWith("}"))
+            {
+                // This is a field, not a property, so can append a semi colon.
+                declarationLineBuilder.Append(';');
+            }
             lines.Insert(lineNumberStartDeclarations, declarationLineBuilder.ToString());
             lineNumberStartDeclarations++;
         }
@@ -400,7 +409,10 @@ internal class ManagerConverter
                 lines[i] = lines[i].Remove(pos, searchPattern.Length);
                 lines[i] = lines[i].Insert(pos, replacePattern);
                 replacementDone = true;
-                pos = lines[i].IndexOf(searchPattern, pos + 1);
+                if (pos + 1 >= lines[i].Length)
+                    pos = -1;
+                else
+                    pos = lines[i].IndexOf(searchPattern, pos + 1);
             }
         }
         return replacementDone;

@@ -1,3 +1,4 @@
+using APSIM.Core;
 using Models.Climate;
 using Models.Core;
 using Models.DCAPST.Canopy;
@@ -26,13 +27,14 @@ namespace Models.DCAPST
     [ViewName("UserInterface.Views.PropertyView")]
     [PresenterName("UserInterface.Presenters.PropertyPresenter")]
     [ValidParent(typeof(Zone))]
-    public class DCaPSTModelNG : Model
+    public class DCaPSTModelNG : Model, IStructureDependency
     {
-        /// <summary>
-        /// Clock object reference (dcapst needs to know day of year).
-        /// </summary>
+        /// <summary>Structure instance supplied by APSIM.core.</summary>
+        [field: NonSerialized]
+        public IStructure Structure { private get; set; }
+
         [Link]
-        private readonly IClock clock = null;
+        IClock clock = null;
 
         /// <summary>
         /// Weather provider.
@@ -429,7 +431,7 @@ namespace Models.DCAPST
             if (string.IsNullOrEmpty(cropName)) return;
             if (plant != null) return;
 
-            plant = FindInScope<IPlant>(CropName);
+            plant = Structure.Find<IPlant>(CropName);
             rootShootRatioFunction = GetRootShootRatioFunction();
             leaf = GetLeaf();
         }
@@ -446,7 +448,7 @@ namespace Models.DCAPST
         {
             if (plant is null) return null;
 
-            IVariable variable = plant.FindByPath("[ratioRootShoot]");
+            var variable = Structure.GetObject("[ratioRootShoot]", relativeTo:plant as INodeModel);
             if (variable is null) return null;
             if (variable.Value is not IFunction function) return null;
 
@@ -517,7 +519,7 @@ namespace Models.DCAPST
         /// </summary>
         private IEnumerable<string> GetPlantNames()
         {
-            var plants = FindAllInScope<IPlant>()
+            var plants = Structure.FindAll<IPlant>()
                 .Select(p => p.Name)
                 .Where(name => !string.IsNullOrEmpty(name))
                 .Distinct();

@@ -125,6 +125,11 @@ namespace Models.Core
         StrumTreeTypes,
 
         /// <summary>
+        /// This is a list of Canopy types.
+        /// </summary>
+        CanopyTypes,
+
+        /// <summary>
         /// List of plant organs that have damagable organs returned in plant.organ format.
         /// </summary>
         PlantOrganList,
@@ -166,12 +171,6 @@ namespace Models.Core
         /// use when showing values in the related property.
         /// </summary>
         public string Format { get; set; }
-
-        /// <summary>
-        /// Gets or sets a value indicating whether the user interface should display
-        /// a total at the top of the column in a ProfileGrid.
-        /// </summary>
-        public bool ShowTotal { get; set; }
 
         /// <summary>
         /// Gets or sets a value denoting the type of model to show in the model drop down.

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using APSIM.Core;
 using APSIM.Numerics;
 using APSIM.Shared.Utilities;
 using Models.Core;
@@ -355,12 +356,6 @@ namespace Models.PMF.Organs
         /// Gets or sets the lai dead.
         /// </summary>
         public double LAIDead { get; set; }
-
-        /// <summary>
-        /// The amount of radiation incident above the crop canopy
-        /// </summary>
-        [JsonIgnore]
-        public double Ro { get { return MetData.Radn; } }
 
         /// <summary>
         /// The dry matter supply.

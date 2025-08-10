@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
 using Models.Core;
 using Models.PMF.Phen;
 using System.Linq;
 using APSIM.Shared.Utilities;
 using Models.PMF;
-using System.Data;
+using APSIM.Core;
 
 
 namespace Models.Functions
@@ -21,8 +20,12 @@ namespace Models.Functions
         "Optional full or partial removal of accumulated values can occur on specified events, stages or dates")]
     [ViewName("UserInterface.Views.PropertyView")]
     [PresenterName("UserInterface.Presenters.PropertyPresenter")]
-    public class SetOnEvent : Model, IFunction
+    public class SetOnEvent : Model, IFunction, IStructureDependency
     {
+        /// <summary>Structure instance supplied by APSIM.core.</summary>
+        [field: NonSerialized]
+        public IStructure Structure { private get; set; }
+
         ///Links
         /// -----------------------------------------------------------------------------------------------------------
 
@@ -94,12 +97,12 @@ namespace Models.Functions
             setValue = PreSetValue.Value();
             if (!String.IsNullOrEmpty(NameOfPlantToLink))
             {
-                parentPhenology = FindInScope<Plant>(NameOfPlantToLink).Phenology;
+                parentPhenology = Structure.Find<Plant>(NameOfPlantToLink).Phenology;
             }
             else
             {
                 parentPhenology = FindAllAncestors<Plant>().FirstOrDefault()?.Phenology;
-            }           
+            }
         }
 
         /// <summary>

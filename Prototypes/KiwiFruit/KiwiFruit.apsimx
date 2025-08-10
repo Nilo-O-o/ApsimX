@@ -108603,8 +108603,8 @@
         },
         {
           "$type": "Models.Clock, Models",
-          "Start": "2007-01-01T00:00:00",
-          "End": "2015-06-30T00:00:00",
+          "Start": "2018-01-01T00:00:00",
+          "End": "2024-06-30T00:00:00",
           "Name": "Clock",
           "ResourceName": null,
           "Children": [],
@@ -110166,7 +110166,7 @@
                 },
                 {
                   "Key": "SowingDate",
-                  "Value": "05/25/2007 00:00:00"
+                  "Value": "05/25/2018 00:00:00"
                 }
               ],
               "Name": "SowDateCv",
@@ -116690,7 +116690,7 @@
                   "Start": "EndFlowering",
                   "End": "StartFruitGrowth",
                   "IsEmerged": true,
-                  "Name": "EarlyFruit",
+                  "Name": "RapidBerryGrowth",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -123627,93 +123627,6 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.Functions.MultiplyFunction, Models",
-                  "Name": "TotalDMDemand",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.PhaseLookup, Models",
-                      "Name": "PartitionFraction",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.PhaseLookupValue, Models",
-                          "Start": "StartFruitGrowth",
-                          "End": "FruitMature",
-                          "Name": "NonReproductive",
-                          "ResourceName": null,
-                          "Children": [
-                            {
-                              "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                              "Name": "PartitionFraction",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.XYPairs, Models",
-                                  "X": [
-                                    1.0,
-                                    6.0,
-                                    17.0,
-                                    20.0,
-                                    25.0
-                                  ],
-                                  "Y": [
-                                    0.0,
-                                    0.0,
-                                    1.0,
-                                    1.0,
-                                    1.0
-                                  ],
-                                  "Name": "XYPairs",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Memo, Models",
-                                  "Text": "Allocation determined by node number - partitioning coefficients have been determined using the 2014 sowing date October data ([Khaembah_etal_2017]).",
-                                  "Name": "Memo",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Leaf].NodeNumber",
-                                  "Name": "XValue",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            }
-                          ],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Leaf].Photosynthesis",
-                      "Name": "PotentialPhotosynthesis",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
                   "$type": "Models.PMF.Library.BiomassRemoval, Models",
                   "HarvestFractionLiveToRemove": 0.95,
                   "HarvestFractionDeadToRemove": 0.0,
@@ -123751,46 +123664,132 @@
                   ],
                   "Enabled": true,
                   "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.MultiplyFunction, Models",
+                  "Name": "TotalDMDemand",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.LessThanFunction, Models",
+                      "Name": "LessThanFunction",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.VariableReference, Models",
+                          "VariableName": "[Weather].DaysSinceWinterSolstice",
+                          "Name": "DAWS",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 305.0,
+                          "Units": null,
+                          "Name": "HarvestTime",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.PhaseLookupValue, Models",
+                          "Start": "EndFlowering",
+                          "End": "FruitMature",
+                          "Name": "AfterFruitSet",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.MaximumFunction, Models",
+                              "Name": "MaximumFunction",
+                              "ResourceName": null,
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.DeltaFunction, Models",
+                                  "StartStageName": null,
+                                  "Name": "DeltaFunction",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.MultiplyFunction, Models",
+                                      "Name": "Integral",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Berry].NumberFunction",
+                                          "Name": "BerryNumber",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Berry].SingleBerryDW",
+                                          "Name": "BerryDM",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 0.0,
+                                  "Units": "g",
+                                  "Name": "Constant",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 0.0,
+                          "Units": null,
+                          "Name": "Zero",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.Constant, Models",
+                      "FixedValue": 1.0,
+                      "Units": "g",
+                      "Name": "Constant",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
                 }
               ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.PMF.Organs.ReproductiveOrgan, Models",
-              "SurfaceOrganicMatter": null,
-              "Summary": null,
-              "biomassRemovalModel": null,
-              "DMConversionEfficiency": null,
-              "MaintenanceRespirationFunction": null,
-              "RemobilisationCost": null,
-              "GrowthRespiration": 0.0,
-              "MaintenanceRespiration": 0.0,
-              "DMDemand": null,
-              "NDemand": null,
-              "DMSupply": null,
-              "NSupply": null,
-              "RipeStage": null,
-              "potentialDMAllocation": null,
-              "Live": {
-                "$type": "Models.PMF.Biomass, Models",
-                "Name": "Biomass",
-                "ResourceName": null,
-                "Children": [],
-                "Enabled": true,
-                "ReadOnly": false
-              },
-              "Dead": {
-                "$type": "Models.PMF.Biomass, Models",
-                "Name": "Biomass",
-                "ResourceName": null,
-                "Children": [],
-                "Enabled": true,
-                "ReadOnly": false
-              },
-              "Name": "Berry",
-              "ResourceName": null,
-              "Children": [],
               "Enabled": true,
               "ReadOnly": false
             },

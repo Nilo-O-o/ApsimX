@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using APSIM.Core;
 using APSIM.Numerics;
 using APSIM.Shared.Documentation.Extensions;
 using APSIM.Shared.Utilities;
-using Mapsui.Extensions;
 using Models.Core;
 using Models.Functions;
 using Models.Interfaces;
@@ -14,7 +14,7 @@ using Models.Soils;
 using Models.Soils.Arbitrator;
 using Models.Surface;
 using Newtonsoft.Json;
-using SkiaSharp;
+
 
 namespace Models.PMF
 {
@@ -27,8 +27,12 @@ namespace Models.PMF
     [ViewName("UserInterface.Views.PropertyView")]
     [PresenterName("UserInterface.Presenters.PropertyPresenter")]
     [ValidParent(ParentType = typeof(IOrgan))]
-    public class RootNetwork : Model, IWaterNitrogenUptake
+    public class RootNetwork : Model, IWaterNitrogenUptake, IStructureDependency
     {
+        /// <summary>Structure instance supplied by APSIM.core.</summary>
+        [field: NonSerialized]
+        public IStructure Structure { private get; set; }
+
 
         ///1. Links
         ///--------------------------------------------------------------------------------------------------
@@ -123,8 +127,6 @@ namespace Models.PMF
         {
             Zones = new List<NetworkZoneState>();
             ZoneNamesToGrowRootsIn = new List<string>();
-            ZoneRootDepths = new List<double>();
-            ZoneInitialDM = new List<NutrientPoolFunctions>();
         }
 
         ///4. Public Events And Enums
@@ -146,10 +148,6 @@ namespace Models.PMF
         [JsonIgnore]
         public List<double> ZoneRootDepths { get; set; }
 
-        /// <summary>The live weights for each addition zone.</summary>
-        [JsonIgnore]
-        public List<NutrientPoolFunctions> ZoneInitialDM { get; set; }
-
         /// <summary>A list of all zones to grow roots in</summary>
         [JsonIgnore]
         public List<NetworkZoneState> Zones { get; set; }
@@ -157,6 +155,37 @@ namespace Models.PMF
         /// <summary>The zone where the plant is growing</summary>
         [JsonIgnore]
         public NetworkZoneState PlantZone { get; set; }
+
+        /// <summary>The amount of root weight in each zone </summary>
+        public double[] WtByLayerZone1
+        {
+            get
+            {
+                NetworkZoneState z = Zones[0];
+                double[] ret = new double[z.LayerLive.Length];
+                for (int i = 0; i < z.LayerLive.Length; i++)
+                        ret[i] = z.LayerLive[i].Wt;
+                return ret;
+            }
+        }
+
+        /// <summary>The amount of root weight in each zone </summary>
+        public double[] WtByLayerZone2
+        {
+            get
+            {
+                if (Zones.Count == 1)
+                    return new double[0];
+                else
+                {
+                    NetworkZoneState z = Zones[1];
+                    double[] ret = new double[z.LayerLive.Length];
+                    for (int i = 0; i < z.LayerLive.Length; i++)
+                        ret[i] = z.LayerLive[i].Wt;
+                    return ret;
+                }
+            }
+        }
 
         /// <summary>Gets the root length density.</summary>
         [Units("mm/mm3")]
@@ -180,6 +209,24 @@ namespace Models.PMF
         /// The kl being used daily in each layer
         /// </summary>
         public double[] klByLayer { get; set; }
+
+        /// <summary>Gets the nitrogen uptake.</summary>
+        [Units("mm")]
+        [JsonIgnore]
+        public double[] NUptakeLayered
+        {
+            get
+            {
+                if (Zones == null || Zones.Count == 0)
+                    return Array.Empty<double>();
+                if (Zones.Count > 1)
+                    throw new Exception(this.Name + " Can't report layered Nuptake for multiple zones as they may not have the same size or number of layers");
+                double[] uptake = new double[Zones[0].Physical.Thickness.Length];
+                if (Zones[0].NitUptake != null)
+                    uptake = Zones[0].NitUptake;
+                return MathUtilities.Multiply_Value(uptake, -1); // convert to positive values.
+            }
+        }
 
         ///<Summary>The speed of root descent</Summary>
         [JsonIgnore]
@@ -235,7 +282,7 @@ namespace Models.PMF
 
                 foreach (NetworkZoneState Z in Zones)
                 {
-                    Zone zone = this.FindInScope(Z.Name) as Zone;
+                    Zone zone = Structure.Find<Zone>(Z.Name);
                     var soilPhysical = Z.Soil.FindChild<IPhysical>();
                     var waterBalance = Z.Soil.FindChild<ISoilWater>();
                     var soilCrop = Z.Soil.FindDescendant<SoilCrop>(parentPlant.Name + "Soil");
@@ -319,7 +366,8 @@ namespace Models.PMF
             }
         }
 
-        /// <summary>Gets or sets the water supply.</summary>
+        /// <summary>Gets water supply.</summary>
+        /// Returns a value in l so must adjust for zone size
         /// <param name="zone">The zone.</param>
         public double[] CalculateWaterSupply(ZoneWaterAndN zone)
         {
@@ -344,6 +392,8 @@ namespace Models.PMF
                     double available = zone.Water[layer] - ll[layer] * myZone.Physical.Thickness[layer];
 
                     supply[layer] = Math.Max(0.0, klByLayer[layer] *  available * myZone.RootProportions[layer]);
+
+                    //supply[layer] *= zone.Zone.Area * 10000; // Calculation above is in mm (l/m2).  To convert to m2 multiply by zone area (which has to be multiplied by 10000 to convert from ha to m2.
                 }
             }
             return supply;
@@ -393,7 +443,7 @@ namespace Models.PMF
             List<double> zoneNuptakes = new List<double>(zonesFromSoilArbitrator.Count);
             foreach (ZoneWaterAndN thisZone in zonesFromSoilArbitrator)
             {
-                
+
                 NetworkZoneState zone = Zones.Find(z => z.Name == thisZone.Zone.Name);
                 if (zone != null)
                 {
@@ -413,7 +463,7 @@ namespace Models.PMF
                     zoneNuptakes.Add(thisZone.NO3N.Sum()+thisZone.NH4N.Sum());
                 }
             }
-            NitrogenTakenUp.ByZoneKg = zoneNuptakes.ToArray();
+            NitrogenTakenUp.AmountByZone = zoneNuptakes.ToArray();
         }
 
         /// <summary>Gets the nitrogen supply (kg) from the specified zone for the current plant instance.</summary>
@@ -428,7 +478,7 @@ namespace Models.PMF
                 if (RWC == null || RWC.Length != myZone.Physical.Thickness.Length)
                     RWC = new double[myZone.Physical.Thickness.Length];
 
-                
+
 
                 double[] thickness = myZone.Physical.Thickness;
                 double[] water = myZone.WaterBalance.SWmm;
@@ -478,10 +528,11 @@ namespace Models.PMF
         {
             Zones = new List<NetworkZoneState>();
 
-            Soil soil = this.FindInScope<Soil>();
+            Soil soil = Structure.Find<Soil>();
             if (soil == null)
                 throw new Exception("Cannot find soil");
-            PlantZone = new NetworkZoneState(parentPlant, soil);
+            PlantZone = new NetworkZoneState(parentPlant, soil, Structure);
+            ZoneNamesToGrowRootsIn.Add(PlantZone.Name);
 
             soilCrop = soil.FindDescendant<SoilCrop>(parentPlant.Name + "Soil");
             if (soilCrop == null)
@@ -503,13 +554,13 @@ namespace Models.PMF
                     z.CalculateRAw();
                     z.CalculateRelativeLiveBiomassProportions();
                     z.CalculateRelativeDeadBiomassProportions();
+                    z.CalculateRootProportionThroughLayer();
                 }
 
                 double[] KL = soilCrop.KL;
                 for (int layer = 0; layer < Zones[0].Physical.Thickness.Length; layer++)
                 {
                     klByLayer[layer] = KL[layer] * klModifier.Value(layer) * KLModiferDueToDamage(layer);
-                    Zones[0].RootProportions[layer] = SoilUtilities.ProportionThroughLayer(Zones[0].Physical.Thickness, layer, Depth);
                 }
             }
         }
@@ -532,10 +583,10 @@ namespace Models.PMF
                 TotalArea += Z.Area;
             }
 
-            foreach (NetworkZoneState Z in Zones)
-            {
-                Z.LayerLive[0] = Initial * (Z.Area/TotalArea);
-            }
+            PartitionBiomassThroughSoil(new OrganNutrientsState(), new OrganNutrientsState(),
+                                             Initial, new OrganNutrientsState(),
+                                             new OrganNutrientsState(),
+                                             new OrganNutrientsState(), new OrganNutrientsState());
         }
 
         /// <summary>
@@ -564,7 +615,7 @@ namespace Models.PMF
             {
                 double checkTotalWt = 0;
                 double checkTotalN = 0;
-                
+
                 foreach (NetworkZoneState z in Zones)
                 {
                     double RZA = z.Area / TotalArea;
@@ -604,9 +655,9 @@ namespace Models.PMF
                     FomLayer.Layer = FOMLayers;
                     z.nutrient.DoIncorpFOM(FomLayer);
                 }
-               if (!MathUtilities.FloatsAreEqual(checkTotalWt, parentOrgan.Wt, 1e-11))
+               if (!MathUtilities.FloatsAreEqual(checkTotalWt, parentOrgan.Wt, Math.Max(checkTotalWt * 1e-10,1e-12)))
                         throw new Exception("C Mass balance error in root profile partitioning");
-               if (!MathUtilities.FloatsAreEqual(checkTotalN, parentOrgan.N, 1e-11))
+               if (!MathUtilities.FloatsAreEqual(checkTotalN, parentOrgan.N, Math.Max(checkTotalN * 1e-10,1e-12)))
                         throw new Exception("C Mass balance error in root profile partitioning");
             }
         }
@@ -622,8 +673,8 @@ namespace Models.PMF
                     for (int layer = 0; layer < z.Physical.Thickness.Length; layer++)
                     {
                         OrganNutrientsState detachedToday = z.LayerLive[layer] + z.LayerDead[layer];
-                        z.LayerDead[layer] = new OrganNutrientsState();
-                        z.LayerLive[layer] = new OrganNutrientsState();
+                        z.LayerDead[layer] = new OrganNutrientsState(parentOrgan.Cconc);
+                        z.LayerLive[layer] = new OrganNutrientsState(parentOrgan.Cconc);
 
                         FOMType fom = new FOMType();
                         fom.amount = (float)(detachedToday.Wt * 10);
@@ -645,35 +696,31 @@ namespace Models.PMF
                 }
             }
         }
-        
+
         /// <summary>grow roots in each zone.</summary>
         public void GrowRootDepth()
         {
             foreach (NetworkZoneState z in Zones)
                 z.GrowRootDepth();
         }
-        
+
         /// <summary>Initialise all zones.</summary>
         private void InitialiseZones()
         {
-            Zone zone = this.FindAncestor<Zone>();
-            List<double> zoneAreas = new List<double>(Zones.Count);
-            zoneAreas.Add(zone.Area);
-            PlantZone.Initialize(parentPlant.SowingData.Depth);
-            Zones.Add(PlantZone);
-            if (ZoneRootDepths.Count != ZoneNamesToGrowRootsIn.Count ||
-                ZoneRootDepths.Count != ZoneInitialDM.Count)
-                throw new Exception("The root zone variables (ZoneRootDepths, ZoneNamesToGrowRootsIn, ZoneInitialDM) need to have the same number of values");
-
-            for (int i = 0; i < ZoneNamesToGrowRootsIn.Count; i++)
+            List<double> zoneAreas = new List<double>();
+            foreach (string z in ZoneNamesToGrowRootsIn)
             {
-                zone = this.FindInScope(ZoneNamesToGrowRootsIn[i]) as Zone;
+                Zone zone = Structure.Find<Zone>(z);
                 if (zone != null)
                 {
-                    Soil soil = zone.FindInScope<Soil>();
+                    Soil soil = Structure.Find<Soil>(relativeTo: zone);
                     if (soil == null)
                         throw new Exception("Cannot find soil in zone: " + zone.Name);
-                    NetworkZoneState newZone = new NetworkZoneState(parentPlant, soil);
+                    NetworkZoneState newZone = null;
+                    if (z == PlantZone.Name)
+                        newZone = PlantZone;
+                    else
+                        newZone = new NetworkZoneState(parentPlant, soil, Structure);
                     newZone.Initialize(parentPlant.SowingData.Depth);
                     Zones.Add(newZone);
                     zoneAreas.Add(newZone.Area);
@@ -687,7 +734,7 @@ namespace Models.PMF
             WaterTakenUp = new PlantWaterOrNDelta(zoneAreas);
             NitrogenTakenUp = new PlantWaterOrNDelta(zoneAreas);
         }
-        
+
         /// <summary>Clears this instance.</summary>
         private void Clear()
         {
@@ -698,94 +745,7 @@ namespace Models.PMF
 
     }
 
-    /// <summary>
-    /// Class to hold data on water or n supplies or uptakes and return values in kg (for the entire zone area) or kg/ha for the total area or by zone
-    /// </summary>
-    public class PlantWaterOrNDelta
-    {
-        /// <summary>The area of the zone in ha</summary>
-        public List<ZoneWaterOrNDelta> Zones { get; set; }
-        /// <summary>The area of the zone in ha</summary>
-        public double ZoneAreaSum { get; private set; }
-        /// <summary>the mass of the supply or uptake in kg</summary>
-        public double Kg
-        {
-            get
-            {
-                double kg = 0;
-                foreach (ZoneWaterOrNDelta z in Zones)
-                { kg += z.Kg; }
-                return kg;
-            }
-        }
 
-        /// <summary>the mass of the supply or uptake in g/m2</summary>
-        public double Gpm2 { get { return (Kg * 1000) / (ZoneAreaSum * 10000); } }
-
-        /// <summary>the depth of the supply or uptake in mm (relavent for water only)</summary>
-        public double Mm { get { return Gpm2 /1000; } }
-
-        private double[] byZoneKg = null;
-        /// <summary>the mass of the supply or uptake in kg for each zone</summary>
-        public double[] ByZoneKg
-        {
-            get
-            {
-                return byZoneKg;
-            }
-            set
-            {
-                byZoneKg = value;
-                int pos = 0;
-                foreach (ZoneWaterOrNDelta z in Zones)
-                {
-                    z.Kg = value[pos];
-                    pos += 1;
-                }
-            }
-        }
-
-        /// <summary>the mass of the supply or uptake in kg for each zone</summary>
-        public double[] ByZoneKgpha
-        {
-            get
-            {
-                double[] returnVals = new double[Zones.Count];
-                for (int z = 0; z < Zones.Count; z++)
-                {
-                    returnVals[z] = Zones[z].Kg / Zones[z].Area;
-                }
-                return returnVals;
-            }
-        }
-
-
-
-        /// <summary>Constructor</summary>
-        public PlantWaterOrNDelta(List<double> zoneAreas)
-        {
-            Zones = new List<ZoneWaterOrNDelta>();
-            foreach (double za in zoneAreas)
-            {
-                Zones.Add(new ZoneWaterOrNDelta(za));
-                ZoneAreaSum += za;
-            }
-        }
-    }
-    /// <summary>Class to hold the mass of N or water delta for a zone</summary>
-    public class ZoneWaterOrNDelta
-    {
-        /// <summary>The area of the zone in ha</summary>
-        public double Area { get; private set; }
-        /// <summary>the mass of the supply or uptake in kg</summary>
-        public double Kg { get; set; }
-        /// <summary>the mass of the supply or uptake in kg/ha</summary>
-        public ZoneWaterOrNDelta(double area)
-        {
-            Area = area;
-        }
-
-    }
 
 
 }

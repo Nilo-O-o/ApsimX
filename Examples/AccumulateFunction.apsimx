@@ -1,12 +1,11 @@
 {
   "$type": "Models.Core.Simulations, Models",
-  "Version": 195,
+  "Version": 197,
   "Name": "Simulations",
   "ResourceName": null,
   "Children": [
     {
       "$type": "Models.Storage.DataStore, Models",
-      "useFirebird": false,
       "CustomFileName": null,
       "Name": "DataStore",
       "ResourceName": null,
@@ -80,6 +79,7 @@
           "Slope": 0.0,
           "AspectAngle": 0.0,
           "Altitude": 50.0,
+          "CanopyType": null,
           "Name": "Field",
           "ResourceName": null,
           "Children": [
@@ -1402,6 +1402,7 @@
           "Slope": 0.0,
           "AspectAngle": 0.0,
           "Altitude": 50.0,
+          "CanopyType": null,
           "Name": "Field",
           "ResourceName": null,
           "Children": [
@@ -2583,6 +2584,7 @@
           "Slope": 0.0,
           "AspectAngle": 0.0,
           "Altitude": 50.0,
+          "CanopyType": null,
           "Name": "Field",
           "ResourceName": null,
           "Children": [

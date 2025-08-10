@@ -101,7 +101,7 @@ namespace UserInterface.Presenters
 
             graphView.Clear();
             if (storage == null)
-                storage = graph.FindInScope<IDataStore>();
+                storage = graph.Node.Find<IDataStore>();
 
             // Get a list of series definitions.
             try
@@ -114,11 +114,6 @@ namespace UserInterface.Presenters
             {
                 explorerPresenter.MainPresenter.ShowError(new Exception("Error obtaining data from database: ", e));
             }
-            catch (FirebirdException e)
-            {
-                explorerPresenter.MainPresenter.ShowError(new Exception("Error obtaining data from database: ", e));
-            }
-
             DrawGraph(SeriesDefinitions);
         }
 
@@ -128,7 +123,7 @@ namespace UserInterface.Presenters
             explorerPresenter.MainPresenter.ClearStatusPanel();
             graphView.Clear();
             if (storage == null)
-                storage = graph.FindInScope<IDataStore>();
+                storage = graph.Node.Find<IDataStore>();
             if (graph != null && graph.Series != null)
             {
                 if (!definitions.Any() && Configuration.Settings.EnableGraphDebuggingMessages)
