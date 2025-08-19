@@ -2127,9 +2127,9 @@
             "Yield.xlsx"
           ],
           "SheetNames": [
-            "FruitFW",
-            "FruitDMg",
-            "FruitDMP"
+            "SingleBerryFW",
+            "SingleBerryDW",
+            "SingleBerryDMC"
           ],
           "Name": "Yield",
           "ResourceName": null,
@@ -2140,7 +2140,7 @@
         {
           "$type": "Models.PostSimulationTools.PredictedObserved, Models",
           "PredictedTableName": "Report",
-          "ObservedTableName": "FruitDMg",
+          "ObservedTableName": "SingleBerryFW",
           "FieldNameUsedForMatch": "SimulationName",
           "FieldName2UsedForMatch": "Clock.Today.Year",
           "FieldName3UsedForMatch": "KiwiFruit.Phenology.CurrentStageName",
@@ -9612,7 +9612,7 @@
               "Children": [
                 {
                   "$type": "Models.Functions.Constant, Models",
-                  "FixedValue": 0.0,
+                  "FixedValue": 0.001,
                   "Units": null,
                   "Name": "InitialWt",
                   "ResourceName": null,
@@ -9809,8 +9809,8 @@
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
+                          "$type": "Models.Functions.VariableReference, Models",
+                          "VariableName": "[Fruit].TotalCarbonDemand",
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -10455,77 +10455,21 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.Functions.MultiplyFunction, Models",
+                  "$type": "Models.Functions.PhaseLookup, Models",
                   "Name": "TotalCarbonDemand",
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.MaximumFunction, Models",
-                      "Name": "RelativeFruitMass",
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "StartEndo",
+                      "End": "EndFlowering",
+                      "Name": "NoFruit",
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.DeltaFunction, Models",
-                          "StartStageName": "EndFlowering",
-                          "Name": "Delta",
-                          "ResourceName": null,
-                          "Children": [
-                            {
-                              "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                              "Name": "Integral",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.XYPairs, Models",
-                                  "X": [
-                                    0.0,
-                                    100.0,
-                                    400.0,
-                                    800.0
-                                  ],
-                                  "Y": [
-                                    0.0,
-                                    0.01,
-                                    0.9,
-                                    1.0
-                                  ],
-                                  "Name": "XYPairs",
-                                  "ResourceName": null,
-                                  "Children": [
-                                    {
-                                      "$type": "Models.Memo, Models",
-                                      "Text": "The x values that define the shape of the fruit biomass demand are set at establishment from values defined in STRUMTreeInstance\n",
-                                      "Name": "Memo",
-                                      "ResourceName": null,
-                                      "Children": [],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    }
-                                  ],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[KiwiFruit].Phenology.HeatModelHourlyFruit",
-                                  "Name": "XValue",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            }
-                          ],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
                           "$type": "Models.Functions.Constant, Models",
                           "FixedValue": 0.0,
-                          "Units": null,
+                          "Units": "",
                           "Name": "Zero",
                           "ResourceName": null,
                           "Children": [],
@@ -10537,170 +10481,68 @@
                       "ReadOnly": false
                     },
                     {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Fruit].Number",
-                      "Name": "Number",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Fruit].FruitDMg",
-                      "Name": "DW",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Fruit].Cconc",
-                      "Name": "CarbonConc",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.MultiplyFunction, Models",
-                  "Name": "Number",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.ExpressionFunction, Models",
-                      "Units": null,
-                      "Expression": "0.3 * [Phenology].BrokenBuds",
-                      "Name": "FruitingShoots",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 1.5,
-                      "Units": "",
-                      "Name": "AverageFruitNumPerShoot",
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "EndFlowering",
+                      "End": "FruitMature",
+                      "Name": "FruitingPhase",
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Memo, Models",
-                          "Text": "Need to be determined for control & HC. The paper \"Effects of hydrogen cyanamide on budbreak\nand flowering in kiwifruit (Actinidia deliciosa\n’Hayward')\" can be helpful.",
-                          "Name": "Memo",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 1.0,
-                      "Units": "%",
-                      "Name": "RetainedPostThinning",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Memo, Models",
-                          "Text": "No thinning == 1",
-                          "Name": "Memo",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.AccumulateFunction, Models",
-                  "StartStageName": "EndFlowering",
-                  "EndStageName": "FruitMature",
-                  "ResetStageName": "FruitMature",
-                  "FractionRemovedOnCut": 0.0,
-                  "FractionRemovedOnHarvest": 0.0,
-                  "FractionRemovedOnGraze": 0.0,
-                  "FractionRemovedOnPrune": 1.0,
-                  "Name": "FruitDMg",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.MultiplyFunction, Models",
-                      "Name": "MultiplyFunction",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Phenology].HeatModelHourlyFruit",
-                          "Name": "TT",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
-                          "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.014,
-                          "Units": "",
-                          "Name": "coefficient",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
-                          "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                          "Name": "FruitNumberEffect",
+                          "$type": "Models.Functions.MaximumFunction, Models",
+                          "Name": "CarbonDemand",
                           "ResourceName": null,
                           "Children": [
                             {
-                              "$type": "Models.Functions.XYPairs, Models",
-                              "X": [
-                                0.0,
-                                1.0,
-                                2.0,
-                                3.0,
-                                4.0,
-                                5.0,
-                                6.0,
-                                7.0,
-                                8.0
-                              ],
-                              "Y": [
-                                1.0,
-                                1.0,
-                                0.98,
-                                0.95,
-                                0.92,
-                                0.89,
-                                0.86,
-                                0.83,
-                                0.8
-                              ],
-                              "Name": "XYPairs",
+                              "$type": "Models.Functions.DeltaFunction, Models",
+                              "StartStageName": "EndFlowering",
+                              "Name": "DeltaFunction",
                               "ResourceName": null,
-                              "Children": [],
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.MultiplyFunction, Models",
+                                  "Name": "Integral",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Fruit].FruitNumberPerM2",
+                                      "Name": "Number",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    },
+                                    {
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Fruit].SingleBerryDW",
+                                      "Name": "SingleBerryDW",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    },
+                                    {
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Fruit].Cconc",
+                                      "Name": "CarbonConc",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
                               "Enabled": true,
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Phenology].FruitGrowth.ProgressThroughPhase",
-                              "Name": "XValue",
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 0.0,
+                              "Units": null,
+                              "Name": "Zero",
                               "ResourceName": null,
                               "Children": [],
                               "Enabled": true,
@@ -10719,150 +10561,69 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.Functions.MinimumFunction, Models",
-                  "Name": "FruitFW",
+                  "$type": "Models.Functions.PhaseLookup, Models",
+                  "Name": "SingleBerryDW",
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 150.0,
-                      "Units": "",
-                      "Name": "MaxFreshWt",
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "StartEndo",
+                      "End": "EndFlowering",
+                      "Name": "NoFruit",
                       "ResourceName": null,
-                      "Children": [],
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 0.0,
+                          "Units": "",
+                          "Name": "Zero",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
                       "Enabled": true,
                       "ReadOnly": false
                     },
                     {
-                      "$type": "Models.Functions.AccumulateFunction, Models",
-                      "StartStageName": "EndFlowering",
-                      "EndStageName": "FruitMature",
-                      "ResetStageName": "FruitMature",
-                      "FractionRemovedOnCut": 0.0,
-                      "FractionRemovedOnHarvest": 0.0,
-                      "FractionRemovedOnGraze": 0.0,
-                      "FractionRemovedOnPrune": 1.0,
-                      "Name": "ExpectedFreshWt",
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "EndFlowering",
+                      "End": "FruitMature",
+                      "Name": "FruitingPhase",
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.MultiplyFunction, Models",
-                          "Name": "FreshWtStressed",
+                          "$type": "Models.Functions.AccumulateFunction, Models",
+                          "StartStageName": "EndFlowering",
+                          "EndStageName": "FruitMature",
+                          "ResetStageName": "FruitMature",
+                          "FractionRemovedOnCut": 0.0,
+                          "FractionRemovedOnHarvest": 0.0,
+                          "FractionRemovedOnGraze": 0.0,
+                          "FractionRemovedOnPrune": 1.0,
+                          "Name": "ThermalTimeAfterFlowering",
                           "ResourceName": null,
                           "Children": [
                             {
                               "$type": "Models.Functions.MultiplyFunction, Models",
-                              "Name": "FreshWtPotential",
+                              "Name": "MultiplyFunction",
                               "ResourceName": null,
                               "Children": [
                                 {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Phenology].HeatModelHourlyFruit",
-                                  "Name": "TT",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 0.13,
+                                  "FixedValue": 0.012,
                                   "Units": "",
                                   "Name": "coefficient",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
                                   "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                              "Name": "FW",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.XYPairs, Models",
-                                  "X": [
-                                    0.0,
-                                    100.0,
-                                    250.0,
-                                    450.0,
-                                    500.0,
-                                    650.0,
-                                    850.0,
-                                    1000.0
-                                  ],
-                                  "Y": [
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    1.0
-                                  ],
-                                  "Name": "XYPairs",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
                                 },
                                 {
                                   "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Phenology].FruitGrowth.ProgressThroughPhase",
-                                  "Name": "XValue",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                              "Name": "FruitNumberEffect",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.XYPairs, Models",
-                                  "X": [
-                                    0.0,
-                                    1.0,
-                                    2.0,
-                                    3.0,
-                                    4.0,
-                                    5.0,
-                                    6.0,
-                                    7.0,
-                                    8.0
-                                  ],
-                                  "Y": [
-                                    1.0,
-                                    1.0,
-                                    1.0,
-                                    0.95,
-                                    0.85,
-                                    0.75,
-                                    0.6,
-                                    0.5,
-                                    0.4
-                                  ],
-                                  "Name": "XYPairs",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Phenology].FruitGrowth.ProgressThroughPhase",
-                                  "Name": "XValue",
+                                  "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                  "Name": "TT",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
@@ -10886,7 +10647,166 @@
                 },
                 {
                   "$type": "Models.Functions.PhaseLookup, Models",
-                  "Name": "FruitDMP",
+                  "Name": "SingleBerryFW",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "StartEndo",
+                      "End": "EndFlowering",
+                      "Name": "NoFruit",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 0.0,
+                          "Units": "",
+                          "Name": "Zero",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "EndFlowering",
+                      "End": "FruitMature",
+                      "Name": "FruitingPhase",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.MinimumFunction, Models",
+                          "Name": "FreshWt",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 150.0,
+                              "Units": "g",
+                              "Name": "MaxFreshWt",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.AccumulateFunction, Models",
+                              "StartStageName": "EndFlowering",
+                              "EndStageName": "FruitMature",
+                              "ResetStageName": "FruitMature",
+                              "FractionRemovedOnCut": 0.0,
+                              "FractionRemovedOnHarvest": 0.0,
+                              "FractionRemovedOnGraze": 0.0,
+                              "FractionRemovedOnPrune": 1.0,
+                              "Name": "ExpectedFreshWt",
+                              "ResourceName": null,
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.MultiplyFunction, Models",
+                                  "Name": "FreshWtStressed",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.MultiplyFunction, Models",
+                                      "Name": "FreshWtPotential",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                          "Name": "TT",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 0.07,
+                                          "Units": "",
+                                          "Name": "coefficient",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    },
+                                    {
+                                      "$type": "Models.Functions.LinearInterpolationFunction, Models",
+                                      "Name": "FW",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.XYPairs, Models",
+                                          "X": [
+                                            0.0,
+                                            100.0,
+                                            250.0,
+                                            450.0,
+                                            500.0,
+                                            650.0,
+                                            850.0,
+                                            1000.0
+                                          ],
+                                          "Y": [
+                                            1.0,
+                                            1.0,
+                                            1.0,
+                                            1.0,
+                                            1.0,
+                                            1.0,
+                                            1.0,
+                                            1.0
+                                          ],
+                                          "Name": "XYPairs",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Phenology].FruitGrowth.ProgressThroughPhase",
+                                          "Name": "XValue",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.PhaseLookup, Models",
+                  "Name": "SingleBerryDMC",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -10919,29 +10839,176 @@
                       "Children": [
                         {
                           "$type": "Models.Functions.MultiplyFunction, Models",
-                          "Name": "FruitDMPercentage",
+                          "Name": "SingleBerryDMPercent",
                           "ResourceName": null,
                           "Children": [
                             {
-                              "$type": "Models.Functions.DivideFunction, Models",
-                              "Name": "FruitDM",
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 100.0,
+                              "Units": "",
+                              "Name": "Percent",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.AccumulateFunction, Models",
+                              "StartStageName": "EndFlowering",
+                              "EndStageName": "FruitMature",
+                              "ResetStageName": "FruitMature",
+                              "FractionRemovedOnCut": 0.0,
+                              "FractionRemovedOnHarvest": 0.0,
+                              "FractionRemovedOnGraze": 0.0,
+                              "FractionRemovedOnPrune": 1.0,
+                              "Name": "SingleBerryDMC",
+                              "ResourceName": null,
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.MultiplyFunction, Models",
+                                  "Name": "DailyDemand",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                      "Name": "TT",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    },
+                                    {
+                                      "$type": "Models.Functions.Constant, Models",
+                                      "FixedValue": 0.0001,
+                                      "Units": "",
+                                      "Name": "coefficient",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.PhaseLookup, Models",
+                  "Name": "FruitNumberPerM2",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "StartEndo",
+                      "End": "EndFlowering",
+                      "Name": "NoFruit",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 0.0,
+                          "Units": "",
+                          "Name": "Zero",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "EndFlowering",
+                      "End": "FruitMature",
+                      "Name": "FruitingPhase",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.ProtectedDivideFunction, Models",
+                          "NumeratorErrVal": 0.0,
+                          "DenominatorErrVal": 0.0,
+                          "Name": "PlantsPerM2",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.MultiplyFunction, Models",
+                              "Name": "FruitNumberPerVine",
                               "ResourceName": null,
                               "Children": [
                                 {
                                   "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Fruit].FruitDMg",
-                                  "Name": "FruitDMg",
+                                  "VariableName": "[Leaf].DeltaLAI.Vegetative.Delta.VineShoots.CaneNum",
+                                  "Name": "CaneNum",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
                                   "ReadOnly": false
                                 },
                                 {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Fruit].FruitFW",
-                                  "Name": "FruitFW",
+                                  "$type": "Models.Functions.ExpressionFunction, Models",
+                                  "Units": null,
+                                  "Expression": "0.3 * [Phenology].BrokenBuds",
+                                  "Name": "FruitingShoots",
                                   "ResourceName": null,
                                   "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 1.5,
+                                  "Units": "",
+                                  "Name": "AverageFruitNumPerShoot",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Memo, Models",
+                                      "Text": "Need to be determined for control & HC. The paper \"Effects of hydrogen cyanamide on budbreak\nand flowering in kiwifruit (Actinidia deliciosa\n’Hayward')\" can be helpful.",
+                                      "Name": "Memo",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 1.0,
+                                  "Units": "%",
+                                  "Name": "RetainedPostThinning",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Memo, Models",
+                                      "Text": "No thinning == 1",
+                                      "Name": "Memo",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
                                   "Enabled": true,
                                   "ReadOnly": false
                                 }
@@ -10950,12 +11017,31 @@
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 100.0,
-                              "Units": "",
-                              "Name": "Hundred",
+                              "$type": "Models.Functions.MultiplyFunction, Models",
+                              "Name": "Area",
                               "ResourceName": null,
-                              "Children": [],
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 6.0,
+                                  "Units": "M",
+                                  "Name": "RowWidth",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 4.0,
+                                  "Units": "M",
+                                  "Name": "RowLength",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
                               "Enabled": true,
                               "ReadOnly": false
                             }
@@ -10983,7 +11069,9 @@
                 "[Trunk].Live",
                 "[Trunk].Dead",
                 "[Stem].Live",
-                "[Stem].Dead"
+                "[Stem].Dead",
+                "[Fruit].Live",
+                "[Fruit].Dead"
               ],
               "Name": "AboveGround",
               "ResourceName": null,
@@ -10996,7 +11084,8 @@
               "Propertys": [
                 "[Leaf].Dead",
                 "[Trunk].Dead",
-                "[Stem].Dead"
+                "[Stem].Dead",
+                "[Fruit].Dead"
               ],
               "Name": "AboveGroundDead",
               "ResourceName": null,
@@ -11026,7 +11115,9 @@
                 "[Stem].Live",
                 "[Stem].Dead",
                 "[Root].Live",
-                "[Root].Dead"
+                "[Root].Dead",
+                "[Fruit].Live",
+                "[Fruit].Dead"
               ],
               "Name": "Total",
               "ResourceName": null,
@@ -11040,7 +11131,8 @@
                 "[Leaf].Live",
                 "[Stem].Live",
                 "[Trunk].Live",
-                "[Root].Live"
+                "[Root].Live",
+                "[Fruit].Live"
               ],
               "Name": "TotalLive",
               "ResourceName": null,
@@ -11054,7 +11146,8 @@
                 "[Leaf].Dead",
                 "[Stem].Dead",
                 "[Trunk].Dead",
-                "[Root].Dead"
+                "[Root].Dead",
+                "[Fruit].Dead"
               ],
               "Name": "TotalDead",
               "ResourceName": null,
@@ -11240,71 +11333,6 @@
               ],
               "Enabled": true,
               "ReadOnly": false
-            },
-            {
-              "$type": "Models.Functions.AddFunction, Models",
-              "Name": "Width",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Functions.MultiplyFunction, Models",
-                  "Name": "PrunedWidth",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[KiwiFruit].RelativeAnnualDimension",
-                      "Name": "Age pattern",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 4.0,
-                      "Units": "m",
-                      "Name": "Maximum",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.MultiplyFunction, Models",
-                  "Name": "SeasonalGrowth",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[KiwiFruit].RelativeSeasonalDimension",
-                      "Name": "Seasonal pattern",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 1.0,
-                      "Units": "m",
-                      "Name": "Maximum",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
             }
           ],
           "Enabled": true,
@@ -11348,16 +11376,18 @@
             "[KiwiFruit].Leaf.Canopy.CoverTotal",
             "[KiwiFruit].Leaf.Canopy.Fw",
             "[KiwiFruit].Leaf.Transmitted_light",
-            "[KiwiFruit].Fruit.Number",
+            "[KiwiFruit].Fruit.FruitNumberPerM2",
             "[KiwiFruit].Fruit.Wt",
             "[KiwiFruit].Fruit.TotalCarbonDemand",
             "[KiwiFruit].Leaf.Canopy.RadiationIntercepted",
             "[KiwiFruit].Leaf.Canopy.CoverGreen",
-            "[KiwiFruit].Leaf.Photosynthesis",
-            "[KiwiFruit].Fruit.FruitDMP",
-            "[KiwiFruit].Fruit.FruitFW",
-            "[KiwiFruit].Fruit.FruitDMg",
-            "[KiwiFruit].Phenology.FruitGrowth.ProgressThroughPhase"
+            "[KiwiFruit].Phenology.FruitGrowth.ProgressThroughPhase",
+            "[KiwiFruit].Fruit.SingleBerryDW",
+            "[KiwiFruit].Fruit.SingleBerryDMC",
+            "[KiwiFruit].Fruit.SingleBerryFW",
+            "[KiwiFruit].Fruit.FruitNumberPerM2",
+            "",
+            "[KiwiFruit].Fruit.TotalCarbonDemand"
           ],
           "EventNames": [
             "[Clock].DoReport"
@@ -128772,7 +128802,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "FruitNumber",
+              "Name": "FruitNumberPerM2",
               "ResourceName": null,
               "Children": [
                 {
@@ -128780,7 +128810,7 @@
                   "Type": 1,
                   "XAxis": 3,
                   "YAxis": 0,
-                  "ColourArgb": -16777216,
+                  "ColourArgb": -11094807,
                   "FactorToVaryColours": null,
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
@@ -128790,7 +128820,7 @@
                   "LineThickness": 0,
                   "TableName": "Report",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Fruit.Number",
+                  "YFieldName": "KiwiFruit.Fruit.FruitNumberPerM2",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": false,
@@ -128798,9 +128828,20 @@
                   "Cumulative": false,
                   "CumulativeX": false,
                   "Filter": null,
-                  "Name": "FruitNumber",
+                  "Name": "FruitNumberPerM2",
                   "ResourceName": null,
-                  "Children": [],
+                  "Children": [
+                    {
+                      "$type": "Models.EventNamesOnGraph, Models",
+                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
+                      "SimulationName": "TP01HW2022_2024",
+                      "Name": "EventNamesOnGraph",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
                   "Enabled": true,
                   "ReadOnly": false
                 }
@@ -128918,7 +128959,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "FruitFW",
+              "Name": "SingleBerryFW",
               "ResourceName": null,
               "Children": [
                 {
@@ -128936,7 +128977,7 @@
                   "LineThickness": 0,
                   "TableName": "Report",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Fruit.FruitFW",
+                  "YFieldName": "KiwiFruit.Fruit.SingleBerryFW",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": false,
@@ -128983,9 +129024,9 @@
                   "MarkerSize": 2,
                   "Line": 4,
                   "LineThickness": 0,
-                  "TableName": "FruitFW",
+                  "TableName": "SingleBerryFW",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Fruit.FruitFW",
+                  "YFieldName": "KiwiFruit.Fruit.SingleBerryFW",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": false,
@@ -129035,7 +129076,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "FruitDMg",
+              "Name": "SingleBerryDMC",
               "ResourceName": null,
               "Children": [
                 {
@@ -129053,10 +129094,10 @@
                   "LineThickness": 0,
                   "TableName": "Report",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Fruit.FruitDMg",
+                  "YFieldName": "KiwiFruit.Fruit.SingleBerryDMC",
                   "X2FieldName": null,
                   "Y2FieldName": null,
-                  "ShowInLegend": false,
+                  "ShowInLegend": true,
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
@@ -129100,9 +129141,9 @@
                   "MarkerSize": 2,
                   "Line": 4,
                   "LineThickness": 0,
-                  "TableName": "FruitDMg",
+                  "TableName": "SingleBerryDMC",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Fruit.FruitDMg",
+                  "YFieldName": "KiwiFruit.Fruit.SingleBerryDMC",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
@@ -129152,7 +129193,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "FruitDMP",
+              "Name": "SingleBerryDW",
               "ResourceName": null,
               "Children": [
                 {
@@ -129170,7 +129211,7 @@
                   "LineThickness": 0,
                   "TableName": "Report",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Fruit.FruitDMP",
+                  "YFieldName": "KiwiFruit.Fruit.SingleBerryDW",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": false,
@@ -129217,12 +129258,12 @@
                   "MarkerSize": 2,
                   "Line": 4,
                   "LineThickness": 0,
-                  "TableName": "FruitDMP",
+                  "TableName": "SingleBerryDW",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Fruit.FruitDMP",
+                  "YFieldName": "KiwiFruit.Fruit.SingleBerryDW",
                   "X2FieldName": null,
                   "Y2FieldName": null,
-                  "ShowInLegend": false,
+                  "ShowInLegend": true,
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
@@ -129230,6 +129271,94 @@
                   "Name": "Observed",
                   "ResourceName": null,
                   "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                }
+              ],
+              "Enabled": true,
+              "ReadOnly": false
+            },
+            {
+              "$type": "Models.Graph, Models",
+              "Caption": null,
+              "Axis": [
+                {
+                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                  "Title": null,
+                  "Position": 3,
+                  "Inverted": false,
+                  "CrossesAtZero": false,
+                  "LabelOnOneLine": false,
+                  "Minimum": null,
+                  "Maximum": null,
+                  "Interval": null
+                },
+                {
+                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                  "Title": null,
+                  "Position": 0,
+                  "Inverted": false,
+                  "CrossesAtZero": false,
+                  "LabelOnOneLine": false,
+                  "Minimum": null,
+                  "Maximum": null,
+                  "Interval": null
+                }
+              ],
+              "LegendPosition": 5,
+              "LegendOrientation": 0,
+              "AnnotationLocation": 0,
+              "DisabledSeries": [],
+              "LegendOutsideGraph": false,
+              "Name": "Test",
+              "ResourceName": null,
+              "Children": [
+                {
+                  "$type": "Models.Series, Models",
+                  "Type": 1,
+                  "XAxis": 3,
+                  "YAxis": 0,
+                  "ColourArgb": -11094807,
+                  "FactorToVaryColours": null,
+                  "FactorToVaryMarkers": null,
+                  "FactorToVaryLines": null,
+                  "Marker": 11,
+                  "MarkerSize": 0,
+                  "Line": 0,
+                  "LineThickness": 0,
+                  "TableName": "Report",
+                  "XFieldName": "Clock.Today",
+                  "YFieldName": "KiwiFruit.Fruit.TotalCarbonDemand",
+                  "X2FieldName": null,
+                  "Y2FieldName": null,
+                  "ShowInLegend": true,
+                  "IncludeSeriesNameInLegend": false,
+                  "Cumulative": false,
+                  "CumulativeX": false,
+                  "Filter": null,
+                  "Name": "Predicted",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Memo, Models",
+                      "Text": "Steve Green's report : @@ZesIR-Avg Fruit growth (2025).xlsx",
+                      "Name": "Memo",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.EventNamesOnGraph, Models",
+                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
+                      "SimulationName": "TP01HW2022_2024",
+                      "Name": "EventNamesOnGraph",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
                   "Enabled": true,
                   "ReadOnly": false
                 }
