@@ -310,29 +310,36 @@ namespace Models.PMF
         /// <returns>The amount of biomass (live+dead) removed from the plant (g/m2).</returns>
         public virtual double RemoveBiomass(double liveToRemove = 1, double deadToRemove = 0, double liveToResidue = 0, double deadToResidue = 0)
         {
-            OrganNutrientsState liveExported = Live * liveToRemove;
-            OrganNutrientsState liveRetained = Live * liveToResidue;
-            LiveRemoved = liveExported + liveRetained;
-
-            OrganNutrientsState deadExported = Dead * deadToRemove;
-            OrganNutrientsState deadRetained = Dead * deadToResidue;
-            DeadRemoved = deadExported + deadRetained;
-
-            double fracLiveToResidue = MathUtilities.Divide(liveToResidue, (liveToResidue + liveToRemove), 0);
-            double fracDeadToResidue = MathUtilities.Divide(deadToResidue, (deadToResidue + deadToRemove), 0);
-
-            if (fracDeadToResidue + fracLiveToResidue > 0)
+            if (Live != null)
             {
-                OrganNutrientsState totalToResidues = liveRetained + deadRetained;
-                Biomass toResidues = totalToResidues.ToBiomass;
-                surfaceOrganicMatter.Add(toResidues.Wt * 10.0, toResidues.N * 10.0, 0.0, parentPlant.PlantType, Name);
-            }
-            if ((liveToRemove + deadToRemove + liveToResidue + deadToResidue)>0)
-            {
-                removeBiomass = true;
-            }
+                OrganNutrientsState liveExported = Live * liveToRemove;
+                OrganNutrientsState liveRetained = Live * liveToResidue;
+                LiveRemoved = liveExported + liveRetained;
 
-            return LiveRemoved.Wt + DeadRemoved.Wt;
+                OrganNutrientsState deadExported = Dead * deadToRemove;
+                OrganNutrientsState deadRetained = Dead * deadToResidue;
+                DeadRemoved = deadExported + deadRetained;
+
+                double fracLiveToResidue = MathUtilities.Divide(liveToResidue, (liveToResidue + liveToRemove), 0);
+                double fracDeadToResidue = MathUtilities.Divide(deadToResidue, (deadToResidue + deadToRemove), 0);
+
+                if (fracDeadToResidue + fracLiveToResidue > 0)
+                {
+                    OrganNutrientsState totalToResidues = liveRetained + deadRetained;
+                    Biomass toResidues = totalToResidues.ToBiomass;
+                    surfaceOrganicMatter.Add(toResidues.Wt * 10.0, toResidues.N * 10.0, 0.0, parentPlant.PlantType, Name);
+                }
+                if ((liveToRemove + deadToRemove + liveToResidue + deadToResidue) > 0)
+                {
+                    removeBiomass = true;
+                }
+
+                return LiveRemoved.Wt + DeadRemoved.Wt;
+            }
+            else
+            {
+                return 0;
+            }
         }
 
         /// <summary>Clears this instance.</summary>
