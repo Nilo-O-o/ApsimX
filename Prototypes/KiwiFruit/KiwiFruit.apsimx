@@ -6257,12 +6257,14 @@
                           "$type": "Models.Functions.XYPairs, Models",
                           "X": [
                             0.0,
-                            14.100662607203542,
+                            8.0,
+                            15.0,
                             30.0,
                             45.0
                           ],
                           "Y": [
-                            0.0,
+                            1.0,
+                            1.0,
                             1.0,
                             1.0,
                             0.0
@@ -6296,7 +6298,7 @@
                           "$type": "Models.Functions.XYPairs, Models",
                           "X": [
                             0.0,
-                            0.5542824893023762,
+                            0.5,
                             1.0
                           ],
                           "Y": [
@@ -9931,7 +9933,7 @@
                           "$type": "Models.Functions.Constant, Models",
                           "FixedValue": 0.0,
                           "Units": null,
-                          "Name": "QMetabolicPriority",
+                          "Name": "QStoragePriority",
                           "ResourceName": null,
                           "Children": [],
                           "Enabled": true,
@@ -9941,7 +9943,7 @@
                           "$type": "Models.Functions.Constant, Models",
                           "FixedValue": 0.0,
                           "Units": null,
-                          "Name": "QStoragePriority",
+                          "Name": "QMetabolicPriority",
                           "ResourceName": null,
                           "Children": [],
                           "Enabled": true,
@@ -10577,15 +10579,17 @@
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.MultiplyFunction, Models",
-                          "Name": "MultiplyFunction",
+                          "$type": "Models.Functions.BetaGrowthFunction, Models",
+                          "tm": 750.0,
+                          "te": 1500.0,
+                          "Name": "BetaGrowthFunction",
                           "ResourceName": null,
                           "Children": [
                             {
                               "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 0.052,
+                              "FixedValue": 75.0,
                               "Units": "",
-                              "Name": "coefficient",
+                              "Name": "Ymax",
                               "ResourceName": null,
                               "Children": [],
                               "Enabled": true,
@@ -10600,59 +10604,13 @@
                               "FractionRemovedOnHarvest": 0.0,
                               "FractionRemovedOnGraze": 0.0,
                               "FractionRemovedOnPrune": 1.0,
-                              "Name": "ThermalTimeAfterFlowering",
+                              "Name": "XValue",
                               "ResourceName": null,
                               "Children": [
                                 {
                                   "$type": "Models.Functions.VariableReference, Models",
                                   "VariableName": "[Phenology].HeatModelHourlyFruit",
                                   "Name": "TT",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                              "Name": "DMAccumulationPace",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.XYPairs, Models",
-                                  "X": [
-                                    0.0,
-                                    600.0,
-                                    1300.0,
-                                    2500.0,
-                                    3000.0,
-                                    "NaN",
-                                    "NaN",
-                                    "NaN"
-                                  ],
-                                  "Y": [
-                                    0.5,
-                                    1.0,
-                                    1.0,
-                                    0.0,
-                                    0.0,
-                                    "NaN",
-                                    "NaN",
-                                    "NaN"
-                                  ],
-                                  "Name": "XYPairs",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Fruit].PotentialSingleBerryDW.FruitingPhase.MultiplyFunction.ThermalTimeAfterFlowering",
-                                  "Name": "XValue",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
@@ -10818,7 +10776,7 @@
                               "Children": [
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 0.000145,
+                                  "FixedValue": 0.00018,
                                   "Units": "",
                                   "Name": "coefficient",
                                   "ResourceName": null,
@@ -10842,52 +10800,6 @@
                                       "$type": "Models.Functions.VariableReference, Models",
                                       "VariableName": "[Phenology].HeatModelHourlyFruit",
                                       "Name": "TT",
-                                      "ResourceName": null,
-                                      "Children": [],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    }
-                                  ],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                                  "Name": "DMAccumulationPace",
-                                  "ResourceName": null,
-                                  "Children": [
-                                    {
-                                      "$type": "Models.Functions.XYPairs, Models",
-                                      "X": [
-                                        0.0,
-                                        300.0,
-                                        1150.0,
-                                        3000.0,
-                                        "NaN",
-                                        "NaN",
-                                        "NaN",
-                                        "NaN"
-                                      ],
-                                      "Y": [
-                                        0.0,
-                                        1.0,
-                                        0.85,
-                                        0.3,
-                                        "NaN",
-                                        "NaN",
-                                        "NaN",
-                                        "NaN"
-                                      ],
-                                      "Name": "XYPairs",
-                                      "ResourceName": null,
-                                      "Children": [],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    },
-                                    {
-                                      "$type": "Models.Functions.VariableReference, Models",
-                                      "VariableName": "[Fruit].SingleBerryDM.FruitingPhase.MinimumFunction.SingleBerryDM.ThermalTimeAfterFlowering",
-                                      "Name": "XValue",
                                       "ResourceName": null,
                                       "Children": [],
                                       "Enabled": true,
@@ -11390,66 +11302,6 @@
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "FruitMature",
                   "ReSetEvent": "StartEndo",
-                  "Name": "MaxSingleBerryFW",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 0.0,
-                      "Units": null,
-                      "Name": "PreEventValue",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Fruit].SingleBerryFW",
-                      "Name": "PostEventValue",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.OnEventFunction, Models",
-                  "SetEvent": "FruitMature",
-                  "ReSetEvent": "StartEndo",
-                  "Name": "MaxSingleBerryDWOOO",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 0.0,
-                      "Units": null,
-                      "Name": "PreEventValue",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Fruit].SingleBerryDW",
-                      "Name": "PostEventValue",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.OnEventFunction, Models",
-                  "SetEvent": "FruitMature",
-                  "ReSetEvent": "StartEndo",
                   "Name": "MaxSingleBerryDMC",
                   "ResourceName": null,
                   "Children": [
@@ -11486,6 +11338,25 @@
                       "$type": "Models.Functions.VariableReference, Models",
                       "VariableName": "[Fruit].SingleBerryDW",
                       "Name": "SingleBerryDW",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.HoldFunction, Models",
+                  "WhenToHold": "FruitMature",
+                  "Name": "MaxSingleBerryFW",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Fruit].SingleBerryFW",
+                      "Name": "SingleBerryFW",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -11832,6 +11703,7 @@
             "[KiwiFruit].Fruit.PotentialSingleBerryDW",
             "[KiwiFruit].Fruit.SingleBerryDMC",
             "[KiwiFruit].Fruit.SingleBerryFW",
+            "[KiwiFruit].Fruit.MaxSingleBerryFW",
             "[KiwiFruit].Stem.Wt",
             "[KiwiFruit].Root.Wt",
             "[KiwiFruit].Trunk.Wt",
@@ -11856,7 +11728,8 @@
             "[KiwiFruit].Phenology.FullBloomDOY",
             "[Clock].Today.Year",
             "[KiwiFruit].Phenology.CurrentStageName",
-            "[KiwiFruit].Fruit.MaxSingleBerryDW"
+            "[KiwiFruit].Fruit.MaxSingleBerryDW",
+            "[KiwiFruit].Fruit.MaxSingleBerryFW"
           ],
           "EventNames": [
             ""
@@ -129815,7 +129688,7 @@
                   "Name": "PotentialDW",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
@@ -191210,7 +191083,7 @@
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
               "Minimum": 50.0,
-              "Maximum": 160.0,
+              "Maximum": 155.0,
               "Interval": null
             },
             {
@@ -191221,7 +191094,7 @@
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
               "Minimum": 50.0,
-              "Maximum": 160.0,
+              "Maximum": 155.0,
               "Interval": null
             }
           ],
@@ -191242,13 +191115,13 @@
               "FactorToVaryColours": "SimulationName",
               "FactorToVaryMarkers": "SimulationName",
               "FactorToVaryLines": "SimulationName",
-              "Marker": 5,
-              "MarkerSize": 2,
+              "Marker": 0,
+              "MarkerSize": 0,
               "Line": 4,
               "LineThickness": 0,
               "TableName": "PredictedObservedSingleBerryFW",
-              "XFieldName": "Predicted.KiwiFruit.Fruit.SingleBerryFW",
-              "YFieldName": "Observed.KiwiFruit.Fruit.SingleBerryFW",
+              "XFieldName": "Observed.KiwiFruit.Fruit.MaxSingleBerryFW",
+              "YFieldName": "Predicted.KiwiFruit.Fruit.MaxSingleBerryFW",
               "X2FieldName": null,
               "Y2FieldName": null,
               "ShowInLegend": true,
@@ -191327,8 +191200,8 @@
               "Line": 0,
               "LineThickness": 0,
               "TableName": "PredictedObservedSingleBerryDW",
-              "XFieldName": "Predicted.KiwiFruit.Fruit.MaxSingleBerryDW",
-              "YFieldName": "Observed.KiwiFruit.Fruit.MaxSingleBerryDW",
+              "XFieldName": "Observed.KiwiFruit.Fruit.MaxSingleBerryDW",
+              "YFieldName": "Predicted.KiwiFruit.Fruit.MaxSingleBerryDW",
               "X2FieldName": null,
               "Y2FieldName": null,
               "ShowInLegend": true,
