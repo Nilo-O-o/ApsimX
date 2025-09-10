@@ -122117,7 +122117,7 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": false,
+                      "Enabled": true,
                       "ReadOnly": false
                     }
                   ],
@@ -184340,25 +184340,6 @@
                           "ReadOnly": false
                         },
                         {
-                          "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
-                          "Units": "",
-                          "Name": "Adjustment",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
-                          "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[Phenology].FloweringDevelopmentRate",
-                          "Name": "FloweringDevelopmentRate",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
                           "$type": "Models.Functions.AddFunction, Models",
                           "Name": "FPhotoperiod",
                           "ResourceName": null,
@@ -184517,7 +184498,7 @@
                     },
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 6.0,
+                      "FixedValue": 300.0,
                       "Units": "GDH",
                       "Name": "Target",
                       "ResourceName": null,
@@ -185059,92 +185040,6 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.Functions.ProtectedDivideFunction, Models",
-                  "NumeratorErrVal": 0.0,
-                  "DenominatorErrVal": 0.0,
-                  "Name": "XXXXX",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                      "AccumulateToday": false,
-                      "AccumulateEventName": "[Clock].DoReportCalculations",
-                      "NameOfPlantToLink": "KiwiFruit",
-                      "StartStageName": "StartEndo",
-                      "EndStageName": "EndChilling",
-                      "StartEventName": null,
-                      "EndEventName": null,
-                      "StartDate": "",
-                      "EndDate": "",
-                      "ReduceStageName": "EndFlowering",
-                      "FractionRemovedOnStage": 1.0,
-                      "ReduceEventName": null,
-                      "FractionRemovedOnEvent": 0.0,
-                      "ReduceDates": null,
-                      "FractionRemovedOnDate": 0.0,
-                      "FractionRemovedOnCut": 0.0,
-                      "FractionRemovedOnHarvest": 0.0,
-                      "FractionRemovedOnGraze": 0.0,
-                      "FractionRemovedOnPrune": 0.0,
-                      "Name": "AccEndoDailyMeanT",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[IWeather].MeanT",
-                          "Name": "DailyMeanT",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                      "AccumulateToday": false,
-                      "AccumulateEventName": "[Clock].DoReportCalculations",
-                      "NameOfPlantToLink": "KiwiFruit",
-                      "StartStageName": "StartEndo",
-                      "EndStageName": "EndChilling",
-                      "StartEventName": null,
-                      "EndEventName": null,
-                      "StartDate": "",
-                      "EndDate": "",
-                      "ReduceStageName": "EndFlowering",
-                      "FractionRemovedOnStage": 1.0,
-                      "ReduceEventName": null,
-                      "FractionRemovedOnEvent": 0.0,
-                      "ReduceDates": null,
-                      "FractionRemovedOnDate": 0.0,
-                      "FractionRemovedOnCut": 0.0,
-                      "FractionRemovedOnHarvest": 0.0,
-                      "FractionRemovedOnGraze": 0.0,
-                      "FractionRemovedOnPrune": 0.0,
-                      "Name": "EndoDays",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
-                          "Units": null,
-                          "Name": "OneDay",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
                   "$type": "Models.Functions.PhaseLookupValue, Models",
                   "Start": "EndChilling",
                   "End": "FruitMature",
@@ -185301,7 +185196,7 @@
                         15.0,
                         20.0,
                         30.0,
-                        40.0,
+                        35.0,
                         "NaN"
                       ],
                       "Y": [
@@ -185311,7 +185206,7 @@
                         0.019,
                         0.032,
                         0.059,
-                        0.086,
+                        0.059,
                         "NaN"
                       ],
                       "Name": "XYPairs",
@@ -186535,8 +186430,8 @@
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
+                          "$type": "Models.Functions.VariableReference, Models",
+                          "VariableName": "[Leaf].TotalCarbonDemand",
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -186563,7 +186458,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 100.0,
+                          "FixedValue": 1.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -186573,7 +186468,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 100.0,
+                          "FixedValue": 1.0,
                           "Units": null,
                           "Name": "QMetabolicPriority",
                           "ResourceName": null,
@@ -188752,7 +188647,7 @@
                                       "X": [
                                         0.0,
                                         0.25,
-                                        0.6,
+                                        0.7,
                                         0.9,
                                         1.0
                                       ],
@@ -188793,7 +188688,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 0.015,
+                                  "FixedValue": 0.06,
                                   "Units": "/d",
                                   "Name": "MaxRate",
                                   "ResourceName": null,
@@ -188821,7 +188716,7 @@
                                         0.0,
                                         15.0,
                                         25.0,
-                                        35.0,
+                                        40.0,
                                         45.0
                                       ],
                                       "Y": [
@@ -188861,7 +188756,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 0.015,
+                                  "FixedValue": 0.06,
                                   "Units": "/d",
                                   "Name": "MaxRate",
                                   "ResourceName": null,
@@ -189764,8 +189659,8 @@
                 },
                 {
                   "$type": "Models.Functions.DemandFunctions.AllometricDemandFunction, Models",
-                  "Const": 0.1,
-                  "Power": 1.5,
+                  "Const": 0.17,
+                  "Power": 1.15,
                   "Name": "TotalDMDemand",
                   "ResourceName": null,
                   "Children": [
@@ -190923,8 +190818,8 @@
                 },
                 {
                   "$type": "Models.Functions.DemandFunctions.AllometricDemandFunction, Models",
-                  "Const": 1.0,
-                  "Power": 1.0,
+                  "Const": 0.8,
+                  "Power": 0.9,
                   "Name": "TotalDMDemand",
                   "ResourceName": null,
                   "Children": [
@@ -191895,7 +191790,7 @@
                         {
                           "$type": "Models.Functions.BetaGrowthFunction, Models",
                           "tm": 750.0,
-                          "te": 1500.0,
+                          "te": 1800.0,
                           "Name": "BetaGrowthFunction",
                           "ResourceName": null,
                           "Children": [
