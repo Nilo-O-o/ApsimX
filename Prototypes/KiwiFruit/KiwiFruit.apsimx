@@ -191962,7 +191962,7 @@
                               "Children": [
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 12.3,
+                                  "FixedValue": 13.7,
                                   "Units": "",
                                   "Name": "InitialDM",
                                   "ResourceName": null,
@@ -192033,7 +192033,7 @@
                                   "Children": [
                                     {
                                       "$type": "Models.Functions.Constant, Models",
-                                      "FixedValue": -0.002,
+                                      "FixedValue": -0.004,
                                       "Units": null,
                                       "Name": "Constant",
                                       "ResourceName": null,
@@ -192089,7 +192089,7 @@
                                   "Children": [
                                     {
                                       "$type": "Models.Functions.Constant, Models",
-                                      "FixedValue": 0.003,
+                                      "FixedValue": 0.004,
                                       "Units": null,
                                       "Name": "Constant",
                                       "ResourceName": null,
@@ -194014,11 +194014,11 @@
               "Line": 4,
               "LineThickness": 0,
               "TableName": "PredictedObservedSingleBerryDMC",
-              "XFieldName": "Predicted.KiwiFruit.Fruit.MaxSingleBerryDMC",
-              "YFieldName": "Observed.KiwiFruit.Fruit.MaxSingleBerryDMC",
+              "XFieldName": "Observed.KiwiFruit.Fruit.MaxSingleBerryDMC",
+              "YFieldName": "Predicted.KiwiFruit.Fruit.MaxSingleBerryDMC",
               "X2FieldName": null,
               "Y2FieldName": null,
-              "ShowInLegend": false,
+              "ShowInLegend": true,
               "IncludeSeriesNameInLegend": false,
               "Cumulative": false,
               "CumulativeX": false,
