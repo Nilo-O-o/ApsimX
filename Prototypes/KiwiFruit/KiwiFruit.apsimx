@@ -1,6 +1,6 @@
 {
   "$type": "Models.Core.Simulations, Models",
-  "Version": 199,
+  "Version": 201,
   "Name": "Simulations",
   "ResourceName": null,
   "Children": [
@@ -138,12 +138,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -1405,7 +1399,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -1457,7 +1453,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -2319,12 +2315,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -3586,7 +3576,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -3638,7 +3630,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -5078,12 +5070,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -6345,7 +6331,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -6397,7 +6385,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -7572,12 +7560,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -8840,7 +8822,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -8892,7 +8876,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -10068,12 +10052,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -11335,7 +11313,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -11387,7 +11367,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -12562,12 +12542,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -13829,7 +13803,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -13881,7 +13857,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -15056,12 +15032,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -16323,7 +16293,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -16375,7 +16347,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -17550,12 +17522,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -18818,7 +18784,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -18870,7 +18838,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -20124,12 +20092,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -21391,7 +21353,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -21443,7 +21407,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -22618,12 +22582,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -23885,7 +23843,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -23937,7 +23897,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -25112,12 +25072,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -26379,7 +26333,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -26431,7 +26387,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -27606,12 +27562,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -28873,7 +28823,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -28925,7 +28877,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -30100,12 +30052,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -31367,7 +31313,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -31419,7 +31367,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -32594,12 +32542,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -33874,7 +33816,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -33926,7 +33870,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -34989,12 +34933,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -36269,7 +36207,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -36321,7 +36261,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -37384,12 +37324,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -38651,7 +38585,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -38703,7 +38639,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -39759,12 +39695,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -41026,7 +40956,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -41078,7 +41010,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -42134,12 +42066,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -43401,7 +43327,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -43453,7 +43381,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -44661,12 +44589,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -45928,7 +45850,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -45980,7 +45904,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -47474,12 +47398,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -48742,7 +48660,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -48794,7 +48714,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -49950,12 +49870,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -51217,7 +51131,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -51269,7 +51185,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -52317,12 +52233,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -53597,7 +53507,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -53649,7 +53561,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -54862,12 +54774,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -56142,7 +56048,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -56194,7 +56102,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -57249,12 +57157,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -58516,7 +58418,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -58568,7 +58472,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -59472,12 +59376,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -60738,7 +60636,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -60790,7 +60690,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -62208,12 +62108,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -63474,7 +63368,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -63526,7 +63422,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -65103,12 +64999,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -66369,7 +66259,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -66421,7 +66313,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -67998,12 +67890,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -69264,7 +69150,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -69316,7 +69204,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -70870,12 +70758,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -72136,7 +72018,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -72188,7 +72072,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -73742,12 +73626,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -75008,7 +74886,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -75060,7 +74940,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -76614,12 +76494,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -77880,7 +77754,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -77932,7 +77808,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -79486,12 +79362,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -80752,7 +80622,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -80804,7 +80676,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -82358,12 +82230,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -83624,7 +83490,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -83676,7 +83544,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -85230,12 +85098,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -86496,7 +86358,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -86548,7 +86412,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -88102,12 +87966,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -89368,7 +89226,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -89420,7 +89280,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -90974,12 +90834,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -92240,7 +92094,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -92292,7 +92148,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -93846,12 +93702,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -95112,7 +94962,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -95164,7 +95016,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -96718,12 +96570,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -97984,7 +97830,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -98036,7 +97884,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -99590,12 +99438,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -100856,7 +100698,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -100908,7 +100752,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -102462,12 +102306,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -103728,7 +103566,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -103780,7 +103620,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -105334,12 +105174,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -106600,7 +106434,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -106652,7 +106488,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -108206,12 +108042,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -109472,7 +109302,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -109524,7 +109356,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -111078,12 +110910,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -112358,7 +112184,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -112410,7 +112238,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -114720,12 +114548,6 @@
             },
             {
               "$type": "Models.PMF.Plant, Models",
-              "Phenology": null,
-              "Arbitrator": null,
-              "structure": null,
-              "Leaf": null,
-              "Root": null,
-              "AboveGround": null,
               "PlantType": null,
               "Name": "KiwiFruit",
               "ResourceName": null,
@@ -116000,7 +115822,9 @@
                 "        private double lowerLimitOfMonitoredLayer;",
                 "        private double upperLimitOfMonitoredLayer;",
                 "        private double depthOfMonitoredLayer;",
+                "        [field:NonSerialized]",
                 "        public IStructure Structure { private get; set; }",
+                "",
                 "",
                 "        //User inputs from properties tab",
                 "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -116052,7 +115876,7 @@
                 "            {",
                 "                // check root depth",
                 "                double currentRootDepth = 0.0;",
-                "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                 "                {",
                 "                    if (species.IsAlive)",
                 "                    {",
@@ -118104,12 +117928,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -119384,7 +119202,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -119436,7 +119256,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -122696,12 +122516,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -123976,7 +123790,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -124028,7 +123844,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -126667,12 +126483,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -127947,7 +127757,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -127999,7 +127811,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -130705,12 +130517,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -131985,7 +131791,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -132037,7 +131845,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -134743,12 +134551,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -136023,7 +135825,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -136075,7 +135879,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -138781,12 +138585,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -140061,7 +139859,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -140113,7 +139913,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -142819,12 +142619,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -144099,7 +143893,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -144151,7 +143947,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -146857,12 +146653,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -148137,7 +147927,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -148189,7 +147981,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -150895,12 +150687,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -152175,7 +151961,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -152227,7 +152015,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -154933,12 +154721,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -156213,7 +155995,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -156265,7 +156049,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -158971,12 +158755,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -160251,7 +160029,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -160303,7 +160083,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -163009,12 +162789,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -164289,7 +164063,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -164341,7 +164117,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -167047,12 +166823,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -168327,7 +168097,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -168379,7 +168151,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -171085,12 +170857,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -172365,7 +172131,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -172417,7 +172185,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -175034,7 +174802,7 @@
               "Name": "Weather",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -175044,7 +174812,7 @@
               "Name": "Clock",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -175053,7 +174821,7 @@
               "Name": "Summary",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -175061,7 +174829,7 @@
               "Name": "Soil Arbitrator",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -175102,7 +174870,7 @@
                   "Name": "Report",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175118,22 +174886,16 @@
                   "Name": "Stages",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175141,7 +174903,7 @@
                   "Name": "Fertiliser",
                   "ResourceName": "Fertiliser",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175157,7 +174919,7 @@
                   "Name": "SurfaceOrganicMatter",
                   "ResourceName": "SurfaceOrganicMatter",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175165,7 +174927,7 @@
                   "Name": "Irrigation",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175181,7 +174943,7 @@
                   "Name": "MicroClimate",
                   "ResourceName": "MicroClimate",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175220,7 +174982,7 @@
                   "Name": "ReportOnEvents",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175303,7 +175065,7 @@
                   "Name": "Reset on date",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -175346,7 +175108,7 @@
                       "Name": "LayerStructure",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175393,7 +175155,7 @@
                       "Name": "Chemical",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175420,7 +175182,7 @@
                       "Name": "Water",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175473,7 +175235,7 @@
                       "Name": "SoilWater",
                       "ResourceName": "WaterBalance",
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175533,7 +175295,7 @@
                       "Name": "Organic",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175549,7 +175311,7 @@
                       "Name": "OutputLayers",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175583,7 +175345,7 @@
                       "Name": "NO3",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175617,7 +175379,7 @@
                       "Name": "NH4",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175651,7 +175413,7 @@
                       "Name": "Urea",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175861,11 +175623,11 @@
                           "Name": "KiwiFruitSoil",
                           "ResourceName": null,
                           "Children": [],
-                          "Enabled": true,
+                          "Enabled": false,
                           "ReadOnly": false
                         }
                       ],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175873,7 +175635,7 @@
                       "Name": "Nutrient",
                       "ResourceName": "Nutrient",
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -175883,11 +175645,11 @@
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176106,7 +175868,7 @@
                   "Name": "AutomaticIrrigation",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176194,7 +175956,7 @@
                   "Name": "FactorLabels",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176366,7 +176128,7 @@
                   "Name": "AutomaticFertiliser",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176403,7 +176165,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -176455,7 +176219,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -176548,7 +176312,7 @@
                   "Name": "WaterStatus",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176618,7 +176382,7 @@
                   "Name": "SowDateCv",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176626,7 +176390,7 @@
                   "Name": "AgriChemical",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176643,7 +176407,7 @@
                   "Name": "Operations",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176707,11 +176471,11 @@
                   "Name": "OnPrune",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -176782,15 +176546,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -176861,11 +176625,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176901,11 +176665,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -176941,15 +176705,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177020,15 +176784,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177099,15 +176863,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177178,15 +176942,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177257,15 +177021,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177336,11 +177100,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -177384,7 +177148,7 @@
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177455,11 +177219,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -177495,15 +177259,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177574,15 +177338,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177653,11 +177417,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -177693,15 +177457,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177772,15 +177536,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177851,15 +177615,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -177930,11 +177694,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -177970,15 +177734,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178049,15 +177813,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178132,7 +177896,7 @@
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -178141,11 +177905,11 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178220,7 +177984,7 @@
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -178229,11 +177993,11 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178297,11 +178061,11 @@
                   "Name": "Cover_LAI",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178365,11 +178129,11 @@
                   "Name": "Canopy intercepted radiation",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178433,11 +178197,11 @@
                   "Name": "Transmitted light",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178501,11 +178265,11 @@
                   "Name": "FruitNumber",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178575,15 +178339,15 @@
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178653,7 +178417,7 @@
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -178663,11 +178427,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -178696,11 +178460,11 @@
                   "Name": "Observed",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178770,7 +178534,7 @@
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -178780,11 +178544,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -178813,11 +178577,11 @@
                   "Name": "Observed",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -178887,7 +178651,7 @@
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -178897,11 +178661,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -178930,11 +178694,11 @@
                   "Name": "Observed",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -179004,7 +178768,7 @@
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -179014,11 +178778,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -179047,15 +178811,15 @@
                   "Name": "Observed",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -179161,12 +178925,6 @@
                 },
                 {
                   "$type": "Models.PMF.Plant, Models",
-                  "Phenology": null,
-                  "Arbitrator": null,
-                  "structure": null,
-                  "Leaf": null,
-                  "Root": null,
-                  "AboveGround": null,
                   "PlantType": null,
                   "Name": "KiwiFruit",
                   "ResourceName": null,
@@ -180441,7 +180199,9 @@
                     "        private double lowerLimitOfMonitoredLayer;",
                     "        private double upperLimitOfMonitoredLayer;",
                     "        private double depthOfMonitoredLayer;",
+                    "        [field:NonSerialized]",
                     "        public IStructure Structure { private get; set; }",
+                    "",
                     "",
                     "        //User inputs from properties tab",
                     "        [Description(\"Depth to monitor soil moisture is based on root depth?\")]",
@@ -180493,7 +180253,7 @@
                     "            {",
                     "                // check root depth",
                     "                double currentRootDepth = 0.0;",
-                    "                foreach (Plant species in myZone.FindAllChildren<Plant>().OfType<IModel>().ToList())",
+                    "                foreach (Plant species in   Structure.FindChildren<Plant>(recurse: true, relativeTo: (INodeModel)myZone).OfType<IModel>().ToList())",
                     "                {",
                     "                    if (species.IsAlive)",
                     "                    {",
@@ -183108,12 +182868,6 @@
       "Children": [
         {
           "$type": "Models.PMF.Plant, Models",
-          "Phenology": null,
-          "Arbitrator": null,
-          "structure": null,
-          "Leaf": null,
-          "Root": null,
-          "AboveGround": null,
           "PlantType": "KiwiFruit",
           "Name": "KiwiFruit",
           "ResourceName": null,
@@ -183164,7 +182918,6 @@
             },
             {
               "$type": "Models.PMF.Phen.Phenology, Models",
-              "thermalTime": null,
               "Name": "Phenology",
               "ResourceName": null,
               "Children": [
@@ -183348,7 +183101,6 @@
                 },
                 {
                   "$type": "Models.Functions.SubDailyInterpolation, Models",
-                  "InterpolationMethod": null,
                   "agregationMethod": 1,
                   "Name": "ChillModelHourly",
                   "ResourceName": null,
@@ -183484,7 +183236,6 @@
                 },
                 {
                   "$type": "Models.Functions.SubDailyInterpolation, Models",
-                  "InterpolationMethod": null,
                   "agregationMethod": 1,
                   "Name": "HeatModelHourlyBB",
                   "ResourceName": null,
@@ -183517,7 +183268,6 @@
                 },
                 {
                   "$type": "Models.Functions.SubDailyInterpolation, Models",
-                  "InterpolationMethod": null,
                   "agregationMethod": 1,
                   "Name": "HeatModelHourlyFlwr",
                   "ResourceName": null,
@@ -183550,17 +183300,16 @@
                 },
                 {
                   "$type": "Models.Functions.SubDailyInterpolation, Models",
-                  "InterpolationMethod": null,
                   "agregationMethod": 1,
                   "Name": "HeatModelHourlyFruit",
                   "ResourceName": null,
                   "Children": [
                     {
                       "$type": "Models.Functions.WangEngelTempFunction, Models",
-                      "MinTemp": 17.0,
-                      "OptTemp": 25.68,
+                      "MinTemp": 15.0,
+                      "OptTemp": 27.0,
                       "MaxTemp": 34.0,
-                      "RefTemp": 25.68,
+                      "RefTemp": 27.0,
                       "MaximumTemperatureWeighting": 0.0,
                       "Units": "GDH",
                       "Name": "Response",
@@ -185234,11 +184983,6 @@
             },
             {
               "$type": "Models.PMF.Organ, Models",
-              "parentPlant": null,
-              "senescenceRate": null,
-              "InitialWt": null,
-              "Carbon": null,
-              "Nitrogen": null,
               "RootNetworkObject": null,
               "Cconc": 0.4,
               "IsAboveGround": true,
@@ -185272,10 +185016,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "AssimilationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -185325,10 +185065,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "MobilisationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -185434,18 +185170,11 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -185454,7 +185183,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -185463,7 +185191,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -185506,15 +185233,11 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientProportionFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
                       "Name": "PoolFractions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.CalculateCarbonFractionFromNConc, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -185523,7 +185246,6 @@
                         },
                         {
                           "$type": "Models.PMF.CalculateCarbonFractionFromNConc, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -185532,7 +185254,6 @@
                         },
                         {
                           "$type": "Models.PMF.CalculateCarbonFractionFromNConc, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -185545,10 +185266,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -185574,9 +185291,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -185634,9 +185348,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -185734,18 +185445,11 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -185754,7 +185458,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -185763,7 +185466,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -185806,10 +185508,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -185835,9 +185533,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -185895,9 +185590,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -185959,9 +185651,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientConcentrationFunctions, Models",
-                      "Maximum": null,
-                      "Critical": null,
-                      "Minimum": null,
                       "Name": "ConcFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -186230,11 +185919,6 @@
             },
             {
               "$type": "Models.PMF.Organ, Models",
-              "parentPlant": null,
-              "senescenceRate": null,
-              "InitialWt": null,
-              "Carbon": null,
-              "Nitrogen": null,
               "RootNetworkObject": null,
               "Cconc": 0.4,
               "IsAboveGround": true,
@@ -186268,10 +185952,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "AssimilationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -186321,10 +186001,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "MobilisationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -186420,12 +186096,6 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -186440,7 +186110,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -186449,7 +186118,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -186492,10 +186160,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -186538,9 +186202,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -186598,9 +186259,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -186662,9 +186320,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientProportionFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
                       "Name": "PoolFractions",
                       "ResourceName": null,
                       "Children": [
@@ -186740,18 +186395,11 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -186760,7 +186408,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -186769,7 +186416,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -186812,10 +186458,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -186841,9 +186483,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -186901,9 +186540,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -186965,9 +186601,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientConcentrationFunctions, Models",
-                      "Maximum": null,
-                      "Critical": null,
-                      "Minimum": null,
                       "Name": "ConcFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -187422,9 +187055,6 @@
                 },
                 {
                   "$type": "Models.Functions.SupplyFunctions.RUEModel, Models",
-                  "FT": null,
-                  "FVPD": null,
-                  "RadnInt": null,
                   "Name": "Photosynthesis",
                   "ResourceName": null,
                   "Children": [
@@ -188846,11 +188476,6 @@
             },
             {
               "$type": "Models.PMF.Organ, Models",
-              "parentPlant": null,
-              "senescenceRate": null,
-              "InitialWt": null,
-              "Carbon": null,
-              "Nitrogen": null,
               "RootNetworkObject": null,
               "Cconc": 0.4,
               "IsAboveGround": true,
@@ -188884,10 +188509,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "AssimilationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -188937,10 +188558,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "MobilisationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -189045,12 +188662,6 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -189119,9 +188730,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientProportionFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
                       "Name": "PoolFractions",
                       "ResourceName": null,
                       "Children": [
@@ -189161,10 +188769,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -189190,9 +188794,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -189232,9 +188833,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -189314,18 +188912,11 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -189334,7 +188925,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -189343,7 +188933,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -189386,10 +188975,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -189415,9 +189000,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -189475,9 +189057,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -189539,9 +189118,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientConcentrationFunctions, Models",
-                      "Maximum": null,
-                      "Critical": null,
-                      "Minimum": null,
                       "Name": "ConcFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -189731,11 +189307,6 @@
             },
             {
               "$type": "Models.PMF.Organ, Models",
-              "parentPlant": null,
-              "senescenceRate": null,
-              "InitialWt": null,
-              "Carbon": null,
-              "Nitrogen": null,
               "RootNetworkObject": null,
               "Cconc": 0.4,
               "IsAboveGround": false,
@@ -189769,10 +189340,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "AssimilationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -189822,10 +189389,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "MobilisationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -189931,18 +189494,11 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -189951,7 +189507,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -189960,7 +189515,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -190003,10 +189557,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -190032,9 +189582,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -190092,9 +189639,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -190156,15 +189700,11 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientProportionFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
                       "Name": "PoolFractions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.CalculateCarbonFractionFromNConc, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -190173,7 +189713,6 @@
                         },
                         {
                           "$type": "Models.PMF.CalculateCarbonFractionFromNConc, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -190182,7 +189721,6 @@
                         },
                         {
                           "$type": "Models.PMF.CalculateCarbonFractionFromNConc, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -190231,18 +189769,11 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -190251,7 +189782,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Storage",
                           "ResourceName": null,
                           "Children": [],
@@ -190260,7 +189790,6 @@
                         },
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
@@ -190303,10 +189832,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -190332,9 +189857,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -190392,9 +189914,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -190456,9 +189975,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientConcentrationFunctions, Models",
-                      "Maximum": null,
-                      "Critical": null,
-                      "Minimum": null,
                       "Name": "ConcFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -190502,9 +190018,6 @@
                 },
                 {
                   "$type": "Models.PMF.RootNetwork, Models",
-                  "parentOrgan": null,
-                  "RootFrontCalcSwitch": null,
-                  "RootDepthStressFactor": null,
                   "ZoneNamesToGrowRootsIn": [],
                   "klByLayer": null,
                   "WaterTakenUp": null,
@@ -190890,11 +190403,6 @@
             },
             {
               "$type": "Models.PMF.Organ, Models",
-              "parentPlant": null,
-              "senescenceRate": null,
-              "InitialWt": null,
-              "Carbon": null,
-              "Nitrogen": null,
               "RootNetworkObject": null,
               "Cconc": 0.4,
               "IsAboveGround": true,
@@ -190928,10 +190436,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "AssimilationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -190981,10 +190485,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientFunctions, Models",
-                      "C": null,
-                      "N": null,
-                      "P": null,
-                      "K": null,
                       "Name": "MobilisationCostFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -191090,12 +190590,6 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -191164,9 +190658,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientProportionFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
                       "Name": "PoolFractions",
                       "ResourceName": null,
                       "Children": [
@@ -191206,10 +190697,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -191235,9 +190722,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -191277,9 +190761,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -191359,18 +190840,11 @@
                   "Children": [
                     {
                       "$type": "Models.PMF.NutrientDemandFunctions, Models",
-                      "Structural": null,
-                      "Metabolic": null,
-                      "Storage": null,
-                      "QStructuralPriority": null,
-                      "QMetabolicPriority": null,
-                      "QStoragePriority": null,
                       "Name": "DemandFunctions",
                       "ResourceName": null,
                       "Children": [
                         {
                           "$type": "Models.PMF.DeficitDemandFunction, Models",
-                          "multiplier": null,
                           "Name": "Structural",
                           "ResourceName": null,
                           "Children": [],
@@ -191433,10 +190907,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientSupplyFunctions, Models",
-                      "ReAllocation": null,
-                      "Uptake": null,
-                      "Fixation": null,
-                      "ReTranslocation": null,
                       "Name": "SupplyFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -191462,9 +190932,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReAllocation",
                           "ResourceName": null,
                           "Children": [
@@ -191504,9 +190971,6 @@
                         },
                         {
                           "$type": "Models.PMF.NutrientPoolFunctions, Models",
-                          "Structural": null,
-                          "Metabolic": null,
-                          "Storage": null,
                           "Name": "ReTranslocation",
                           "ResourceName": null,
                           "Children": [
@@ -191550,9 +191014,6 @@
                     },
                     {
                       "$type": "Models.PMF.NutrientConcentrationFunctions, Models",
-                      "Maximum": null,
-                      "Critical": null,
-                      "Minimum": null,
                       "Name": "ConcFunctions",
                       "ResourceName": null,
                       "Children": [
@@ -191941,192 +191402,99 @@
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.MinimumFunction, Models",
-                          "Name": "MinimumFunction",
+                          "$type": "Models.Functions.SigmoidFunction, Models",
+                          "Name": "SigmoidFunction",
                           "ResourceName": null,
                           "Children": [
                             {
                               "$type": "Models.Functions.Constant, Models",
                               "FixedValue": 20.0,
                               "Units": "",
-                              "Name": "MaxDM",
+                              "Name": "Ymax",
                               "ResourceName": null,
                               "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.AddFunction, Models",
-                              "Name": "DMC",
+                              "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                              "AccumulateToday": false,
+                              "AccumulateEventName": "[Clock].DoReportCalculations",
+                              "NameOfPlantToLink": "KiwiFruit",
+                              "StartStageName": "EndFlowering",
+                              "EndStageName": "FruitMature",
+                              "StartEventName": null,
+                              "EndEventName": null,
+                              "StartDate": "",
+                              "EndDate": "",
+                              "ReduceStageName": "BareTree",
+                              "FractionRemovedOnStage": 1.0,
+                              "ReduceEventName": null,
+                              "FractionRemovedOnEvent": 0.0,
+                              "ReduceDates": null,
+                              "FractionRemovedOnDate": "NaN",
+                              "FractionRemovedOnCut": 0.0,
+                              "FractionRemovedOnHarvest": 1.0,
+                              "FractionRemovedOnGraze": 0.0,
+                              "FractionRemovedOnPrune": 0.0,
+                              "Name": "XValue",
                               "ResourceName": null,
                               "Children": [
                                 {
-                                  "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 13.7,
-                                  "Units": "",
-                                  "Name": "InitialDM",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.MultiplyFunction, Models",
-                                  "Name": "SpringMeanTShare",
+                                  "$type": "Models.Functions.AddFunction, Models",
+                                  "Name": "AddFunction",
                                   "ResourceName": null,
                                   "Children": [
                                     {
-                                      "$type": "Models.Functions.Constant, Models",
-                                      "FixedValue": 0.01,
-                                      "Units": null,
-                                      "Name": "Constant",
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                      "Name": "HeatModelHourlyFruit",
                                       "ResourceName": null,
                                       "Children": [],
                                       "Enabled": true,
                                       "ReadOnly": false
                                     },
                                     {
-                                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                                      "AccumulateToday": false,
-                                      "AccumulateEventName": "[Clock].DoReportCalculations",
-                                      "NameOfPlantToLink": "KiwiFruit",
-                                      "StartStageName": "EndFlowering",
-                                      "EndStageName": "StartFruitGrowth",
-                                      "StartEventName": null,
-                                      "EndEventName": null,
-                                      "StartDate": "",
-                                      "EndDate": "",
-                                      "ReduceStageName": "BareTree",
-                                      "FractionRemovedOnStage": 1.0,
-                                      "ReduceEventName": null,
-                                      "FractionRemovedOnEvent": 0.0,
-                                      "ReduceDates": null,
-                                      "FractionRemovedOnDate": "NaN",
-                                      "FractionRemovedOnCut": 0.0,
-                                      "FractionRemovedOnHarvest": 1.0,
-                                      "FractionRemovedOnGraze": 0.0,
-                                      "FractionRemovedOnPrune": 0.0,
-                                      "Name": "AccumulatedTemps",
+                                      "$type": "Models.Functions.MultiplyFunction, Models",
+                                      "Name": "PTQ",
                                       "ResourceName": null,
                                       "Children": [
                                         {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[IWeather].MeanT",
-                                          "Name": "DailyMeanT",
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 1.0,
+                                          "Units": "",
+                                          "Name": "Sensitivity",
                                           "ResourceName": null,
                                           "Children": [],
                                           "Enabled": true,
                                           "ReadOnly": false
-                                        }
-                                      ],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    }
-                                  ],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.MultiplyFunction, Models",
-                                  "Name": "SummerMeanTShare",
-                                  "ResourceName": null,
-                                  "Children": [
-                                    {
-                                      "$type": "Models.Functions.Constant, Models",
-                                      "FixedValue": -0.004,
-                                      "Units": null,
-                                      "Name": "Constant",
-                                      "ResourceName": null,
-                                      "Children": [],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    },
-                                    {
-                                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                                      "AccumulateToday": false,
-                                      "AccumulateEventName": "[Clock].DoReportCalculations",
-                                      "NameOfPlantToLink": "KiwiFruit",
-                                      "StartStageName": "StartFruitGrowth",
-                                      "EndStageName": "FruitMaxSize",
-                                      "StartEventName": null,
-                                      "EndEventName": null,
-                                      "StartDate": "",
-                                      "EndDate": "",
-                                      "ReduceStageName": "BareTree",
-                                      "FractionRemovedOnStage": 1.0,
-                                      "ReduceEventName": null,
-                                      "FractionRemovedOnEvent": 0.0,
-                                      "ReduceDates": null,
-                                      "FractionRemovedOnDate": "NaN",
-                                      "FractionRemovedOnCut": 0.0,
-                                      "FractionRemovedOnHarvest": 1.0,
-                                      "FractionRemovedOnGraze": 0.0,
-                                      "FractionRemovedOnPrune": 0.0,
-                                      "Name": "AccumulatedTemps",
-                                      "ResourceName": null,
-                                      "Children": [
+                                        },
                                         {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[IWeather].MeanT",
-                                          "Name": "DailyMeanT",
+                                          "$type": "Models.Functions.ProtectedDivideFunction, Models",
+                                          "NumeratorErrVal": 0.0,
+                                          "DenominatorErrVal": 0.0,
+                                          "Name": "ProtectedDivideFunction",
                                           "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        }
-                                      ],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    }
-                                  ],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.MultiplyFunction, Models",
-                                  "Name": "AutumnMeanTShare",
-                                  "ResourceName": null,
-                                  "Children": [
-                                    {
-                                      "$type": "Models.Functions.Constant, Models",
-                                      "FixedValue": 0.004,
-                                      "Units": null,
-                                      "Name": "Constant",
-                                      "ResourceName": null,
-                                      "Children": [],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    },
-                                    {
-                                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
-                                      "AccumulateToday": false,
-                                      "AccumulateEventName": "[Clock].DoReportCalculations",
-                                      "NameOfPlantToLink": "KiwiFruit",
-                                      "StartStageName": "FruitMaxSize",
-                                      "EndStageName": "FruitMature",
-                                      "StartEventName": null,
-                                      "EndEventName": null,
-                                      "StartDate": "",
-                                      "EndDate": "",
-                                      "ReduceStageName": "BareTree",
-                                      "FractionRemovedOnStage": 1.0,
-                                      "ReduceEventName": null,
-                                      "FractionRemovedOnEvent": 0.0,
-                                      "ReduceDates": null,
-                                      "FractionRemovedOnDate": "NaN",
-                                      "FractionRemovedOnCut": 0.0,
-                                      "FractionRemovedOnHarvest": 1.0,
-                                      "FractionRemovedOnGraze": 0.0,
-                                      "FractionRemovedOnPrune": 0.0,
-                                      "Name": "AccumulatedTemps",
-                                      "ResourceName": null,
-                                      "Children": [
-                                        {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[IWeather].MeanT",
-                                          "Name": "DailyMeanT",
-                                          "ResourceName": null,
-                                          "Children": [],
+                                          "Children": [
+                                            {
+                                              "$type": "Models.Functions.VariableReference, Models",
+                                              "VariableName": "[IWeather].Radn",
+                                              "Name": "DailyMeanRdn",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            },
+                                            {
+                                              "$type": "Models.Functions.VariableReference, Models",
+                                              "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                              "Name": "HeatModelHourlyFruit",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            }
+                                          ],
                                           "Enabled": true,
                                           "ReadOnly": false
                                         }
@@ -192139,6 +191507,26 @@
                                   "ReadOnly": false
                                 }
                               ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 500.0,
+                              "Units": "",
+                              "Name": "Xo",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 625.0,
+                              "Units": "",
+                              "Name": "b",
+                              "ResourceName": null,
+                              "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             }
@@ -193976,8 +193364,8 @@
               "Inverted": false,
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
-              "Minimum": 10.0,
-              "Maximum": 22.0,
+              "Minimum": 14.0,
+              "Maximum": 20.0,
               "Interval": null
             },
             {
@@ -193987,8 +193375,8 @@
               "Inverted": false,
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
-              "Minimum": 10.0,
-              "Maximum": 22.0,
+              "Minimum": 14.0,
+              "Maximum": 20.0,
               "Interval": null
             }
           ],
