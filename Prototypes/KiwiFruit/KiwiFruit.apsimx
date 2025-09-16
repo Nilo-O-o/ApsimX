@@ -121861,7 +121861,18 @@
                   "Filter": null,
                   "Name": "FruitWt",
                   "ResourceName": null,
-                  "Children": [],
+                  "Children": [
+                    {
+                      "$type": "Models.EventNamesOnGraph, Models",
+                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
+                      "SimulationName": "TPHW2016_2024",
+                      "Name": "EventNamesOnGraph",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
                   "Enabled": true,
                   "ReadOnly": false
                 }
@@ -184926,6 +184937,15 @@
                       "Children": [],
                       "Enabled": true,
                       "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Memo, Models",
+                      "Text": "Effects of hydrogen cyanamide on budbreak\nand flowering in kiwifruit (Actinidia deliciosa\n’Hayward')\n\nFig.5.B",
+                      "Name": "Memo",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
                     }
                   ],
                   "Enabled": true,
@@ -188048,6 +188068,15 @@
                           "Children": [],
                           "Enabled": true,
                           "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Memo, Models",
+                          "Text": "Accumulation and partitioning of dry matter and mineral nutrients in developing kiwifruit vines\n\n\np. 299: 6.4 (m2 kg-1)  ==> 0.0064 (m2 g-1)",
+                          "Name": "Memo1",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
                         }
                       ],
                       "Enabled": true,
@@ -189314,6 +189343,15 @@
               "ResourceName": null,
               "Children": [
                 {
+                  "$type": "Models.Memo, Models",
+                  "Text": "Read:\n\nAccumulation and partitioning of dry matter and mineral nutrients in developing kiwifruit vines - p.298\n\nWith an allometric function of Y = aW^b, we might be able to to find the root weight change by its growing size.\n",
+                  "Name": "Memo",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
                   "$type": "Models.Functions.Constant, Models",
                   "FixedValue": 500.0,
                   "Units": "g/m2",
@@ -190337,6 +190375,15 @@
                   "ResourceName": null,
                   "Children": [
                     {
+                      "$type": "Models.Memo, Models",
+                      "Text": "Check: \n\n\nAccumulation and partitioning of dry matter and mineral\nnutrients in developing kiwifruit vines\n\npage. 299: the ratioof leaf area to root length => 0.76 m2/Km for five-year-old vines",
+                      "Name": "Memo",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
                       "$type": "Models.Functions.VariableReference, Models",
                       "VariableName": "[Leaf].Live.Wt",
                       "Name": "XValue",
@@ -190409,6 +190456,15 @@
               "Name": "Fruit",
               "ResourceName": null,
               "Children": [
+                {
+                  "$type": "Models.Memo, Models",
+                  "Text": "Check for biomass balance between organs\n\nKiwifruit reserves: balancing vine growth and fruit productivity",
+                  "Name": "Memo",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
                 {
                   "$type": "Models.Functions.Constant, Models",
                   "FixedValue": 0.0,
@@ -191249,34 +191305,124 @@
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.BetaGrowthFunction, Models",
-                          "tm": 500.0,
-                          "te": 2300.0,
-                          "Name": "BetaGrowthFunction",
+                          "$type": "Models.Functions.AddFunction, Models",
+                          "Name": "AddFunction",
                           "ResourceName": null,
                           "Children": [
                             {
                               "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 40.0,
+                              "FixedValue": 0.5,
                               "Units": "",
-                              "Name": "Ymax",
+                              "Name": "InitialBerryWt",
                               "ResourceName": null,
-                              "Children": [],
+                              "Children": [
+                                {
+                                  "$type": "Models.Memo, Models",
+                                  "Text": "A biophysical model of kiwifruit (Actinidia deliciosa) berry development\n\nAppendix: Table (b) => initial berry weight",
+                                  "Name": "Memo",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
                               "Enabled": true,
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.AccumulateByDate, Models",
-                              "StartDate": "25-Dec",
-                              "EndDate": "18-May",
-                              "ResetDate": "20-May",
-                              "Name": "XValue",
+                              "$type": "Models.Functions.BetaGrowthFunction, Models",
+                              "tm": 650.0,
+                              "te": 2200.0,
+                              "Name": "BetaGrowthFunction",
                               "ResourceName": null,
                               "Children": [
                                 {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Phenology].HeatModelHourlyFruit",
-                                  "Name": "TT",
+                                  "$type": "Models.Functions.AccumulateFunction, Models",
+                                  "StartStageName": "EndFlowering",
+                                  "EndStageName": "FruitMature",
+                                  "ResetStageName": "BareTree",
+                                  "FractionRemovedOnCut": 0.0,
+                                  "FractionRemovedOnHarvest": 1.0,
+                                  "FractionRemovedOnGraze": 0.0,
+                                  "FractionRemovedOnPrune": 0.0,
+                                  "Name": "XValue",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.AddFunction, Models",
+                                      "Name": "AddFunction",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                          "Name": "HeatModelHourlyFruit",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.MultiplyFunction, Models",
+                                          "Name": "PTQ",
+                                          "ResourceName": null,
+                                          "Children": [
+                                            {
+                                              "$type": "Models.Functions.Constant, Models",
+                                              "FixedValue": 0.6,
+                                              "Units": "",
+                                              "Name": "Sensitivity",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            },
+                                            {
+                                              "$type": "Models.Functions.ProtectedDivideFunction, Models",
+                                              "NumeratorErrVal": 0.0,
+                                              "DenominatorErrVal": 0.0,
+                                              "Name": "ProtectedDivideFunction",
+                                              "ResourceName": null,
+                                              "Children": [
+                                                {
+                                                  "$type": "Models.Functions.VariableReference, Models",
+                                                  "VariableName": "[IWeather].Radn",
+                                                  "Name": "DailyMeanRdn",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                },
+                                                {
+                                                  "$type": "Models.Functions.VariableReference, Models",
+                                                  "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                                  "Name": "HeatModelHourlyFruit",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                }
+                                              ],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            }
+                                          ],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 30.0,
+                                  "Units": "",
+                                  "Name": "Ymax",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
@@ -192024,7 +192170,7 @@
                   "Children": [
                     {
                       "$type": "Models.Memo, Models",
-                      "Text": "Y (yield) before unit conversion: Kg/m2\n\nY (yield) after unit conversion: t/ha",
+                      "Text": "I n f l u e n c e of Fruit N u m b e r on Fruit Weight and Yield of K i w i f r u i t: Eq. 1\n\n\n\n\nY (yield) before unit conversion: Kg/m2\n\nY (yield) after unit conversion: t/ha",
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
@@ -192625,8 +192771,7 @@
             "[KiwiFruit].Root.Wt",
             "[KiwiFruit].Trunk.Wt",
             "[KiwiFruit].Fruit.TCD.DeltaFunction",
-            "[KiwiFruit].Fruit.FruitNumberPerM2.FruitingPhase.PerM2.FruitNumberPerVine.HCFraction",
-            "[KiwiFruit].Fruit.PotentialSingleBerryDW.FruitingPhase.BetaGrowthFunction.XValue"
+            "[KiwiFruit].Fruit.FruitNumberPerM2.FruitingPhase.PerM2.FruitNumberPerVine.HCFraction"
           ],
           "EventNames": [
             "[Clock].DoReport"
