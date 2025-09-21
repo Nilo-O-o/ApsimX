@@ -216117,7 +216117,7 @@
                             },
                             {
                               "$type": "Models.Functions.BetaGrowthFunction, Models",
-                              "tm": 1800.0,
+                              "tm": 2000.0,
                               "te": 3400.0,
                               "Name": "BetaGrowthFunction",
                               "ResourceName": null,
@@ -216149,7 +216149,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 30.0,
+                                  "FixedValue": 29.0,
                                   "Units": "",
                                   "Name": "Ymax",
                                   "ResourceName": null,
@@ -216330,69 +216330,65 @@
                                       "ReadOnly": false
                                     },
                                     {
-                                      "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                                      "Name": "Sensitivity",
+                                      "$type": "Models.Functions.AddFunction, Models",
+                                      "Name": "AddFunction",
                                       "ResourceName": null,
                                       "Children": [
                                         {
-                                          "$type": "Models.Functions.XYPairs, Models",
-                                          "X": [
-                                            0.0,
-                                            5.0,
-                                            7.5,
-                                            30.0,
-                                            35.0,
-                                            40.0
-                                          ],
-                                          "Y": [
-                                            0.0,
-                                            0.0,
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0
-                                          ],
-                                          "Name": "XYPairs",
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 1.0,
+                                          "Units": "",
+                                          "Name": "One",
                                           "ResourceName": null,
                                           "Children": [],
                                           "Enabled": true,
                                           "ReadOnly": false
                                         },
                                         {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[Phenology].HeatModelHourlyFruit",
-                                          "Name": "XValue",
+                                          "$type": "Models.Functions.MultiplyFunction, Models",
+                                          "Name": "PTQEffect",
                                           "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        }
-                                      ],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    },
-                                    {
-                                      "$type": "Models.Functions.ProtectedDivideFunction, Models",
-                                      "NumeratorErrVal": 0.0,
-                                      "DenominatorErrVal": 0.0,
-                                      "Name": "PTQ",
-                                      "ResourceName": null,
-                                      "Children": [
-                                        {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[IWeather].Radn",
-                                          "Name": "DailyMeanRdn",
-                                          "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        },
-                                        {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[Phenology].HeatModelHourlyFruit",
-                                          "Name": "HeatModelHourlyFruit",
-                                          "ResourceName": null,
-                                          "Children": [],
+                                          "Children": [
+                                            {
+                                              "$type": "Models.Functions.ProtectedDivideFunction, Models",
+                                              "NumeratorErrVal": 0.0,
+                                              "DenominatorErrVal": 0.0,
+                                              "Name": "PTQ",
+                                              "ResourceName": null,
+                                              "Children": [
+                                                {
+                                                  "$type": "Models.Functions.VariableReference, Models",
+                                                  "VariableName": "[IWeather].Radn",
+                                                  "Name": "DailyMeanRdn",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                },
+                                                {
+                                                  "$type": "Models.Functions.VariableReference, Models",
+                                                  "VariableName": "[Phenology].HeatModelHourlyFruit",
+                                                  "Name": "HeatModelHourlyFruit",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                }
+                                              ],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            },
+                                            {
+                                              "$type": "Models.Functions.Constant, Models",
+                                              "FixedValue": 0.0,
+                                              "Units": "",
+                                              "Name": "constant",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            }
+                                          ],
                                           "Enabled": true,
                                           "ReadOnly": false
                                         }
@@ -216410,7 +216406,7 @@
                             },
                             {
                               "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 1200.0,
+                              "FixedValue": 1800.0,
                               "Units": "",
                               "Name": "Xo",
                               "ResourceName": null,
@@ -216420,7 +216416,7 @@
                             },
                             {
                               "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 900.0,
+                              "FixedValue": 700.0,
                               "Units": "",
                               "Name": "b",
                               "ResourceName": null,
@@ -218170,7 +218166,7 @@
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
               "Minimum": 10.0,
-              "Maximum": 21.0,
+              "Maximum": 23.0,
               "Interval": null
             },
             {
@@ -218181,7 +218177,7 @@
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
               "Minimum": 10.0,
-              "Maximum": 21.0,
+              "Maximum": 23.0,
               "Interval": null
             }
           ],
