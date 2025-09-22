@@ -119435,52 +119435,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -123989,45 +123947,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-08-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-08-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-17",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-17 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-29",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-29 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-09-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-09-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-20",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-20 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -127824,38 +127747,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-04",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-04 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-03",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-03 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-13",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-13 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -131662,52 +131557,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -135738,52 +135591,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -139814,52 +139625,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -143890,52 +143659,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -147966,52 +147693,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -152042,52 +151727,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -156118,52 +155761,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -160194,52 +159795,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -164270,52 +163829,10 @@
                   "OperationsList": [
                     {
                       "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2015-08-02",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2015-08-02 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2016-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2016-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2017-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2017-08-07 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-07-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-07-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-07-23",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-07-23 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-07-26",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-07-26 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-07",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-07 [AgriChemical].Apply()"
+                      "Enabled": false,
+                      "Date": null,
+                      "Action": null,
+                      "Line": ""
                     }
                   ],
                   "Name": "Operations",
@@ -168350,48 +167867,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-08-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-08-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-17",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-17 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-29",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-29 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-09-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-09-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-20",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-20 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -172426,48 +171901,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-08-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-08-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-17",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-17 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-29",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-29 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-09-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-09-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-20",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-20 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -176502,48 +175935,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-08-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-08-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-17",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-17 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-29",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-29 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-09-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-09-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-20",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-20 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -180578,48 +179969,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-08-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-08-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-17",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-17 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-29",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-29 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-09-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-09-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-20",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-20 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -184654,48 +184003,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2018-08-27",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2018-08-27 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-17",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-17 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-29",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-29 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-09-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-09-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-20",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-20 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -188730,41 +188037,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-04",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-04 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-03",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-03 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-13",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-13 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -192799,41 +192071,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-04",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-04 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-03",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-03 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-13",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-13 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -196868,41 +196105,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-04",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-04 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-03",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-03 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-13",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-13 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -200937,41 +200139,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-04",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-04 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-03",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-03 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-13",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-13 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -205006,41 +204173,6 @@
                       "Date": null,
                       "Action": null,
                       "Line": ""
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2019-08-04",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-08-04 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2020-08-03",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-03 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2021-08-15",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-15 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2022-08-25",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2022-08-25 [AgriChemical].Apply()"
-                    },
-                    {
-                      "$type": "Models.Operation, Models",
-                      "Enabled": true,
-                      "Date": "2023-08-13",
-                      "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-13 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -216406,7 +215538,7 @@
                             },
                             {
                               "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 1800.0,
+                              "FixedValue": 1000.0,
                               "Units": "",
                               "Name": "Xo",
                               "ResourceName": null,
@@ -216416,7 +215548,7 @@
                             },
                             {
                               "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 700.0,
+                              "FixedValue": 1200.0,
                               "Units": "",
                               "Name": "b",
                               "ResourceName": null,
@@ -216631,6 +215763,16 @@
                                   "FixedValue": 1.0,
                                   "Units": "",
                                   "Name": "RetainedAfterThinning",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 4.0,
+                                  "Units": "",
+                                  "Name": "Setting",
                                   "ResourceName": null,
                                   "Children": [],
                                   "Enabled": true,
