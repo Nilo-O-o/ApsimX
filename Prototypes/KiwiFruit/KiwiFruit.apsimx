@@ -1,6 +1,6 @@
 {
   "$type": "Models.Core.Simulations, Models",
-  "Version": 204,
+  "Version": 205,
   "Name": "Simulations",
   "ResourceName": null,
   "Children": [
@@ -198737,9 +198737,9 @@
                     {
                       "$type": "Models.Operation, Models",
                       "Enabled": true,
-                      "Date": "2019-09-10",
+                      "Date": "2019-08-25",
                       "Action": "[AgriChemical].Apply()",
-                      "Line": "2019-09-10 [AgriChemical].Apply()"
+                      "Line": "2019-08-25 [AgriChemical].Apply()"
                     },
                     {
                       "$type": "Models.Operation, Models",
@@ -202867,9 +202867,9 @@
                     {
                       "$type": "Models.Operation, Models",
                       "Enabled": true,
-                      "Date": "2020-08-15",
+                      "Date": "2020-08-13",
                       "Action": "[AgriChemical].Apply()",
-                      "Line": "2020-08-15 [AgriChemical].Apply()"
+                      "Line": "2020-08-13 [AgriChemical].Apply()"
                     },
                     {
                       "$type": "Models.Operation, Models",
@@ -206997,9 +206997,9 @@
                     {
                       "$type": "Models.Operation, Models",
                       "Enabled": true,
-                      "Date": "2021-08-20",
+                      "Date": "2021-08-15",
                       "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-20 [AgriChemical].Apply()"
+                      "Line": "2021-08-15 [AgriChemical].Apply()"
                     },
                     {
                       "$type": "Models.Operation, Models",
@@ -207942,85 +207942,6 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Flowering",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -11094807,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "Report",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Phenology.Flowering.ProgressThroughPhase",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": false,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Predicted",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.EventNamesOnGraph, Models",
-                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                      "SimulationName": "KiwiTest",
-                      "Name": "EventNamesOnGraph",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "Clock.Today",
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": null,
-                  "Maximum": null,
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
               "Name": "FloweringDOY",
               "ResourceName": null,
               "Children": [
@@ -208101,6 +208022,74 @@
                       "ReadOnly": false
                     }
                   ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                }
+              ],
+              "Enabled": true,
+              "ReadOnly": false
+            },
+            {
+              "$type": "Models.Graph, Models",
+              "Caption": null,
+              "Axis": [
+                {
+                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                  "Title": null,
+                  "Position": 3,
+                  "Inverted": false,
+                  "CrossesAtZero": false,
+                  "LabelOnOneLine": false,
+                  "Minimum": null,
+                  "Maximum": null,
+                  "Interval": null
+                },
+                {
+                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                  "Title": null,
+                  "Position": 0,
+                  "Inverted": false,
+                  "CrossesAtZero": false,
+                  "LabelOnOneLine": false,
+                  "Minimum": null,
+                  "Maximum": null,
+                  "Interval": null
+                }
+              ],
+              "LegendPosition": 5,
+              "LegendOrientation": 0,
+              "AnnotationLocation": 0,
+              "DisabledSeries": [],
+              "LegendOutsideGraph": false,
+              "Name": "FlowersPerCane",
+              "ResourceName": null,
+              "Children": [
+                {
+                  "$type": "Models.Series, Models",
+                  "Type": 1,
+                  "XAxis": 3,
+                  "YAxis": 0,
+                  "ColourArgb": -16777216,
+                  "FactorToVaryColours": null,
+                  "FactorToVaryMarkers": null,
+                  "FactorToVaryLines": null,
+                  "Marker": 11,
+                  "MarkerSize": 0,
+                  "Line": 0,
+                  "LineThickness": 0,
+                  "TableName": "Report",
+                  "XFieldName": "Clock.Today",
+                  "YFieldName": "KiwiFruit.Phenology.Flowers",
+                  "X2FieldName": null,
+                  "Y2FieldName": null,
+                  "ShowInLegend": false,
+                  "IncludeSeriesNameInLegend": false,
+                  "Cumulative": false,
+                  "CumulativeX": false,
+                  "Filter": null,
+                  "Name": "Predicted",
+                  "ResourceName": null,
+                  "Children": [],
                   "Enabled": true,
                   "ReadOnly": false
                 }
@@ -215177,9 +215166,9 @@
                     {
                       "$type": "Models.Operation, Models",
                       "Enabled": true,
-                      "Date": "2023-08-01",
+                      "Date": "2023-08-09",
                       "Action": "[AgriChemical].Apply()",
-                      "Line": "2023-08-01 [AgriChemical].Apply()"
+                      "Line": "2023-08-09 [AgriChemical].Apply()"
                     },
                     {
                       "$type": "Models.Operation, Models",
@@ -238404,10 +238393,10 @@
                         0.57,
                         0.6,
                         0.6,
-                        1.0,
-                        1.0,
-                        1.0,
-                        1.0
+                        0.6,
+                        0.6,
+                        0.6,
+                        0.6
                       ],
                       "Name": "XYPairs",
                       "ResourceName": null,
@@ -238823,7 +238812,7 @@
                                           "Children": [
                                             {
                                               "$type": "Models.Functions.Constant, Models",
-                                              "FixedValue": 5.0,
+                                              "FixedValue": 10.0,
                                               "Units": null,
                                               "Name": "Sensitivity",
                                               "ResourceName": null,
@@ -238869,12 +238858,50 @@
                                           "ResourceName": null,
                                           "Children": [
                                             {
-                                              "$type": "Models.Functions.Constant, Models",
-                                              "FixedValue": 0.5,
-                                              "Units": null,
-                                              "Name": "Sensitivity",
+                                              "$type": "Models.Functions.LessThanFunction, Models",
+                                              "Name": "LessThanFunction",
                                               "ResourceName": null,
-                                              "Children": [],
+                                              "Children": [
+                                                {
+                                                  "$type": "Models.Functions.VariableReference, Models",
+                                                  "VariableName": "[Phenology].ChillingAtHC",
+                                                  "Name": "ChillingAtHC",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                },
+                                                {
+                                                  "$type": "Models.Functions.Constant, Models",
+                                                  "FixedValue": 1426.0,
+                                                  "Units": null,
+                                                  "Name": "HeatSensitivityStart",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                },
+                                                {
+                                                  "$type": "Models.Functions.Constant, Models",
+                                                  "FixedValue": 0.0,
+                                                  "Units": null,
+                                                  "Name": "Zero",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                },
+                                                {
+                                                  "$type": "Models.Functions.Constant, Models",
+                                                  "FixedValue": 0.5,
+                                                  "Units": null,
+                                                  "Name": "Sensitivity",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                }
+                                              ],
                                               "Enabled": true,
                                               "ReadOnly": false
                                             },
@@ -238887,7 +238914,7 @@
                                                   "$type": "Models.Functions.Constant, Models",
                                                   "FixedValue": 1.0,
                                                   "Units": null,
-                                                  "Name": "one",
+                                                  "Name": "One",
                                                   "ResourceName": null,
                                                   "Children": [],
                                                   "Enabled": true,
@@ -238903,15 +238930,6 @@
                                                   "ReadOnly": false
                                                 }
                                               ],
-                                              "Enabled": true,
-                                              "ReadOnly": false
-                                            },
-                                            {
-                                              "$type": "Models.Functions.VariableReference, Models",
-                                              "VariableName": "[Phenology].HCSensitivityHeat",
-                                              "Name": "HCSensitivityHeat",
-                                              "ResourceName": null,
-                                              "Children": [],
                                               "Enabled": true,
                                               "ReadOnly": false
                                             }
