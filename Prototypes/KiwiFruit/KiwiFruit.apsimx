@@ -247197,7 +247197,7 @@
                 },
                 {
                   "$type": "Models.Functions.PhaseLookup, Models",
-                  "Name": "PotentialSingleBerryDWBeta",
+                  "Name": "PotentialSingleBerryDW",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -247255,8 +247255,8 @@
                             },
                             {
                               "$type": "Models.Functions.BetaGrowthFunction, Models",
-                              "tm": 1800.0,
-                              "te": 3200.0,
+                              "tm": 1400.0,
+                              "te": 2800.0,
                               "Name": "BetaGrowthFunction",
                               "ResourceName": null,
                               "Children": [
@@ -247277,21 +247277,12 @@
                                   "ResourceName": null,
                                   "Children": [
                                     {
-                                      "$type": "Models.Functions.MultiplyFunction, Models",
-                                      "Name": "MultiplyFunction",
+                                      "$type": "Models.Functions.Constant, Models",
+                                      "FixedValue": 2000.0,
+                                      "Units": "",
+                                      "Name": "MaxDWPerM2",
                                       "ResourceName": null,
-                                      "Children": [
-                                        {
-                                          "$type": "Models.Functions.Constant, Models",
-                                          "FixedValue": 2800.0,
-                                          "Units": "",
-                                          "Name": "MaxDWPerM2",
-                                          "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        }
-                                      ],
+                                      "Children": [],
                                       "Enabled": true,
                                       "ReadOnly": false
                                     },
@@ -247301,21 +247292,40 @@
                                       "ResourceName": null,
                                       "Children": [
                                         {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[Fruit].FruitNumberPerM2",
-                                          "Name": "FruitsPerM2",
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 32.0,
+                                          "Units": "",
+                                          "Name": "FruitNumTurningPoint",
                                           "ResourceName": null,
                                           "Children": [],
                                           "Enabled": true,
                                           "ReadOnly": false
                                         },
                                         {
-                                          "$type": "Models.Functions.Constant, Models",
-                                          "FixedValue": 35.0,
-                                          "Units": "",
-                                          "Name": "FruitNumTurningPoint",
+                                          "$type": "Models.Functions.MultiplyFunction, Models",
+                                          "Name": "MultiplyFunction",
                                           "ResourceName": null,
-                                          "Children": [],
+                                          "Children": [
+                                            {
+                                              "$type": "Models.Functions.VariableReference, Models",
+                                              "VariableName": "[Fruit].FruitNumberPerM2",
+                                              "Name": "FruitsPerM2",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            },
+                                            {
+                                              "$type": "Models.Functions.Constant, Models",
+                                              "FixedValue": 1.0,
+                                              "Units": "",
+                                              "Name": "FruitNumSensitivity",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            }
+                                          ],
                                           "Enabled": true,
                                           "ReadOnly": false
                                         }
@@ -247447,27 +247457,86 @@
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.ProtectedDivideFunction, Models",
-                          "NumeratorErrVal": 0.0,
-                          "DenominatorErrVal": 0.0,
-                          "Name": "DM",
+                          "$type": "Models.Functions.BetaGrowthFunction, Models",
+                          "tm": 800.0,
+                          "te": 3200.0,
+                          "Name": "BetaGrowthFunction",
                           "ResourceName": null,
                           "Children": [
                             {
                               "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Fruit].SingleBerryDW",
-                              "Name": "DW",
+                              "VariableName": "[Fruit].FruitingPhaseAccTT",
+                              "Name": "XValue",
                               "ResourceName": null,
                               "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.VariableReference, Models",
-                              "VariableName": "[Fruit].SingleBerryFW",
-                              "Name": "FW",
+                              "$type": "Models.Functions.ProtectedDivideFunction, Models",
+                              "NumeratorErrVal": 0.0,
+                              "DenominatorErrVal": 0.0,
+                              "Name": "Ymax",
                               "ResourceName": null,
-                              "Children": [],
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 25.0,
+                                  "Units": "",
+                                  "Name": "MaxDMPerM2",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.AddFunction, Models",
+                                  "Name": "AddFunction",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.Constant, Models",
+                                      "FixedValue": 135.0,
+                                      "Units": "",
+                                      "Name": "FruitNumTurningPoint",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    },
+                                    {
+                                      "$type": "Models.Functions.MultiplyFunction, Models",
+                                      "Name": "MultiplyFunction",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Fruit].FruitNumberPerM2",
+                                          "Name": "FruitsPerM2",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 0.0,
+                                          "Units": "",
+                                          "Name": "FruitNumSensitivity",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
                               "Enabled": true,
                               "ReadOnly": false
                             }
@@ -248329,6 +248398,154 @@
                   "ReadOnly": false
                 },
                 {
+                  "$type": "Models.Functions.PhaseLookup, Models",
+                  "Name": "PotentialSingleBerryDWOld",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "StartEndo",
+                      "End": "EndFlowering",
+                      "Name": "NoFruit",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 0.0,
+                          "Units": "",
+                          "Name": "Zero",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.PhaseLookupValue, Models",
+                      "Start": "EndFlowering",
+                      "End": "BareTree",
+                      "Name": "FruitingPhase",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.AddFunction, Models",
+                          "Name": "AddFunction",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 0.5,
+                              "Units": "",
+                              "Name": "InitialBerryWt",
+                              "ResourceName": null,
+                              "Children": [
+                                {
+                                  "$type": "Models.Memo, Models",
+                                  "Text": "A biophysical model of kiwifruit (Actinidia deliciosa) berry development\n\nAppendix: Table (b) => initial berry weight",
+                                  "Name": "Memo",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.BetaGrowthFunction, Models",
+                              "tm": 1800.0,
+                              "te": 3200.0,
+                              "Name": "BetaGrowthFunction",
+                              "ResourceName": null,
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.VariableReference, Models",
+                                  "VariableName": "[Fruit].FruitingPhaseAccTT",
+                                  "Name": "XValue",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.ProtectedDivideFunction, Models",
+                                  "NumeratorErrVal": 0.0,
+                                  "DenominatorErrVal": 0.0,
+                                  "Name": "Ymax",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.MultiplyFunction, Models",
+                                      "Name": "MultiplyFunction",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 2800.0,
+                                          "Units": "",
+                                          "Name": "MaxDWPerM2",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    },
+                                    {
+                                      "$type": "Models.Functions.AddFunction, Models",
+                                      "Name": "AddFunction",
+                                      "ResourceName": null,
+                                      "Children": [
+                                        {
+                                          "$type": "Models.Functions.VariableReference, Models",
+                                          "VariableName": "[Fruit].FruitNumberPerM2",
+                                          "Name": "FruitsPerM2",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 35.0,
+                                          "Units": "",
+                                          "Name": "FruitNumTurningPoint",
+                                          "ResourceName": null,
+                                          "Children": [],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        }
+                                      ],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
                   "$type": "Models.Functions.MultiplyFunction, Models",
                   "Name": "YieldToPerHaOld",
                   "ResourceName": null,
@@ -248661,173 +248878,6 @@
                   "ResourceName": null,
                   "Children": [],
                   "Enabled": false,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.PhaseLookup, Models",
-                  "Name": "PotentialSingleBerryDW",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.PhaseLookupValue, Models",
-                      "Start": "StartEndo",
-                      "End": "EndFlowering",
-                      "Name": "NoFruit",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.0,
-                          "Units": "",
-                          "Name": "Zero",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.PhaseLookupValue, Models",
-                      "Start": "EndFlowering",
-                      "End": "BareTree",
-                      "Name": "FruitingPhase",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.AddFunction, Models",
-                          "Name": "AddFunction",
-                          "ResourceName": null,
-                          "Children": [
-                            {
-                              "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 0.5,
-                              "Units": "",
-                              "Name": "InitialBerryWt",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Memo, Models",
-                                  "Text": "A biophysical model of kiwifruit (Actinidia deliciosa) berry development\n\nAppendix: Table (b) => initial berry weight",
-                                  "Name": "Memo",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.BetaGrowthFunction, Models",
-                              "tm": 1400.0,
-                              "te": 2800.0,
-                              "Name": "BetaGrowthFunction",
-                              "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[Fruit].FruitingPhaseAccTT",
-                                  "Name": "XValue",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.ProtectedDivideFunction, Models",
-                                  "NumeratorErrVal": 0.0,
-                                  "DenominatorErrVal": 0.0,
-                                  "Name": "Ymax",
-                                  "ResourceName": null,
-                                  "Children": [
-                                    {
-                                      "$type": "Models.Functions.MultiplyFunction, Models",
-                                      "Name": "MultiplyFunction",
-                                      "ResourceName": null,
-                                      "Children": [
-                                        {
-                                          "$type": "Models.Functions.Constant, Models",
-                                          "FixedValue": 2000.0,
-                                          "Units": "",
-                                          "Name": "MaxDWPerM2",
-                                          "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        }
-                                      ],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    },
-                                    {
-                                      "$type": "Models.Functions.AddFunction, Models",
-                                      "Name": "AddFunction",
-                                      "ResourceName": null,
-                                      "Children": [
-                                        {
-                                          "$type": "Models.Functions.Constant, Models",
-                                          "FixedValue": 32.0,
-                                          "Units": "",
-                                          "Name": "FruitNumTurningPoint",
-                                          "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        },
-                                        {
-                                          "$type": "Models.Functions.MultiplyFunction, Models",
-                                          "Name": "MultiplyFunction",
-                                          "ResourceName": null,
-                                          "Children": [
-                                            {
-                                              "$type": "Models.Functions.VariableReference, Models",
-                                              "VariableName": "[Fruit].FruitNumberPerM2",
-                                              "Name": "FruitsPerM2",
-                                              "ResourceName": null,
-                                              "Children": [],
-                                              "Enabled": true,
-                                              "ReadOnly": false
-                                            },
-                                            {
-                                              "$type": "Models.Functions.Constant, Models",
-                                              "FixedValue": 1.0,
-                                              "Units": "",
-                                              "Name": "FruitNumSensitivity",
-                                              "ResourceName": null,
-                                              "Children": [],
-                                              "Enabled": true,
-                                              "ReadOnly": false
-                                            }
-                                          ],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        }
-                                      ],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    }
-                                  ],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            }
-                          ],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
                   "ReadOnly": false
                 }
               ],
