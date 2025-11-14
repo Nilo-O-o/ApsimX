@@ -247647,12 +247647,70 @@
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 0.0,
-                      "Units": "0-1",
+                      "$type": "Models.Functions.MultiplyFunction, Models",
                       "Name": "MaintenanceRespirationFunction",
                       "ResourceName": null,
-                      "Children": [],
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 0.001,
+                          "Units": null,
+                          "Name": "Qm",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.ExponentialFunction, Models",
+                          "A": 0.0,
+                          "B": 1.0,
+                          "C": 0.045,
+                          "Name": "TempResponse",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Memo, Models",
+                              "Text": "The temperature-dependent parameter is set so that the respiration rate doubles for every 10 oC increase in temperature.",
+                              "Name": "Memo",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.SubtractFunction, Models",
+                              "Name": "TempDiff",
+                              "ResourceName": null,
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.VariableReference, Models",
+                                  "VariableName": "[IWeather].MeanT",
+                                  "Name": "DailyMeanT",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 20.0,
+                                  "Units": null,
+                                  "Name": "RefT",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
                       "Enabled": true,
                       "ReadOnly": false
                     },
@@ -247928,7 +247986,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.5,
+                          "FixedValue": 0.0,
                           "Units": "g/day",
                           "Name": "Metabolic",
                           "ResourceName": null,
@@ -248141,7 +248199,7 @@
                                         },
                                         {
                                           "$type": "Models.Functions.Constant, Models",
-                                          "FixedValue": 0.025,
+                                          "FixedValue": 0.02,
                                           "Units": null,
                                           "Name": "DailyStorageDemandRate",
                                           "ResourceName": null,
