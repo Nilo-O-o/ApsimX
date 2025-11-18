@@ -242279,7 +242279,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
+                          "FixedValue": 2.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -242467,7 +242467,7 @@
                               "Children": [
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 1.0,
+                                  "FixedValue": 0.0001,
                                   "Units": null,
                                   "Name": "Multiplier",
                                   "ResourceName": null,
@@ -243225,7 +243225,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
+                          "FixedValue": 2.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -245818,7 +245818,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
+                          "FixedValue": 2.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -246649,7 +246649,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
+                          "FixedValue": 2.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -247694,7 +247694,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 20.0,
+                                  "FixedValue": 17.0,
                                   "Units": null,
                                   "Name": "RefT",
                                   "ResourceName": null,
@@ -247904,7 +247904,7 @@
                                       "Children": [
                                         {
                                           "$type": "Models.Functions.Constant, Models",
-                                          "FixedValue": 250.0,
+                                          "FixedValue": 500.0,
                                           "Units": "g structural DM/m2",
                                           "Name": "MaxStrStorageRootPerM2",
                                           "ResourceName": null,
@@ -247919,7 +247919,7 @@
                                           "Children": [
                                             {
                                               "$type": "Models.Functions.Constant, Models",
-                                              "FixedValue": 100.0,
+                                              "FixedValue": 250.0,
                                               "Units": "minimum g structural storage root DM / plant ",
                                               "Name": "MaxStrStorageRootPerPlant",
                                               "ResourceName": null,
@@ -248055,7 +248055,7 @@
                                             },
                                             {
                                               "$type": "Models.Functions.Constant, Models",
-                                              "FixedValue": 0.37,
+                                              "FixedValue": 0.3,
                                               "Units": "minimum share of structural in storage root",
                                               "Name": "StructuralFraction",
                                               "ResourceName": null,
@@ -248234,7 +248234,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
+                          "FixedValue": 5.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -248254,7 +248254,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 10.0,
+                          "FixedValue": 5.0,
                           "Units": null,
                           "Name": "QStoragePriority",
                           "ResourceName": null,
@@ -248389,7 +248389,7 @@
                               "Children": [
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 10.0,
+                                  "FixedValue": 0.001,
                                   "Units": null,
                                   "Name": "Multiplier",
                                   "ResourceName": null,
@@ -249040,7 +249040,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 7.0,
+                          "FixedValue": 2.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -251209,7 +251209,7 @@
                   "Children": [
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 30.0,
+                      "FixedValue": 40.0,
                       "Units": "",
                       "Name": "Ymax",
                       "ResourceName": null,
