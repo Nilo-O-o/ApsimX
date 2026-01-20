@@ -256053,7 +256053,7 @@
                 },
                 {
                   "$type": "Models.Functions.VariableReference, Models",
-                  "VariableName": "[Leaf].senescenceRate",
+                  "VariableName": "[Leaf].SenescenceRate",
                   "Name": "SenescenceRate",
                   "ResourceName": null,
                   "Children": [],
@@ -256128,7 +256128,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.1,
+                          "FixedValue": 0.0,
                           "Units": null,
                           "Name": "Metabolic",
                           "ResourceName": null,
@@ -256148,9 +256148,9 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 1.0,
+                          "FixedValue": 0.0,
                           "Units": null,
-                          "Name": "QMetabolicPriority",
+                          "Name": "QStoragePriority",
                           "ResourceName": null,
                           "Children": [],
                           "Enabled": true,
@@ -256160,7 +256160,7 @@
                           "$type": "Models.Functions.Constant, Models",
                           "FixedValue": 0.0,
                           "Units": null,
-                          "Name": "QStoragePriority",
+                          "Name": "QMetabolicPriority",
                           "ResourceName": null,
                           "Children": [],
                           "Enabled": true,
@@ -256764,7 +256764,7 @@
                   "Children": [
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 8000.0,
+                      "FixedValue": 5000.0,
                       "Units": "g/tree",
                       "Name": "Wt",
                       "ResourceName": null,
@@ -256999,20 +256999,38 @@
                           "ReadOnly": false
                         },
                         {
-                          "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.1,
-                          "Units": "g/day",
-                          "Name": "Metabolic",
+                          "$type": "Models.Functions.MultiplyFunction, Models",
+                          "Name": "Storage",
                           "ResourceName": null,
-                          "Children": [],
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.VariableReference, Models",
+                              "VariableName": "[Trunk].TotalCarbonDemand",
+                              "Name": "Structural",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 0.1,
+                              "Units": "",
+                              "Name": "Coeff",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
                           "Enabled": true,
                           "ReadOnly": false
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.01,
+                          "FixedValue": 0.0,
                           "Units": "g/day",
-                          "Name": "Storage",
+                          "Name": "Metabolic",
                           "ResourceName": null,
                           "Children": [],
                           "Enabled": true,
@@ -257686,7 +257704,7 @@
                               "Children": [
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 0.01,
+                                  "FixedValue": 0.005,
                                   "Units": null,
                                   "Name": "Rate",
                                   "ResourceName": null,
@@ -257866,7 +257884,7 @@
                 },
                 {
                   "$type": "Models.Functions.Constant, Models",
-                  "FixedValue": 1000.0,
+                  "FixedValue": 500.0,
                   "Units": "g/m2",
                   "Name": "InitialWt",
                   "ResourceName": null,
@@ -258622,7 +258640,7 @@
                               "Children": [
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 100.0,
+                                  "FixedValue": 50.0,
                                   "Units": null,
                                   "Name": "Multiplier",
                                   "ResourceName": null,
@@ -259067,7 +259085,7 @@
                 },
                 {
                   "$type": "Models.Functions.Constant, Models",
-                  "FixedValue": 500.0,
+                  "FixedValue": 100.0,
                   "Units": "g/m2",
                   "Name": "InitialWt",
                   "ResourceName": null,
@@ -260467,7 +260485,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 180.0,
+                          "FixedValue": 140.0,
                           "Units": null,
                           "Name": "QStructuralPriority",
                           "ResourceName": null,
@@ -263246,6 +263264,7 @@
             "[KiwiFruit].Leaf.Canopy.LAI",
             "[KiwiFruit].Leaf.Wt",
             "[KiwiFruit].Leaf.Live.Wt",
+            "[KiwiFruit].Stem.Live.Wt",
             "[KiwiFruit].Phenology.ChillingAtHC",
             "",
             "[KiwiFruit].SowingData.Population",
