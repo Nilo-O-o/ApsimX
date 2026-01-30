@@ -68732,7 +68732,7 @@
           "Name": "Memo",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -68743,7 +68743,7 @@
           "Name": "Weather",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -68753,7 +68753,7 @@
           "Name": "Clock",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -68762,7 +68762,7 @@
           "Name": "Summary",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -68770,7 +68770,7 @@
           "Name": "Soil Arbitrator",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -68809,7 +68809,7 @@
               "Name": "Report",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -68825,7 +68825,7 @@
               "Name": "Stages",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -68834,7 +68834,7 @@
               "Name": "KiwiFruit",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -68842,7 +68842,7 @@
               "Name": "Fertiliser",
               "ResourceName": "Fertiliser",
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -68858,7 +68858,7 @@
               "Name": "SurfaceOrganicMatter",
               "ResourceName": "SurfaceOrganicMatter",
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -68866,7 +68866,7 @@
               "Name": "Irrigation",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -68882,7 +68882,7 @@
               "Name": "MicroClimate",
               "ResourceName": "MicroClimate",
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -68922,7 +68922,7 @@
               "Name": "ReportOnEvents",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -69005,7 +69005,7 @@
               "Name": "Reset on date",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -69048,7 +69048,7 @@
                   "Name": "LayerStructure",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69081,7 +69081,7 @@
                   "Name": "Chemical",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69108,7 +69108,7 @@
                   "Name": "Water",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69161,7 +69161,7 @@
                   "Name": "SoilWater",
                   "ResourceName": "WaterBalance",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69221,7 +69221,7 @@
                   "Name": "Organic",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69237,7 +69237,7 @@
                   "Name": "OutputLayers",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69271,7 +69271,7 @@
                   "Name": "NO3",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69305,7 +69305,7 @@
                   "Name": "NH4",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69339,7 +69339,7 @@
                   "Name": "Urea",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69549,11 +69549,11 @@
                       "Name": "KiwiFruitSoil",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69561,7 +69561,7 @@
                   "Name": "Nutrient",
                   "ResourceName": "Nutrient",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -69571,11 +69571,11 @@
                   "Name": "Temperature",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -69794,7 +69794,7 @@
               "Name": "AutomaticIrrigation",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -69882,7 +69882,7 @@
               "Name": "FactorLabels",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70054,7 +70054,7 @@
               "Name": "AutomaticFertiliser",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70238,7 +70238,7 @@
               "Name": "WaterStatus",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70308,7 +70308,7 @@
               "Name": "SowDateCv",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70357,7 +70357,7 @@
               "Name": "SetPhaseCompletionDates",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70420,7 +70420,7 @@
               "Name": "SetBudNumber",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70428,7 +70428,7 @@
               "Name": "AgriChemical",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70436,7 +70436,7 @@
               "Name": "Girdling",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70460,7 +70460,7 @@
               "Name": "Operations",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70524,11 +70524,11 @@
               "Name": "OnPrune",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -70592,11 +70592,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -70667,15 +70667,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -70746,15 +70746,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -70825,11 +70825,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70865,11 +70865,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -70905,15 +70905,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -70984,15 +70984,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71063,15 +71063,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71142,11 +71142,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -71175,11 +71175,11 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71250,11 +71250,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -71290,15 +71290,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71369,11 +71369,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -71409,15 +71409,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71488,11 +71488,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -71528,15 +71528,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71607,15 +71607,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71686,15 +71686,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71765,15 +71765,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71844,11 +71844,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -71877,11 +71877,11 @@
               "Name": "TotalCaneLeaves",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -71952,11 +71952,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -71985,11 +71985,11 @@
               "Name": "FruitNumberVine",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72060,11 +72060,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72093,11 +72093,11 @@
               "Name": "Y",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72167,7 +72167,7 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -72177,11 +72177,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72210,7 +72210,7 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72239,11 +72239,11 @@
               "Name": "U",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72313,7 +72313,7 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -72323,11 +72323,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72356,7 +72356,7 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72385,11 +72385,11 @@
               "Name": "PotentialDW",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72459,7 +72459,7 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -72469,11 +72469,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72502,15 +72502,15 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         }
       ],
-      "Enabled": true,
+      "Enabled": false,
       "ReadOnly": false
     },
     {
@@ -72525,7 +72525,7 @@
           "Name": "Memo",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72536,7 +72536,7 @@
           "Name": "Weather",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72546,7 +72546,7 @@
           "Name": "Clock",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72555,7 +72555,7 @@
           "Name": "Summary",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72563,7 +72563,7 @@
           "Name": "Soil Arbitrator",
           "ResourceName": null,
           "Children": [],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -72602,7 +72602,7 @@
               "Name": "Report",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72618,7 +72618,7 @@
               "Name": "Stages",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72627,7 +72627,7 @@
               "Name": "KiwiFruit",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72635,7 +72635,7 @@
               "Name": "Fertiliser",
               "ResourceName": "Fertiliser",
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72651,7 +72651,7 @@
               "Name": "SurfaceOrganicMatter",
               "ResourceName": "SurfaceOrganicMatter",
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72659,7 +72659,7 @@
               "Name": "Irrigation",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72675,7 +72675,7 @@
               "Name": "MicroClimate",
               "ResourceName": "MicroClimate",
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72715,7 +72715,7 @@
               "Name": "ReportOnEvents",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72798,7 +72798,7 @@
               "Name": "Reset on date",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -72841,7 +72841,7 @@
                   "Name": "LayerStructure",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -72874,7 +72874,7 @@
                   "Name": "Chemical",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -72901,7 +72901,7 @@
                   "Name": "Water",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -72954,7 +72954,7 @@
                   "Name": "SoilWater",
                   "ResourceName": "WaterBalance",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73014,7 +73014,7 @@
                   "Name": "Organic",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73030,7 +73030,7 @@
                   "Name": "OutputLayers",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73064,7 +73064,7 @@
                   "Name": "NO3",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73098,7 +73098,7 @@
                   "Name": "NH4",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73132,7 +73132,7 @@
                   "Name": "Urea",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73342,11 +73342,11 @@
                       "Name": "KiwiFruitSoil",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73354,7 +73354,7 @@
                   "Name": "Nutrient",
                   "ResourceName": "Nutrient",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -73364,11 +73364,11 @@
                   "Name": "Temperature",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -73587,7 +73587,7 @@
               "Name": "AutomaticIrrigation",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -73675,7 +73675,7 @@
               "Name": "FactorLabels",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -73847,7 +73847,7 @@
               "Name": "AutomaticFertiliser",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74031,7 +74031,7 @@
               "Name": "WaterStatus",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74107,7 +74107,7 @@
               "Name": "SowDateCv",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74156,7 +74156,7 @@
               "Name": "SetPhaseCompletionDates",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74219,7 +74219,7 @@
               "Name": "SetBudNumber",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74227,7 +74227,7 @@
               "Name": "AgriChemical",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74235,7 +74235,7 @@
               "Name": "Girdling",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74259,7 +74259,7 @@
               "Name": "Operations",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74323,11 +74323,11 @@
               "Name": "OnPrune",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -74391,11 +74391,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -74466,15 +74466,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -74545,11 +74545,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74585,11 +74585,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74625,15 +74625,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -74704,15 +74704,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -74783,15 +74783,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -74862,11 +74862,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -74895,11 +74895,11 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -74970,11 +74970,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75010,15 +75010,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75089,11 +75089,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75129,15 +75129,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75208,11 +75208,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75248,15 +75248,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75327,15 +75327,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75406,15 +75406,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75485,15 +75485,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75564,11 +75564,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75597,11 +75597,11 @@
               "Name": "TotalCaneLeaves",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75672,11 +75672,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75705,11 +75705,11 @@
               "Name": "FruitNumberVine",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75780,11 +75780,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75813,11 +75813,11 @@
               "Name": "Y",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -75887,7 +75887,7 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -75897,11 +75897,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75930,7 +75930,7 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -75959,11 +75959,11 @@
               "Name": "U",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -76033,7 +76033,7 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -76043,11 +76043,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76076,7 +76076,7 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76105,11 +76105,11 @@
               "Name": "PotentialDW",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -76179,7 +76179,7 @@
                   "Name": "Memo",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -76189,11 +76189,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76222,11 +76222,11 @@
               "Name": "Observed",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -76301,7 +76301,7 @@
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76330,7 +76330,7 @@
               "Name": "FruitWt",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76359,7 +76359,7 @@
               "Name": "LeafWt",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76388,7 +76388,7 @@
               "Name": "FineRootWt",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76417,7 +76417,7 @@
               "Name": "StorageRootWt",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76446,7 +76446,7 @@
               "Name": "TrunkWt",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76455,11 +76455,11 @@
               "Name": "Memo",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -76541,11 +76541,11 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -76581,19 +76581,19 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         }
       ],
-      "Enabled": true,
+      "Enabled": false,
       "ReadOnly": false
     },
     {
@@ -85408,7 +85408,7 @@
               "Parameters": [
                 {
                   "Key": "FruitMatureDate",
-                  "Value": "02-May"
+                  "Value": "29-Apr"
                 }
               ],
               "Name": "SetPhaseCompletionDates",
@@ -90004,6 +90004,69 @@
               "ReadOnly": false
             },
             {
+              "$type": "Models.Manager, Models",
+              "CodeArray": [
+                "using System.Diagnostics;",
+                "using APSIM.Core;",
+                "using APSIM.Shared.Utilities;",
+                "using Models.Core;",
+                "using Newtonsoft.Json;",
+                "using System;",
+                "using System.Collections.Generic;",
+                "using System.Linq;",
+                "using System;",
+                "using Models.Utilities;",
+                "",
+                "",
+                "namespace Models",
+                "{",
+                "    [Serializable]",
+                "    public class Script : Model, IStructureDependency",
+                "    {",
+                "        [Link] Clock clock;",
+                "        ",
+                "        /// <summary>Structure instance supplied by APSIM.core.</summary>",
+                "        [field: NonSerialized]",
+                "        public IStructure Structure { private get; set; }",
+                "        ",
+                "        [Description(\"Bud Set Date (dd-mmm)\")]",
+                "        public string BudSetDate { get; set;} ",
+                "        [Description(\"Bud Number\")]",
+                "        public double BudNumber { get; set;} ",
+                "        ",
+                "        ",
+                "        [EventSubscribe(\"StartOfDay\")]",
+                "        private void OnStartOfDay(object sender, EventArgs data)",
+                "        {",
+                "            if (!String.IsNullOrEmpty(BudSetDate))",
+                "            {",
+                "            //Debugger.Break();",
+                "            if (DateUtilities.DatesEqual(BudSetDate,clock.Today))",
+                "               Structure.Set(\"[KiwiFruit].Phenology.BrokenBuds.Vegetative.MultiplyFunction.AllBuds.FixedValue\", (object)BudNumber);",
+                " ",
+                "            }",
+                "            ",
+                "        }",
+                "    }",
+                "}"
+              ],
+              "Parameters": [
+                {
+                  "Key": "BudSetDate",
+                  "Value": "01-Jul"
+                },
+                {
+                  "Key": "BudNumber",
+                  "Value": "21"
+                }
+              ],
+              "Name": "SetBudNumber",
+              "ResourceName": null,
+              "Children": [],
+              "Enabled": true,
+              "ReadOnly": false
+            },
+            {
               "$type": "Models.AgriChemical, Models",
               "Name": "AgriChemical",
               "ResourceName": null,
@@ -90095,69 +90158,6 @@
                 }
               ],
               "Name": "OnPrune",
-              "ResourceName": null,
-              "Children": [],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Manager, Models",
-              "CodeArray": [
-                "using System.Diagnostics;",
-                "using APSIM.Core;",
-                "using APSIM.Shared.Utilities;",
-                "using Models.Core;",
-                "using Newtonsoft.Json;",
-                "using System;",
-                "using System.Collections.Generic;",
-                "using System.Linq;",
-                "using System;",
-                "using Models.Utilities;",
-                "",
-                "",
-                "namespace Models",
-                "{",
-                "    [Serializable]",
-                "    public class Script : Model, IStructureDependency",
-                "    {",
-                "        [Link] Clock clock;",
-                "        ",
-                "        /// <summary>Structure instance supplied by APSIM.core.</summary>",
-                "        [field: NonSerialized]",
-                "        public IStructure Structure { private get; set; }",
-                "        ",
-                "        [Description(\"Bud Set Date (dd-mmm)\")]",
-                "        public string BudSetDate { get; set;} ",
-                "        [Description(\"Bud Number\")]",
-                "        public double BudNumber { get; set;} ",
-                "        ",
-                "        ",
-                "        [EventSubscribe(\"StartOfDay\")]",
-                "        private void OnStartOfDay(object sender, EventArgs data)",
-                "        {",
-                "            if (!String.IsNullOrEmpty(BudSetDate))",
-                "            {",
-                "            //Debugger.Break();",
-                "            if (DateUtilities.DatesEqual(BudSetDate,clock.Today))",
-                "               Structure.Set(\"[KiwiFruit].Phenology.BrokenBuds.Vegetative.MultiplyFunction.AllBuds.FixedValue\", (object)BudNumber);",
-                " ",
-                "            }",
-                "            ",
-                "        }",
-                "    }",
-                "}"
-              ],
-              "Parameters": [
-                {
-                  "Key": "BudSetDate",
-                  "Value": "01-Jul"
-                },
-                {
-                  "Key": "BudNumber",
-                  "Value": "21"
-                }
-              ],
-              "Name": "SetBudNumber",
               "ResourceName": null,
               "Children": [],
               "Enabled": true,
@@ -91076,85 +91076,6 @@
               "CumulativeX": false,
               "Filter": null,
               "Name": "Observed",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.EventNamesOnGraph, Models",
-                  "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                  "SimulationName": "KiwiTest",
-                  "Name": "EventNamesOnGraph",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            }
-          ],
-          "Enabled": true,
-          "ReadOnly": false
-        },
-        {
-          "$type": "Models.Graph, Models",
-          "Caption": null,
-          "Axis": [
-            {
-              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-              "Title": "",
-              "Position": 0,
-              "Inverted": false,
-              "CrossesAtZero": false,
-              "LabelOnOneLine": false,
-              "Minimum": "NaN",
-              "Maximum": "NaN",
-              "Interval": null
-            },
-            {
-              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-              "Title": "Clock.Today",
-              "Position": 3,
-              "Inverted": false,
-              "CrossesAtZero": false,
-              "LabelOnOneLine": false,
-              "Minimum": null,
-              "Maximum": null,
-              "Interval": null
-            }
-          ],
-          "LegendPosition": 5,
-          "LegendOrientation": 0,
-          "AnnotationLocation": 0,
-          "DisabledSeries": [],
-          "LegendOutsideGraph": false,
-          "Name": "PreEndo",
-          "ResourceName": null,
-          "Children": [
-            {
-              "$type": "Models.Series, Models",
-              "Type": 1,
-              "XAxis": 3,
-              "YAxis": 0,
-              "ColourArgb": -11094807,
-              "FactorToVaryColours": null,
-              "FactorToVaryMarkers": null,
-              "FactorToVaryLines": null,
-              "Marker": 11,
-              "MarkerSize": 0,
-              "Line": 0,
-              "LineThickness": 0,
-              "TableName": "Report",
-              "XFieldName": "Clock.Today",
-              "YFieldName": "KiwiFruit.Phenology.FractionAccumulatedChillingPreEndo",
-              "X2FieldName": null,
-              "Y2FieldName": null,
-              "ShowInLegend": false,
-              "IncludeSeriesNameInLegend": false,
-              "Cumulative": false,
-              "CumulativeX": false,
-              "Filter": null,
-              "Name": "Predicted",
               "ResourceName": null,
               "Children": [
                 {
@@ -94168,7 +94089,7 @@
               "Parameters": [
                 {
                   "Key": "FruitMatureDate",
-                  "Value": "7-May"
+                  "Value": "6-May"
                 }
               ],
               "Name": "SetPhaseCompletionDates",
@@ -94231,7 +94152,7 @@
                 },
                 {
                   "Key": "BudNumber",
-                  "Value": "40"
+                  "Value": "127"
                 }
               ],
               "Name": "SetBudNumber",
@@ -94261,10 +94182,10 @@
               "OperationsList": [
                 {
                   "$type": "Models.Operation, Models",
-                  "Enabled": true,
-                  "Date": "2013-08-10",
-                  "Action": "[AgriChemical].Apply()",
-                  "Line": "2013-08-10 [AgriChemical].Apply()"
+                  "Enabled": false,
+                  "Date": null,
+                  "Action": null,
+                  "Line": "//2013-08-10 [AgriChemical].Apply()"
                 }
               ],
               "Name": "Operations",
@@ -261212,7 +261133,7 @@
                   "Children": [
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 35.0,
+                      "FixedValue": 33.0,
                       "Units": "",
                       "Name": "Ymax",
                       "ResourceName": null,
