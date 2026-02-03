@@ -160057,7 +160057,7 @@
                     },
                     {
                       "Key": "BudNumber",
-                      "Value": "35"
+                      "Value": "60"
                     }
                   ],
                   "Name": "SetBudNumber",
@@ -162897,7 +162897,7 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": false,
+                      "Enabled": true,
                       "ReadOnly": false
                     }
                   ],
@@ -163416,6 +163416,85 @@
                   "Name": "Fruit_TotalCarbonDemand",
                   "ResourceName": null,
                   "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                }
+              ],
+              "Enabled": true,
+              "ReadOnly": false
+            },
+            {
+              "$type": "Models.Graph, Models",
+              "Caption": null,
+              "Axis": [
+                {
+                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                  "Title": null,
+                  "Position": 0,
+                  "Inverted": false,
+                  "CrossesAtZero": false,
+                  "LabelOnOneLine": false,
+                  "Minimum": "NaN",
+                  "Maximum": "NaN",
+                  "Interval": null
+                },
+                {
+                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+                  "Title": null,
+                  "Position": 3,
+                  "Inverted": false,
+                  "CrossesAtZero": false,
+                  "LabelOnOneLine": false,
+                  "Minimum": "NaN",
+                  "Maximum": "NaN",
+                  "Interval": null
+                }
+              ],
+              "LegendPosition": 5,
+              "LegendOrientation": 0,
+              "AnnotationLocation": 0,
+              "DisabledSeries": [],
+              "LegendOutsideGraph": false,
+              "Name": "Respiration",
+              "ResourceName": null,
+              "Children": [
+                {
+                  "$type": "Models.Series, Models",
+                  "Type": 1,
+                  "XAxis": 3,
+                  "YAxis": 0,
+                  "ColourArgb": -11094807,
+                  "FactorToVaryColours": null,
+                  "FactorToVaryMarkers": null,
+                  "FactorToVaryLines": null,
+                  "Marker": 11,
+                  "MarkerSize": 0,
+                  "Line": 0,
+                  "LineThickness": 0,
+                  "TableName": "Report",
+                  "XFieldName": "Clock.Today",
+                  "YFieldName": "KiwiFruit.StorageRoot.Respiration.MaintenanceRespirationFunction",
+                  "X2FieldName": null,
+                  "Y2FieldName": null,
+                  "ShowInLegend": true,
+                  "IncludeSeriesNameInLegend": false,
+                  "Cumulative": false,
+                  "CumulativeX": false,
+                  "Filter": null,
+                  "Name": "Predicted",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.EventNamesOnGraph, Models",
+                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
+                      "SimulationName": "KiwiTest",
+                      "Name": "EventNamesOnGraph",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
                   "Enabled": true,
                   "ReadOnly": false
                 }
@@ -257819,62 +257898,43 @@
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.MultiplyFunction, Models",
+                      "$type": "Models.Functions.ExponentialFunction, Models",
+                      "A": 0.0,
+                      "B": 1.8,
+                      "C": 0.045,
                       "Name": "MaintenanceRespirationFunction",
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.001,
-                          "Units": null,
-                          "Name": "Qm",
+                          "$type": "Models.Memo, Models",
+                          "Text": "The temperature-dependent parameter is set so that the respiration rate doubles for every 10 oC increase in temperature.",
+                          "Name": "Memo",
                           "ResourceName": null,
                           "Children": [],
                           "Enabled": true,
                           "ReadOnly": false
                         },
                         {
-                          "$type": "Models.Functions.ExponentialFunction, Models",
-                          "A": 0.0,
-                          "B": 1.0,
-                          "C": 0.045,
-                          "Name": "TempResponse",
+                          "$type": "Models.Functions.SubtractFunction, Models",
+                          "Name": "TempDiff",
                           "ResourceName": null,
                           "Children": [
                             {
-                              "$type": "Models.Memo, Models",
-                              "Text": "The temperature-dependent parameter is set so that the respiration rate doubles for every 10 oC increase in temperature.",
-                              "Name": "Memo",
+                              "$type": "Models.Functions.VariableReference, Models",
+                              "VariableName": "[IWeather].MeanT",
+                              "Name": "DailyMeanT",
                               "ResourceName": null,
                               "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             },
                             {
-                              "$type": "Models.Functions.SubtractFunction, Models",
-                              "Name": "TempDiff",
+                              "$type": "Models.Functions.Constant, Models",
+                              "FixedValue": 17.0,
+                              "Units": null,
+                              "Name": "RefT",
                               "ResourceName": null,
-                              "Children": [
-                                {
-                                  "$type": "Models.Functions.VariableReference, Models",
-                                  "VariableName": "[IWeather].MeanT",
-                                  "Name": "DailyMeanT",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 17.0,
-                                  "Units": null,
-                                  "Name": "RefT",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                }
-                              ],
+                              "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             }
@@ -258158,7 +258218,7 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.01,
+                          "FixedValue": 0.0,
                           "Units": "g/day",
                           "Name": "Metabolic",
                           "ResourceName": null,
@@ -258561,7 +258621,7 @@
                               "Children": [
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 50.0,
+                                  "FixedValue": 1.0,
                                   "Units": null,
                                   "Name": "Multiplier",
                                   "ResourceName": null,
@@ -263143,6 +263203,7 @@
             "[KiwiFruit].FineRoot.TotalCarbonDemand",
             "[KiwiFruit].Leaf.Photosynthesis*0.4",
             "",
+            "[KiwiFruit].StorageRoot.Respiration.MaintenanceRespirationFunction",
             "",
             "[KiwiFruit].Fruit.Brix",
             "[KiwiFruit].Trunk.TotalCarbonDemand.GirdlingPartitioningResponse",
