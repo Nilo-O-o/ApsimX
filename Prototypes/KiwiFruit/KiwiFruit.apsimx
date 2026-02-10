@@ -237159,7 +237159,7 @@
                     },
                     {
                       "Key": "BudNumber",
-                      "Value": "45"
+                      "Value": "35"
                     }
                   ],
                   "Name": "SetBudNumber",
@@ -237231,9 +237231,9 @@
                     {
                       "$type": "Models.Operation, Models",
                       "Enabled": true,
-                      "Date": "2021-08-15",
+                      "Date": "2021-08-12",
                       "Action": "[AgriChemical].Apply()",
-                      "Line": "2021-08-15 [AgriChemical].Apply()"
+                      "Line": "2021-08-12 [AgriChemical].Apply()"
                     }
                   ],
                   "Name": "Operations",
@@ -259279,7 +259279,7 @@
                     },
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 4500.0,
+                      "FixedValue": 4450.0,
                       "Units": "",
                       "Name": "te",
                       "ResourceName": null,
