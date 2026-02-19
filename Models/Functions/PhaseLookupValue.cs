@@ -41,6 +41,10 @@ namespace Models.Functions
         [Display(Type = DisplayType.CropStageName)]
         public string End { get; set; }
 
+        /// <summary>Value can be set to overwrite child function.</summary>
+        /// <value>The value.</value>
+        public double FixedValue { get; set; } = double.NaN;
+
         /// <summary>Gets the value.</summary>
         /// <value>The value.</value>
         /// <exception cref="System.Exception">
@@ -50,6 +54,11 @@ namespace Models.Functions
         /// </exception>
         public double Value(int arrayIndex = -1)
         {
+            if (!Double.IsNaN(FixedValue))
+            {
+                return FixedValue;
+            }
+
             if (ChildFunctions == null)
                 ChildFunctions = Structure.FindChildren<IFunction>().ToList();
 

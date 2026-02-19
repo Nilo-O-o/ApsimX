@@ -15,7 +15,7 @@ namespace Models.Functions
     public class OnEventFunctionHC : Model, IFunction
     {
         /// <summary>The _ value</summary>
-        private double _Value = 0;
+        private double _Value = 1;
 
         /// <summary>Link to an event service.</summary>
         [Link]
