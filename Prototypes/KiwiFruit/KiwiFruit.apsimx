@@ -150627,34 +150627,33 @@
                     "namespace Models",
                     "{",
                     "    [Serializable]",
-                    "    public class Script : Model, IStructureDependency",
+                    "    public class Script : Model",
                     "    {",
                     "        [Link] Plant KiwiFruit;",
                     "        [Link] Clock clock;",
                     "        [Link] Zone zone;",
                     "        [Link] AgriChemical agriChemical;",
                     "        [Link] Girdling girdling;",
-                    "        [Link] BiomassRemovalEvents biomassRemoval;",
                     "        [Link(Type = LinkType.Path, Path = \"[KiwiFruit].Phenology\")]",
                     "        private Phenology phenology;",
                     "        [Link(Type = LinkType.Scoped, ByName = true)]",
-                    "        private BiomassRemovalEvents OnHarvest;",
-                    "        public IStructure Structure {get; set;}",
-                    "",
+                    "        private BiomassRemovalEvents SummerPrune;",
+                    "        [Link(Type = LinkType.Scoped, ByName = true)]",
+                    "        private BiomassRemovalEvents Pick;",
+                    "        [Link(Type = LinkType.Scoped, ByName = true)]",
+                    "        private BiomassRemovalEvents WinterPrune;",
+                    "        [Link(Type = LinkType.Scoped, ByName = true)]",
+                    "        private BiomassRemovalEvents Defoliate;",
+                    "        ",
                     "        [EventSubscribe(\"DoManagement\")]",
                     "        private void OnDoManagement(object sender, EventArgs data)",
-                    "        ",
                     "        {",
                     "        //Debugger.Break();",
-                    "",
-                    "        ",
                     "         if (phenology.CurrentPhase.Name == \"NaturalLeafFall\")",
                     "            {",
-                    "                OnHarvest.Remove();",
-                    "        ",
+                    "                WinterPrune.Remove();",
                     "            }         ",
-                    "",
-                    "        }",
+                    "       }",
                     "    }",
                     "}",
                     "    ",
@@ -150744,134 +150743,6 @@
                 {
                   "$type": "Models.Management.BiomassRemovalEvents, Models",
                   "NameOfPlantToRemoveFrom": "KiwiFruit",
-                  "RemovalType": 3,
-                  "StageToSet": null,
-                  "RemovalDates": null,
-                  "BiomassRemovalFractions": [
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Trunk",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Leaf",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 1.0,
-                      "DeadToResidue": 1.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Stem",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Root",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Fruit",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    }
-                  ],
-                  "Name": "OnPrune1",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Management.BiomassRemovalEvents, Models",
-                  "NameOfPlantToRemoveFrom": "KiwiFruit",
-                  "RemovalType": 3,
-                  "StageToSet": null,
-                  "RemovalDates": null,
-                  "BiomassRemovalFractions": [
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Trunk",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Leaf",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 1.0,
-                      "DeadToResidue": 1.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Stem",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Root",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    },
-                    {
-                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
-                      "PlantName": "KiwiFruit",
-                      "OrganName": "Fruit",
-                      "TypeString": "Pruning",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
-                      "LiveToResidue": 0.0,
-                      "DeadToResidue": 0.0
-                    }
-                  ],
-                  "Name": "OnPrune11",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Management.BiomassRemovalEvents, Models",
-                  "NameOfPlantToRemoveFrom": "KiwiFruit",
                   "RemovalType": 0,
                   "StageToSet": "",
                   "RemovalDates": null,
@@ -150937,7 +150808,135 @@
                       "DeadToResidue": 0.0
                     }
                   ],
-                  "Name": "OnHarvest",
+                  "Name": "Pick",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Management.BiomassRemovalEvents, Models",
+                  "NameOfPlantToRemoveFrom": "KiwiFruit",
+                  "RemovalType": 3,
+                  "StageToSet": null,
+                  "RemovalDates": null,
+                  "BiomassRemovalFractions": [
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Trunk",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Leaf",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.5,
+                      "DeadToResidue": 0.5
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Stem",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.5,
+                      "DeadToResidue": 0.5
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Root",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Fruit",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    }
+                  ],
+                  "Name": "WinterPrune",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Management.BiomassRemovalEvents, Models",
+                  "NameOfPlantToRemoveFrom": "KiwiFruit",
+                  "RemovalType": 3,
+                  "StageToSet": null,
+                  "RemovalDates": null,
+                  "BiomassRemovalFractions": [
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Trunk",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Leaf",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 1.0,
+                      "DeadToResidue": 1.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Stem",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 1.0,
+                      "DeadToResidue": 1.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Root",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "KiwiFruit",
+                      "OrganName": "Fruit",
+                      "TypeString": "Pruning",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    }
+                  ],
+                  "Name": "Defoliate",
                   "ResourceName": null,
                   "Children": [],
                   "Enabled": true,
@@ -152993,7 +152992,7 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": false,
+                      "Enabled": true,
                       "ReadOnly": false
                     }
                   ],
@@ -254410,7 +254409,7 @@
                 {
                   "$type": "Models.Functions.OnEventFunctionHC, Models",
                   "SetEvent": "[AgriChemical].Sprayed",
-                  "ReSetEvent": "BareTree",
+                  "ReSetEvent": "FruitMature",
                   "Name": "ChillingAtHC",
                   "ResourceName": null,
                   "Children": [
@@ -254897,7 +254896,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "BudBreak",
-                      "End": "BareTree",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "Vegetative",
                       "ResourceName": null,
@@ -255356,7 +255355,7 @@
                             {
                               "$type": "Models.Functions.OnEventFunctionHC, Models",
                               "SetEvent": "[AgriChemical].Sprayed",
-                              "ReSetEvent": "BareTree",
+                              "ReSetEvent": "FruitMature",
                               "Name": "HCReduction",
                               "ResourceName": null,
                               "Children": [
@@ -255448,7 +255447,7 @@
                         {
                           "$type": "Models.Functions.OnEventFunctionHC, Models",
                           "SetEvent": "[AgriChemical].Sprayed",
-                          "ReSetEvent": "BareTree",
+                          "ReSetEvent": "FruitMature",
                           "Name": "HCReduction",
                           "ResourceName": null,
                           "Children": [
@@ -255549,7 +255548,7 @@
                         {
                           "$type": "Models.Functions.OnEventFunctionHC, Models",
                           "SetEvent": "[AgriChemical].Sprayed",
-                          "ReSetEvent": "BareTree",
+                          "ReSetEvent": "FruitMature",
                           "Name": "HCReduction",
                           "ResourceName": null,
                           "Children": [
@@ -255680,40 +255679,9 @@
                 {
                   "$type": "Models.PMF.Phen.GenericPhase, Models",
                   "Start": "FruitMature",
-                  "End": "HalfLeafFall",
+                  "End": "BareVine",
                   "IsEmerged": true,
-                  "Name": "NaturalLeafFall",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Phenology].ChillModelHourly",
-                      "Name": "Progression",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 150.0,
-                      "Units": "GDH",
-                      "Name": "Target",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.PMF.Phen.GenericPhase, Models",
-                  "Start": "HalfLeafFall",
-                  "End": "BareTree",
-                  "IsEmerged": true,
-                  "Name": "LeafDrop",
+                  "Name": "LateCanopy",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -255741,10 +255709,10 @@
                 },
                 {
                   "$type": "Models.PMF.Phen.GotoPhase, Models",
-                  "Start": "BareTree",
+                  "Start": "BareVine",
                   "IsEmerged": false,
                   "PhaseNameToGoto": "ZeroPhase",
-                  "RemovalType": 3,
+                  "RemovalType": 5,
                   "Name": "GotoPhase",
                   "ResourceName": null,
                   "Children": [],
@@ -258214,7 +258182,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "BudBreak",
-                      "End": "BareTree",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "Vegetative",
                       "ResourceName": null,
@@ -258528,7 +258496,7 @@
                   "$type": "Models.Functions.AccumulateFunction, Models",
                   "StartStageName": "BudBreak",
                   "EndStageName": "FruitMaxSize",
-                  "ResetStageName": "BareTree",
+                  "ResetStageName": "BareVine",
                   "FractionRemovedOnCut": 0.0,
                   "FractionRemovedOnHarvest": 0.0,
                   "FractionRemovedOnGraze": 0.0,
@@ -258873,7 +258841,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "FruitMature",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "SenescenceLeafFall",
                       "ResourceName": null,
@@ -260818,12 +260786,12 @@
                   "AccumulateEventName": "[Clock].DoReportCalculations",
                   "NameOfPlantToLink": "KiwiFruit",
                   "StartStageName": "",
-                  "EndStageName": "BareTree",
+                  "EndStageName": "BareVine",
                   "StartEventName": "[Girdling].Girdled",
                   "EndEventName": null,
                   "StartDate": "",
                   "EndDate": "",
-                  "ReduceStageName": "BareTree",
+                  "ReduceStageName": "BareVine",
                   "FractionRemovedOnStage": 1.0,
                   "ReduceEventName": null,
                   "FractionRemovedOnEvent": 0.0,
@@ -260904,7 +260872,7 @@
                     {
                       "$type": "Models.Functions.OnEventFunctionGirdle, Models",
                       "SetEvent": "[Girdling].Girdled",
-                      "ReSetEvent": "BareTree",
+                      "ReSetEvent": "BareVine",
                       "Name": "GirdlingPartitioningResponse",
                       "ResourceName": null,
                       "Children": [
@@ -261339,7 +261307,7 @@
                             {
                               "$type": "Models.Functions.PhaseLookupValue, Models",
                               "Start": "StartFruitGrowth",
-                              "End": "BareTree",
+                              "End": "BareVine",
                               "FixedValue": "NaN",
                               "Name": "Fruiting",
                               "ResourceName": null,
@@ -262947,7 +262915,7 @@
                         {
                           "$type": "Models.Functions.PhaseLookupValue, Models",
                           "Start": "BudBreak",
-                          "End": "BareTree",
+                          "End": "BareVine",
                           "FixedValue": "NaN",
                           "Name": "Vegetative",
                           "ResourceName": null,
@@ -264270,7 +264238,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -264408,7 +264376,7 @@
                         {
                           "$type": "Models.Functions.OnEventFunctionGirdle, Models",
                           "SetEvent": "[Girdling].Girdled",
-                          "ReSetEvent": "BareTree",
+                          "ReSetEvent": "BareVine",
                           "Name": "GirdlingPartitioningResponse",
                           "ResourceName": null,
                           "Children": [
@@ -264552,7 +264520,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -264624,7 +264592,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -264775,7 +264743,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -264886,7 +264854,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -264998,7 +264966,7 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "FruitMature",
-                  "ReSetEvent": "HalfLeafFall",
+                  "ReSetEvent": "BareVine",
                   "Name": "MaxSingleBerryDMC",
                   "ResourceName": null,
                   "Children": [
@@ -265383,7 +265351,7 @@
                 {
                   "$type": "Models.Functions.PhaseLookupValue, Models",
                   "Start": "StartFruitGrowth",
-                  "End": "HalfLeafFall",
+                  "End": "BareVine",
                   "FixedValue": "NaN",
                   "Name": "MeanGrowthTemp",
                   "ResourceName": null,
@@ -265406,7 +265374,7 @@
                           "EndEventName": null,
                           "StartDate": "",
                           "EndDate": "",
-                          "ReduceStageName": "BareTree",
+                          "ReduceStageName": "BareVine",
                           "FractionRemovedOnStage": 1.0,
                           "ReduceEventName": null,
                           "FractionRemovedOnEvent": 0.0,
@@ -265443,7 +265411,7 @@
                           "EndEventName": null,
                           "StartDate": "",
                           "EndDate": "",
-                          "ReduceStageName": "BareTree",
+                          "ReduceStageName": "BareVine",
                           "FractionRemovedOnStage": 1.0,
                           "ReduceEventName": null,
                           "FractionRemovedOnEvent": 0.0,
@@ -265508,7 +265476,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -265599,7 +265567,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "HalfLeafFall",
+                      "End": "BareVine",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -265723,7 +265691,7 @@
                   "$type": "Models.Functions.AccumulateFunction, Models",
                   "StartStageName": "EndFlowering",
                   "EndStageName": "FruitMature",
-                  "ResetStageName": "HalfLeafFall",
+                  "ResetStageName": "BareVine",
                   "FractionRemovedOnCut": 0.0,
                   "FractionRemovedOnHarvest": 1.0,
                   "FractionRemovedOnGraze": 0.0,
@@ -265779,7 +265747,7 @@
                       "EndEventName": null,
                       "StartDate": "",
                       "EndDate": "",
-                      "ReduceStageName": "BareTree",
+                      "ReduceStageName": "BareVine",
                       "FractionRemovedOnStage": 1.0,
                       "ReduceEventName": null,
                       "FractionRemovedOnEvent": 0.0,
