@@ -171,16 +171,8 @@ namespace Models.PMF.Phen
 
         /// <summary>Return current stage name.</summary>
         [JsonIgnore]
-        public string CurrentStageName
-        {
-            get
-            {
-                if (CurrentPhase != null && OnStartDayOf(CurrentPhase.Start))
-                    return CurrentPhase.Start;
-                else
-                    return "";
-            }
-        }
+        public string CurrentStageName { get; private set; }
+
 
         /// <summary>Gets the fraction in current phase.</summary>
         public double FractionInCurrentPhase
@@ -291,6 +283,11 @@ namespace Models.PMF.Phen
                 throw new Exception(this + " Trying to set to non-existant stage");
 
             currentPhaseIndex = Convert.ToInt32(Math.Floor(newStage), CultureInfo.InvariantCulture) - 1;
+
+            if (currentPhaseIndex == newStage) //Stage has been set to interger so stageName should have a value on this day
+            {
+                CurrentStageName = CurrentPhase.Start;
+            }
 
             if (newStage < Stage)
             {
@@ -615,6 +612,7 @@ namespace Models.PMF.Phen
         {
             if (PlantIsAlive)
             {
+                CurrentStageName = "";
                 if (thermalTime.Value() < 0)
                     throw new Exception("Negative Thermal Time, check the set up of the ThermalTime Function in" + this);
 
@@ -642,6 +640,7 @@ namespace Models.PMF.Phen
 
                     PhaseChangedType PhaseChangedData = new PhaseChangedType();
                     PhaseChangedData.StageName = CurrentPhase.Start;
+                    CurrentStageName = CurrentPhase.Start;
                     PhaseChanged?.Invoke(plant, PhaseChangedData);
 
                     if (CurrentPhase is GotoPhase) //If new phase is one that sets a new stage, do them now
