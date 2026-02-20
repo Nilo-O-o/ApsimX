@@ -1,5 +1,6 @@
 ﻿using System;
 using APSIM.Core;
+using DocumentFormat.OpenXml.Drawing;
 using Models.Core;
 using Models.PMF.Phen;
 
@@ -15,6 +16,10 @@ namespace Models.Functions
     {
         /// <summary>The _ value</summary>
         private double _Value = 0;
+
+        /// <summary>Link to an event service.</summary>
+        [Link]
+        private IEvent events = null;
 
         /// <summary>The set event</summary>
         [Description("The event that triggers change from pre to post event value")]
@@ -61,6 +66,34 @@ namespace Models.Functions
 
             if (phaseChange.StageName == ReSetEvent)
                 _Value = PreEventValue.Value();
+        }
+
+        /// <summary>
+        /// Connect event handlers.
+        /// </summary>
+        /// <param name="sender">Sender object..</param>
+        /// <param name="args">Event data.</param>
+        [EventSubscribe("SubscribeToEvents")]
+        private void OnConnectToEvents(object sender, EventArgs args)
+        {
+            if (!String.IsNullOrEmpty(SetEvent))
+            {
+                events.Subscribe(SetEvent, OnEvent);
+            }
+            if (!String.IsNullOrEmpty(ReSetEvent))
+            {
+                events.Subscribe(ReSetEvent, OnReset);
+            }
+        }
+
+        private void OnEvent(object sender, EventArgs args)
+        {
+            _Value = PostEventValue.Value();
+        }
+
+        private void OnReset(object sender, EventArgs args)
+        {
+            _Value = PreEventValue.Value();
         }
 
         /// <summary>Gets the value.</summary>
