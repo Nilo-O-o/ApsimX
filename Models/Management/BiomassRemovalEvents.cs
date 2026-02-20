@@ -160,7 +160,7 @@ namespace Models.Management
         [EventSubscribe("PhenologyDefoliate")]
         private void OnPhenologyDefoliate(object sender, BiomassRemovalEventArgs e)
         {
-            if (RemovalType == e.RemovalType)
+            if ((RemovalType == e.RemovalType) && (e.RemovalType.ToString() != "None"))
                 Remove();
         }
 
