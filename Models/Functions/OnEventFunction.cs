@@ -29,6 +29,14 @@ namespace Models.Functions
         [Description("(optional) The event resets to pre event value")]
         public string ReSetEvent { get; set; }
 
+        /// <summary>The set event</summary>
+        [Description("The phenology stage that triggers change from pre to post event value")]
+        public string SetStage { get; set; }
+
+        /// <summary>The re set event</summary>
+        [Description("(optional) The phenology stage resets to pre event value")]
+        public string ReSetStage { get; set; }
+
 
         /// <summary>The pre event value</summary>
         [Link(Type = LinkType.Child, ByName = true)]
@@ -46,25 +54,16 @@ namespace Models.Functions
             _Value = PreEventValue.Value();
         }
 
-        /// <summary>Called when cutting.</summary>
-        /// <param name="sender">The sender.</param>
-        /// <param name="e">The <see cref="EventArgs"/> instance containing the event data.</param>
-        [EventSubscribe("Cutting")]
-        private void OnCutting(object sender, EventArgs e)
-        {
-            _Value = PreEventValue.Value();
-        }
-
         /// <summary>Called when [phase changed].</summary>
         /// <param name="phaseChange">The phase change.</param>
         /// <param name="sender">Sender plant.</param>
         [EventSubscribe("PhaseChanged")]
         private void OnPhaseChanged(object sender, PhaseChangedType phaseChange)
         {
-            if (phaseChange.StageName == SetEvent)
+            if (phaseChange.StageName == SetStage)
                 _Value = PostEventValue.Value();
 
-            if (phaseChange.StageName == ReSetEvent)
+            if (phaseChange.StageName == ReSetStage)
                 _Value = PreEventValue.Value();
         }
 
@@ -78,11 +77,11 @@ namespace Models.Functions
         {
             if (!String.IsNullOrEmpty(SetEvent))
             {
-                events.Subscribe(SetEvent, OnEvent);
+                events.Subscribe(SetEvent, OnEvent, false);
             }
             if (!String.IsNullOrEmpty(ReSetEvent))
             {
-                events.Subscribe(ReSetEvent, OnReset);
+                events.Subscribe(ReSetEvent, OnReset, false);
             }
         }
 

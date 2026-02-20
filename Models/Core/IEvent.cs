@@ -12,7 +12,8 @@ namespace Models.Core
         /// </summary>
         /// <param name="eventName">The name of the event to subscribe to</param>
         /// <param name="handler">The event handler</param>
-        void Subscribe(string eventName, EventHandler handler);
+        /// <param name="throwIfEventNotFound">flag to suppress error messge if match is not found</param>
+        void Subscribe(string eventName, EventHandler handler, bool throwIfEventNotFound = true);
 
         /// <summary>
         /// Unsubscribe an event. Throws if not found.

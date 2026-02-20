@@ -82,7 +82,8 @@ namespace Models.Core
         /// </summary>
         /// <param name="eventNameAndPath">The name of the event to subscribe to</param>
         /// <param name="handler">The event handler</param>
-        public void Subscribe(string eventNameAndPath, EventHandler handler)
+        /// <param name="throwIfEventNotFound">flag to suppress error messge if match is not found</param>
+        public void Subscribe(string eventNameAndPath, EventHandler handler, bool throwIfEventNotFound = true)
         {
             // Get the name of the component and event.
             string componentName = StringUtilities.ParentName(eventNameAndPath, '.');
@@ -93,10 +94,18 @@ namespace Models.Core
             // Get the component.
             object component = relativeTo.Node.Get(componentName);
             if (component == null)
-                throw new Exception(relativeTo.FullPath + " can not find the component: " + componentName);
-
-            // Get the EventInfo for the published event.
-            EventInfo componentEvent = component.GetType().GetEvent(eventName);
+            {
+                if (throwIfEventNotFound)
+                {
+                    throw new Exception(relativeTo.FullPath + " can not find the component: " + componentName);
+                }
+                else
+                {
+                    return;
+                }
+            }
+                    // Get the EventInfo for the published event.
+                    EventInfo componentEvent = component.GetType().GetEvent(eventName);
             if (componentEvent == null)
                 throw new Exception("Cannot find event: " + eventName + " in model: " + componentName);
 
