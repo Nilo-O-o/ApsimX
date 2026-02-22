@@ -319,8 +319,8 @@ namespace Models.PMF
             
             DeadRemoved += Dead * deadToRemove;
             DeadToResidues += Dead * deadToResidue;
-
-            if (((LiveRemoved+LiveToResidues).Wt > Live.Wt) || ((DeadRemoved + DeadToResidues).Wt > Dead.Wt))
+            if (MathUtilities.IsGreaterThan((LiveRemoved+LiveToResidues).Wt, Live.Wt, 1E-09) ||
+                MathUtilities.IsGreaterThan((DeadRemoved + DeadToResidues).Wt, Dead.Wt, 1E-09))
             {
                 throw new Exception("Weight of biomass removed exceeds the wt present in the organ.  " +
                     "Check the sum of removal fractions do not exceed 1.0 for live and dead.  Multiple biomass removal events" +
