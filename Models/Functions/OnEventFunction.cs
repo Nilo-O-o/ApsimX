@@ -22,18 +22,22 @@ namespace Models.Functions
         private IEvent events = null;
 
         /// <summary>The set event</summary>
-        [Description("The event that triggers change from pre to post event value")]
+        [Separator("Event could come from any model.  Class sending event in square brackets followed by name of event. e.g. [Plant].Sowing")]
+        [Description("The model event that triggers change from pre to post event value")]
         public string SetEvent { get; set; }
 
         /// <summary>The re set event</summary>
-        [Description("(optional) The event resets to pre event value")]
+        [Description("(optional) The model event that resets to pre event value")]
         public string ReSetEvent { get; set; }
 
         /// <summary>The set event</summary>
+        [Separator("Stages from parent plant when actions happen")]
+        [Display(Type = DisplayType.CropStageName)]
         [Description("The phenology stage that triggers change from pre to post event value")]
         public string SetStage { get; set; }
 
         /// <summary>The re set event</summary>
+        [Display(Type = DisplayType.CropStageName)]
         [Description("(optional) The phenology stage resets to pre event value")]
         public string ReSetStage { get; set; }
 
