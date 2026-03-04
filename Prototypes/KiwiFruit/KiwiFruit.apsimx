@@ -2032,7 +2032,7 @@
               "Children": [
                 {
                   "$type": "Models.Factorial.Factor, Models",
-                  "Specification": "[OrchardSetUp].Script.FruitNumber = 45",
+                  "Specification": "[OrchardSetUp].Script.FruitNumber = 50",
                   "Name": "CropLoad",
                   "ResourceName": null,
                   "Children": [],
@@ -277802,104 +277802,97 @@
                       "ResourceName": null,
                       "Children": [
                         {
-                          "$type": "Models.Functions.MaximumFunction, Models",
-                          "Name": "MaximumFunction",
+                          "$type": "Models.Functions.AddFunction, Models",
+                          "Name": "AddFunction",
                           "ResourceName": null,
                           "Children": [
                             {
-                              "$type": "Models.Functions.AddFunction, Models",
-                              "Name": "AddFunction",
+                              "$type": "Models.Functions.MultiplyFunction, Models",
+                              "Name": "DMCEarly",
                               "ResourceName": null,
                               "Children": [
                                 {
-                                  "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": -0.025869,
-                                  "Units": "-0.025869",
-                                  "Name": "ParamA",
-                                  "ResourceName": null,
-                                  "Children": [],
-                                  "Enabled": true,
-                                  "ReadOnly": false
-                                },
-                                {
-                                  "$type": "Models.Functions.MultiplyFunction, Models",
-                                  "Name": "DWEffect",
+                                  "$type": "Models.Functions.SubtractFunction, Models",
+                                  "Name": "SubtractFunction",
                                   "ResourceName": null,
                                   "Children": [
                                     {
                                       "$type": "Models.Functions.Constant, Models",
-                                      "FixedValue": 0.066627,
+                                      "FixedValue": 1.0,
                                       "Units": "",
-                                      "Name": "ParamB",
+                                      "Name": "One",
                                       "ResourceName": null,
                                       "Children": [],
                                       "Enabled": true,
                                       "ReadOnly": false
                                     },
                                     {
-                                      "$type": "Models.Functions.ExpressionFunction, Models",
-                                      "Units": null,
-                                      "Expression": "ln([Fruit].SingleBerryDW.FruitingPhase)",
-                                      "Name": "Ln",
+                                      "$type": "Models.Functions.VariableReference, Models",
+                                      "VariableName": "[Fruit].SDW",
+                                      "Name": "SDW",
+                                      "ResourceName": null,
+                                      "Children": [],
+                                      "Enabled": true,
+                                      "ReadOnly": false
+                                    }
+                                  ],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.Constant, Models",
+                                  "FixedValue": 0.1351,
+                                  "Units": null,
+                                  "Name": "DMC0",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
+                                }
+                              ],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            },
+                            {
+                              "$type": "Models.Functions.MultiplyFunction, Models",
+                              "Name": "DMCLate",
+                              "ResourceName": null,
+                              "Children": [
+                                {
+                                  "$type": "Models.Functions.AddFunction, Models",
+                                  "Name": "AddFunction",
+                                  "ResourceName": null,
+                                  "Children": [
+                                    {
+                                      "$type": "Models.Functions.Constant, Models",
+                                      "FixedValue": -0.025869,
+                                      "Units": "-0.025869",
+                                      "Name": "ParamA",
                                       "ResourceName": null,
                                       "Children": [],
                                       "Enabled": true,
                                       "ReadOnly": false
                                     },
                                     {
-                                      "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                                      "Name": "XylemWaterInflow",
+                                      "$type": "Models.Functions.MultiplyFunction, Models",
+                                      "Name": "DWEffect",
                                       "ResourceName": null,
                                       "Children": [
                                         {
-                                          "$type": "Models.Functions.XYPairs, Models",
-                                          "X": [
-                                            0.0,
-                                            1000.0,
-                                            2000.0,
-                                            3000.0,
-                                            5000.0,
-                                            8000.0,
-                                            10000.0
-                                          ],
-                                          "Y": [
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0,
-                                            1.0
-                                          ],
-                                          "Name": "XYPairs",
+                                          "$type": "Models.Functions.Constant, Models",
+                                          "FixedValue": 0.0675,
+                                          "Units": "0.0675",
+                                          "Name": "ParamB",
                                           "ResourceName": null,
                                           "Children": [],
                                           "Enabled": true,
                                           "ReadOnly": false
                                         },
                                         {
-                                          "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[Fruit].FruitingPhaseAccTT",
-                                          "Name": "XValue",
-                                          "ResourceName": null,
-                                          "Children": [],
-                                          "Enabled": true,
-                                          "ReadOnly": false
-                                        }
-                                      ],
-                                      "Enabled": true,
-                                      "ReadOnly": false
-                                    },
-                                    {
-                                      "$type": "Models.Functions.MultiplyFunction, Models",
-                                      "Name": "RadEffect",
-                                      "ResourceName": null,
-                                      "Children": [
-                                        {
-                                          "$type": "Models.Functions.Constant, Models",
-                                          "FixedValue": 1.0,
-                                          "Units": "0.0001",
-                                          "Name": "ParamC",
+                                          "$type": "Models.Functions.ExpressionFunction, Models",
+                                          "Units": null,
+                                          "Expression": "ln([Fruit].SingleBerryDW.FruitingPhase)",
+                                          "Name": "Ln",
                                           "ResourceName": null,
                                           "Children": [],
                                           "Enabled": true,
@@ -277907,7 +277900,7 @@
                                         },
                                         {
                                           "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                                          "Name": "RadnResponse",
+                                          "Name": "XylemWaterInflow",
                                           "ResourceName": null,
                                           "Children": [
                                             {
@@ -277915,12 +277908,14 @@
                                               "X": [
                                                 0.0,
                                                 1000.0,
-                                                2500.0,
+                                                2000.0,
                                                 3000.0,
-                                                3100.0,
-                                                4000.0
+                                                5000.0,
+                                                8000.0,
+                                                10000.0
                                               ],
                                               "Y": [
+                                                1.0,
                                                 1.0,
                                                 1.0,
                                                 1.0,
@@ -277936,10 +277931,71 @@
                                             },
                                             {
                                               "$type": "Models.Functions.VariableReference, Models",
-                                              "VariableName": "[Fruit].CumRadIntercepted",
+                                              "VariableName": "[Fruit].FruitingPhaseAccTT",
                                               "Name": "XValue",
                                               "ResourceName": null,
                                               "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            }
+                                          ],
+                                          "Enabled": true,
+                                          "ReadOnly": false
+                                        },
+                                        {
+                                          "$type": "Models.Functions.MultiplyFunction, Models",
+                                          "Name": "RadEffect",
+                                          "ResourceName": null,
+                                          "Children": [
+                                            {
+                                              "$type": "Models.Functions.Constant, Models",
+                                              "FixedValue": 1.0,
+                                              "Units": "0.0001",
+                                              "Name": "ParamC",
+                                              "ResourceName": null,
+                                              "Children": [],
+                                              "Enabled": true,
+                                              "ReadOnly": false
+                                            },
+                                            {
+                                              "$type": "Models.Functions.LinearInterpolationFunction, Models",
+                                              "Name": "RadnResponse",
+                                              "ResourceName": null,
+                                              "Children": [
+                                                {
+                                                  "$type": "Models.Functions.XYPairs, Models",
+                                                  "X": [
+                                                    0.0,
+                                                    1000.0,
+                                                    2500.0,
+                                                    3000.0,
+                                                    3100.0,
+                                                    4000.0
+                                                  ],
+                                                  "Y": [
+                                                    1.0,
+                                                    1.0,
+                                                    1.0,
+                                                    1.0,
+                                                    1.0,
+                                                    1.0
+                                                  ],
+                                                  "Name": "XYPairs",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                },
+                                                {
+                                                  "$type": "Models.Functions.VariableReference, Models",
+                                                  "VariableName": "[Fruit].CumRadIntercepted",
+                                                  "Name": "XValue",
+                                                  "ResourceName": null,
+                                                  "Children": [],
+                                                  "Enabled": true,
+                                                  "ReadOnly": false
+                                                }
+                                              ],
                                               "Enabled": true,
                                               "ReadOnly": false
                                             }
@@ -277954,18 +278010,17 @@
                                   ],
                                   "Enabled": true,
                                   "ReadOnly": false
+                                },
+                                {
+                                  "$type": "Models.Functions.VariableReference, Models",
+                                  "VariableName": "[Fruit].SDW",
+                                  "Name": "SDW",
+                                  "ResourceName": null,
+                                  "Children": [],
+                                  "Enabled": true,
+                                  "ReadOnly": false
                                 }
                               ],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            },
-                            {
-                              "$type": "Models.Functions.Constant, Models",
-                              "FixedValue": 0.0,
-                              "Units": "",
-                              "Name": "Zero",
-                              "ResourceName": null,
-                              "Children": [],
                               "Enabled": true,
                               "ReadOnly": false
                             }
@@ -278922,7 +278977,7 @@
                                         {
                                           "$type": "Models.Functions.XYPairs, Models",
                                           "X": [
-                                            "NaN",
+                                            0.0,
                                             500.0,
                                             1400.0,
                                             2200.0,
@@ -279834,6 +279889,37 @@
                       "$type": "Models.Functions.VariableReference, Models",
                       "VariableName": "[Fruit].SingleBerryFW",
                       "Name": "FW",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.ProtectedDivideFunction, Models",
+                  "NumeratorErrVal": 0.0,
+                  "DenominatorErrVal": 0.0,
+                  "Name": "SDW",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.Constant, Models",
+                      "FixedValue": 1.0,
+                      "Units": "",
+                      "Name": "One",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.ExpressionFunction, Models",
+                      "Units": null,
+                      "Expression": "1+exp(-1*([Fruit].SingleBerryDW.FruitingPhase-3))",
+                      "Name": "Exponential",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
