@@ -339424,7 +339424,7 @@
                                 },
                                 {
                                   "$type": "Models.Functions.Constant, Models",
-                                  "FixedValue": 0.85,
+                                  "FixedValue": 0.91891,
                                   "Units": null,
                                   "Name": "PostEventValue",
                                   "ResourceName": null,
@@ -340320,7 +340320,7 @@
                         {
                           "$type": "Models.Functions.Constant, Models",
                           "FixedValue": 11.5,
-                          "Units": "11.4",
+                          "Units": "",
                           "Name": "Xo",
                           "ResourceName": null,
                           "Children": [],
