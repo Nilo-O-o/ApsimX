@@ -340319,8 +340319,8 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 11.4,
-                          "Units": "11.13",
+                          "FixedValue": 11.5,
+                          "Units": "11.4",
                           "Name": "Xo",
                           "ResourceName": null,
                           "Children": [],
