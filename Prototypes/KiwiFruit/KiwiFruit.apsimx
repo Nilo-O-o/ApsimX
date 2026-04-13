@@ -39230,7 +39230,7 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
@@ -39274,7 +39274,7 @@
                   "LineThickness": 0,
                   "TableName": "Report",
                   "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Phenology.ProportionCU",
+                  "YFieldName": "KiwiFruit.Phenology.EndoChillingEffect",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": false,
@@ -337825,8 +337825,8 @@
                         500.0,
                         1200.0,
                         1250.0,
-                        1270.0,
                         1300.0,
+                        1310.0,
                         1360.0,
                         1400.0,
                         1430.0,
@@ -337845,9 +337845,9 @@
                         1.0,
                         1.0,
                         1.0,
-                        0.2,
-                        0.2,
-                        0.28,
+                        0.55,
+                        0.3,
+                        0.25,
                         0.4,
                         0.47,
                         0.59,
@@ -340243,8 +340243,8 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 9.3,
-                          "Units": "",
+                          "FixedValue": 9.2,
+                          "Units": "9.3",
                           "Name": "Xo",
                           "ResourceName": null,
                           "Children": [],
@@ -340253,8 +340253,8 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.4,
-                          "Units": "",
+                          "FixedValue": 0.8,
+                          "Units": "0.4",
                           "Name": "b",
                           "ResourceName": null,
                           "Children": [],
@@ -340380,7 +340380,7 @@
                       "Name": "XYPairs",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -340389,7 +340389,7 @@
                       "Name": "XValue",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -340398,11 +340398,11 @@
                       "Name": "Memo",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -350965,6 +350965,7 @@
             "[KiwiFruit].Phenology.MeanEndoTemp",
             "[KiwiFruit].Phenology.MeanEcoTemp",
             "[KiwiFruit].Phenology.EcoMeanTempEffect",
+            "[KiwiFruit].Phenology.EndoChillingEffect",
             "[KiwiFruit].Phenology.EarlyLeaf.Target",
             "",
             "[KiwiFruit].Phenology.EarlyLeaf.Target.HCReduction",
