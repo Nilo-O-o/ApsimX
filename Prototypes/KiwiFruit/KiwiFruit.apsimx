@@ -340280,12 +340280,12 @@
                 },
                 {
                   "$type": "Models.Functions.AddFunction, Models",
-                  "Name": "EcoMeanTempEffect2",
+                  "Name": "EcoMeanTempEffect",
                   "ResourceName": null,
                   "Children": [
                     {
                       "$type": "Models.Functions.Constant, Models",
-                      "FixedValue": 0.67,
+                      "FixedValue": 0.674,
                       "Units": "",
                       "Name": "Ymin",
                       "ResourceName": null,
@@ -340300,7 +340300,7 @@
                       "Children": [
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 0.33,
+                          "FixedValue": 0.326,
                           "Units": null,
                           "Name": "Ymax",
                           "ResourceName": null,
@@ -340319,8 +340319,8 @@
                         },
                         {
                           "$type": "Models.Functions.Constant, Models",
-                          "FixedValue": 11.13,
-                          "Units": "",
+                          "FixedValue": 11.4,
+                          "Units": "11.13",
                           "Name": "Xo",
                           "ResourceName": null,
                           "Children": [],
@@ -340356,7 +340356,7 @@
                 },
                 {
                   "$type": "Models.Functions.LinearInterpolationFunction, Models",
-                  "Name": "EcoMeanTempEffect",
+                  "Name": "EcoMeanTempEffect21",
                   "ResourceName": null,
                   "Children": [
                     {
