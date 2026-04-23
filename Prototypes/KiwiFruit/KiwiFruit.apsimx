@@ -216153,7 +216153,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -216237,7 +216237,7 @@
                     },
                     {
                       "Key": "HCApplicationDate",
-                      "Value": "20-Jul"
+                      "Value": "30-Jul"
                     },
                     {
                       "Key": "HCRate",
@@ -221577,7 +221577,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -221661,7 +221661,7 @@
                     },
                     {
                       "Key": "HCApplicationDate",
-                      "Value": "20-jul"
+                      "Value": "30-jul"
                     },
                     {
                       "Key": "HCRate",
@@ -226218,7 +226218,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -231288,7 +231288,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -231384,7 +231384,7 @@
                     },
                     {
                       "Key": "GirdlingDates",
-                      "Value": "10-feb"
+                      "Value": "15-feb"
                     },
                     {
                       "Key": "BudSetDate",
@@ -236712,7 +236712,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -236808,7 +236808,7 @@
                     },
                     {
                       "Key": "GirdlingDates",
-                      "Value": "10-feb"
+                      "Value": "15-feb"
                     },
                     {
                       "Key": "BudSetDate",
@@ -241915,7 +241915,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -246650,7 +246650,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -251609,7 +251609,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -251705,7 +251705,7 @@
                     },
                     {
                       "Key": "GirdlingDates",
-                      "Value": "1-Jan"
+                      "Value": "10-Jan"
                     },
                     {
                       "Key": "BudSetDate",
@@ -256266,7 +256266,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -256350,7 +256350,7 @@
                     },
                     {
                       "Key": "HCApplicationDate",
-                      "Value": "5-aug"
+                      "Value": "3-aug"
                     },
                     {
                       "Key": "HCRate",
@@ -256370,7 +256370,7 @@
                     },
                     {
                       "Key": "FruitNumber",
-                      "Value": "60"
+                      "Value": "62"
                     }
                   ],
                   "Name": "OrchardSetUp",
@@ -261001,7 +261001,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -261085,7 +261085,7 @@
                     },
                     {
                       "Key": "HCApplicationDate",
-                      "Value": "1-Aug"
+                      "Value": ""
                     },
                     {
                       "Key": "HCRate",
@@ -265736,7 +265736,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -270695,7 +270695,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -270779,7 +270779,7 @@
                     },
                     {
                       "Key": "HCApplicationDate",
-                      "Value": "5-Aug"
+                      "Value": "10-Aug"
                     },
                     {
                       "Key": "HCRate",
@@ -275928,7 +275928,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -276012,7 +276012,7 @@
                     },
                     {
                       "Key": "HCApplicationDate",
-                      "Value": ""
+                      "Value": "1-sept"
                     },
                     {
                       "Key": "HCRate",
@@ -276024,7 +276024,7 @@
                     },
                     {
                       "Key": "GirdlingDates",
-                      "Value": "30-Jan"
+                      "Value": "5-feb"
                     },
                     {
                       "Key": "BudSetDate",
@@ -276032,7 +276032,7 @@
                     },
                     {
                       "Key": "FruitNumber",
-                      "Value": "60"
+                      "Value": "40"
                     }
                   ],
                   "Name": "OrchardSetUp",
@@ -281180,7 +281180,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -286432,7 +286432,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -286516,7 +286516,7 @@
                     },
                     {
                       "Key": "HCApplicationDate",
-                      "Value": ""
+                      "Value": "1-sep"
                     },
                     {
                       "Key": "HCRate",
@@ -286536,7 +286536,7 @@
                     },
                     {
                       "Key": "FruitNumber",
-                      "Value": "60"
+                      "Value": "40"
                     }
                   ],
                   "Name": "OrchardSetUp",
@@ -291156,7 +291156,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -295966,7 +295966,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -301138,7 +301138,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -306097,7 +306097,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -310832,7 +310832,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -315840,7 +315840,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -320598,7 +320598,7 @@
                     "                else ",
                     "                {",
                     "                IFunction chilling = (IFunction)Structure.Get(\"KiwiFruit.Phenology.AccumulatedChilling\", relativeTo:zone);",
-                    "                if ((chilling.Value() >=1200) && (Applied == false))",
+                    "                if ((chilling.Value() >=1310) && (Applied == false))",
                     "                    {",
                     "                    agriChemical.Apply();",
                     "                    Applied = true; ",
@@ -320702,7 +320702,7 @@
                     },
                     {
                       "Key": "FruitNumber",
-                      "Value": "60"
+                      "Value": "50"
                     }
                   ],
                   "Name": "OrchardSetUp",
