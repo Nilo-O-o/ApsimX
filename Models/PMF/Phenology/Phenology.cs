@@ -30,7 +30,7 @@ namespace Models.PMF.Phen
         private Plant plant = null;
 
         /// <summary>The thermal time</summary>
-        [Link(Type = LinkType.Child, ByName = true)]
+        [Link(Type = LinkType.Child, ByName = true, IsOptional  = true)]
         public IFunction thermalTime = null;
 
         [Link(IsOptional = true)]
@@ -613,7 +613,7 @@ namespace Models.PMF.Phen
             if (PlantIsAlive)
             {
                 CurrentStageName = "";
-                if (thermalTime.Value() < 0)
+                if (thermalTime?.Value() < 0)
                     throw new Exception("Negative Thermal Time, check the set up of the ThermalTime Function in" + this);
 
                 // Calculate progression through current phase
@@ -651,9 +651,12 @@ namespace Models.PMF.Phen
 
                 if (!stageSetToday)
                 {
-                    AccumulatedTT += thermalTime.Value();
-                    if (Emerged)
-                        AccumulatedEmergedTT += thermalTime.Value();
+                    if (thermalTime != null)
+                    {
+                        AccumulatedTT += thermalTime.Value();
+                        if (Emerged)
+                            AccumulatedEmergedTT += thermalTime.Value();
+                    }
                 }
 
                 Stage = (currentPhaseIndex + 1) + CurrentPhase.FractionComplete;
