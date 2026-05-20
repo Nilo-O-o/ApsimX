@@ -1,6 +1,6 @@
 {
   "$type": "Models.Core.Simulations, Models",
-  "Version": 211,
+  "Version": 217,
   "Name": "Simulations",
   "ResourceName": null,
   "Children": [
@@ -48,7 +48,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "CropLoadSensibility",
           "ResourceName": null,
           "Children": [
@@ -885,6 +884,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -3666,7 +3666,6 @@
       "Children": [
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPROB4BB2016control",
           "ResourceName": null,
           "Children": [
@@ -4503,6 +4502,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -5977,74 +5977,6 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "NodeNumber",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -11094807,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "Report",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Leaf.NodeNumber",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Stage",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
               "Name": "Stage",
               "ResourceName": null,
               "Children": [
@@ -6684,46 +6616,6 @@
                   "CumulativeX": false,
                   "Filter": null,
                   "Name": "Predicted",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.EventNamesOnGraph, Models",
-                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                      "SimulationName": "KiwiTest",
-                      "Name": "EventNamesOnGraph",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16777216,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": "SimulationName",
-                  "FactorToVaryLines": "SimulationName",
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "BB",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Phenology.BudBurstDOY",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": false,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Observed",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -7596,7 +7488,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardTPBBCon1",
           "ResourceName": null,
           "Children": [
@@ -8440,6 +8331,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -11082,7 +10974,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardTPBBCon2",
           "ResourceName": null,
           "Children": [
@@ -11927,6 +11818,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -14433,7 +14325,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardKKBBControl",
           "ResourceName": null,
           "Children": [
@@ -15278,6 +15169,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -17852,7 +17744,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KatoaBB2008control",
           "ResourceName": null,
           "Children": [
@@ -18696,6 +18587,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -21494,7 +21386,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "MeadBB2008control",
           "ResourceName": null,
           "Children": [
@@ -22338,6 +22229,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -24765,7 +24657,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KatoaBB2009control",
           "ResourceName": null,
           "Children": [
@@ -25610,6 +25501,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -28116,7 +28008,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "MeadBB2009control",
           "ResourceName": null,
           "Children": [
@@ -28960,6 +28851,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -31387,7 +31279,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KatoaBB2010control",
           "ResourceName": null,
           "Children": [
@@ -32231,6 +32122,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -34658,7 +34550,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "MeadBB2010control",
           "ResourceName": null,
           "Children": [
@@ -35502,6 +35393,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -38008,7 +37900,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "NBB2010control",
           "ResourceName": null,
           "Children": [
@@ -38852,6 +38743,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -41437,7 +41329,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "NBB2011control",
           "ResourceName": null,
           "Children": [
@@ -42281,6 +42172,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -44787,7 +44679,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TeMaraBB2007Control",
           "ResourceName": null,
           "Children": [
@@ -45640,6 +45531,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -47948,7 +47840,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPROBB2007Control",
           "ResourceName": null,
           "Children": [
@@ -48801,6 +48692,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -51109,7 +51001,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHaywardBB2013Co",
           "ResourceName": null,
           "Children": [
@@ -51953,6 +51844,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -54419,7 +54311,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHaywardBB2013Co",
           "ResourceName": null,
           "Children": [
@@ -55263,6 +55154,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -57690,7 +57582,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHaywardBB2018Control",
           "ResourceName": null,
           "Children": [
@@ -58534,6 +58425,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -61079,7 +60971,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHaywardBB2018UntreatedControl",
           "ResourceName": null,
           "Children": [
@@ -61923,6 +61814,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -64677,7 +64569,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardBB2019Untreatedcontrol",
           "ResourceName": null,
           "Children": [
@@ -65521,6 +65412,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -67937,7 +67829,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRaw2020Control",
           "ResourceName": null,
           "Children": [
@@ -68781,6 +68672,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -71089,7 +70981,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRaw2021Control",
           "ResourceName": null,
           "Children": [
@@ -71933,6 +71824,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -74399,7 +74291,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBSpray2020Untreatedcontrol",
           "ResourceName": null,
           "Children": [
@@ -75243,6 +75134,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -77404,7 +77296,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HW-BudbreakTP2020Control",
           "ResourceName": null,
           "Children": [
@@ -78248,6 +78139,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -80923,7 +80815,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRawTP2021Control",
           "ResourceName": null,
           "Children": [
@@ -81767,6 +81658,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -84601,7 +84493,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HW-Budbreak-TP2020Control",
           "ResourceName": null,
           "Children": [
@@ -85445,6 +85336,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -88387,7 +88279,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBTP2022Control",
           "ResourceName": null,
           "Children": [
@@ -89231,6 +89122,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -92331,7 +92223,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardBB2014Control",
           "ResourceName": null,
           "Children": [
@@ -93175,6 +93066,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -96117,7 +96009,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "NBB2009control",
           "ResourceName": null,
           "Children": [
@@ -96961,6 +96852,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -99556,7 +99448,6 @@
       "Children": [
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HW-BudbreakTP2020HiCane223",
           "ResourceName": null,
           "Children": [
@@ -100400,6 +100291,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -103460,7 +103352,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HW-Budbreak-TP2020HiCane226",
           "ResourceName": null,
           "Children": [
@@ -104304,6 +104195,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -107285,7 +107177,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRawTP2021HiCane223",
           "ResourceName": null,
           "Children": [
@@ -108129,6 +108020,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -111229,7 +111121,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRawTP2021HiCane232",
           "ResourceName": null,
           "Children": [
@@ -112073,6 +111964,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -114975,7 +114867,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "NBB2010HC236",
           "ResourceName": null,
           "Children": [
@@ -115819,6 +115710,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -118721,7 +118613,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "NBB2011HC248",
           "ResourceName": null,
           "Children": [
@@ -119565,6 +119456,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -122467,7 +122359,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHaywardBB2013HC239",
           "ResourceName": null,
           "Children": [
@@ -123311,6 +123202,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -126597,7 +126489,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHaywardBB2018HiCaneDriftstop239",
           "ResourceName": null,
           "Children": [
@@ -127441,6 +127332,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -130343,7 +130235,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHaywardBB2018HiCaneDriftstop248",
           "ResourceName": null,
           "Children": [
@@ -131187,6 +131078,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -134089,7 +133981,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardBB2019HCDS236",
           "ResourceName": null,
           "Children": [
@@ -134933,6 +134824,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -137954,7 +137846,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardBB2019HCDS243",
           "ResourceName": null,
           "Children": [
@@ -138798,6 +138689,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -141700,7 +141592,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRaw2020HiCaneDriftstop247",
           "ResourceName": null,
           "Children": [
@@ -142544,6 +142435,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -145446,7 +145338,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBSpray2020HiCaneDriftstop248",
           "ResourceName": null,
           "Children": [
@@ -146290,6 +146181,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -150012,7 +149904,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRaw2020HiCaneDriftstop235",
           "ResourceName": null,
           "Children": [
@@ -150856,6 +150747,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -153758,7 +153650,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBRaw2020HiCaneDriftstop240",
           "ResourceName": null,
           "Children": [
@@ -154602,6 +154493,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -157533,7 +157425,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBSpray2020HiCaneDriftstop243",
           "ResourceName": null,
           "Children": [
@@ -158377,6 +158268,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -162001,7 +161893,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWBBTP2022HC225",
           "ResourceName": null,
           "Children": [
@@ -162845,6 +162736,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -165708,7 +165600,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardBB2014HC252",
           "ResourceName": null,
           "Children": [
@@ -166552,6 +166443,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -169336,7 +169228,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardTPBBHCT1",
           "ResourceName": null,
           "Children": [
@@ -170180,6 +170071,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -171654,74 +171546,6 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "NodeNumber",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -11094807,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "Report",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Leaf.NodeNumber",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Stage",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
               "Name": "Stage",
               "ResourceName": null,
               "Children": [
@@ -171749,85 +171573,6 @@
                   "CumulativeX": false,
                   "Filter": null,
                   "Name": "Stage",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.EventNamesOnGraph, Models",
-                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                      "SimulationName": "KiwiTest",
-                      "Name": "EventNamesOnGraph",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "Clock.Today",
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": null,
-                  "Maximum": null,
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "ProportionCU",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -11094807,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "Report",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Phenology.ProportionCU",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": false,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Predicted",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -172545,35 +172290,6 @@
                   ],
                   "Enabled": true,
                   "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -2793984,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "Report",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Phenology.EcoDormancy.ProgressThroughPhase",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Predicted1",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
                 }
               ],
               "Enabled": true,
@@ -172630,164 +172346,6 @@
                   "TableName": "Report",
                   "XFieldName": "Clock.Today",
                   "YFieldName": "KiwiFruit.Phenology.ChillingAtHC",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Predicted",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.EventNamesOnGraph, Models",
-                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                      "SimulationName": "KiwiTest",
-                      "Name": "EventNamesOnGraph",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "MeanWinterTemp",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -11094807,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "Report",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Phenology.MeanWinterTemp",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": null,
-                  "Name": "Predicted",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.EventNamesOnGraph, Models",
-                      "ColumnName": "KiwiFruit.Phenology.CurrentStageName",
-                      "SimulationName": "KiwiTest",
-                      "Name": "EventNamesOnGraph",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "SumCU",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -11094807,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 0,
-                  "Line": 0,
-                  "LineThickness": 0,
-                  "TableName": "Report",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "KiwiFruit.Phenology.ProportionBB.StartEndoToFruitMature.MaxBBPHC.HCFraction.Control.Sum",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
@@ -172980,7 +172538,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardTPBBHCT2",
           "ResourceName": null,
           "Children": [
@@ -173824,6 +173381,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -176545,7 +176103,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardTPBBHCT3",
           "ResourceName": null,
           "Children": [
@@ -177389,6 +176946,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -180031,7 +179589,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardTPBBHCT4",
           "ResourceName": null,
           "Children": [
@@ -180875,6 +180432,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -183409,7 +182967,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardTPBBHCT5",
           "ResourceName": null,
           "Children": [
@@ -184253,6 +183810,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -186895,7 +186453,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardKKBBHCT1",
           "ResourceName": null,
           "Children": [
@@ -187740,6 +187297,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -190472,7 +190030,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardKKBBHCT2",
           "ResourceName": null,
           "Children": [
@@ -191317,6 +190874,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -193733,7 +193291,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardKKBBHCT3",
           "ResourceName": null,
           "Children": [
@@ -194578,6 +194135,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -196994,7 +196552,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardKKBBHCT4",
           "ResourceName": null,
           "Children": [
@@ -197839,6 +197396,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -200255,7 +199813,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HaywardKKBBHCT5",
           "ResourceName": null,
           "Children": [
@@ -201100,6 +200657,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -203526,7 +203084,6 @@
       "Children": [
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "Gisborne2013HC",
           "ResourceName": null,
           "Children": [
@@ -204363,6 +203920,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -208933,7 +208491,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "Katikati2013HC",
           "ResourceName": null,
           "Children": [
@@ -209770,6 +209327,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -213557,7 +213115,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "Whangarei2013HC",
           "ResourceName": null,
           "Children": [
@@ -214394,6 +213951,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -218612,7 +218170,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2016",
           "ResourceName": null,
           "Children": [
@@ -219464,6 +219021,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -224019,7 +223577,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2017",
           "ResourceName": null,
           "Children": [
@@ -224871,6 +224428,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -229205,7 +228763,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2018",
           "ResourceName": null,
           "Children": [
@@ -230057,6 +229614,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -233923,7 +233481,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2019",
           "ResourceName": null,
           "Children": [
@@ -234775,6 +234332,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -238865,7 +238423,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2020",
           "ResourceName": null,
           "Children": [
@@ -239717,6 +239274,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -243505,7 +243063,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2021",
           "ResourceName": null,
           "Children": [
@@ -244357,6 +243914,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -248223,7 +247781,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2022",
           "ResourceName": null,
           "Children": [
@@ -249075,6 +248632,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -252941,7 +252499,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2023",
           "ResourceName": null,
           "Children": [
@@ -253793,6 +253350,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -258129,7 +257687,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2024",
           "ResourceName": null,
           "Children": [
@@ -258981,6 +258538,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -263345,7 +262903,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHW2020",
           "ResourceName": null,
           "Children": [
@@ -264197,6 +263754,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -268580,7 +268138,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHW2021",
           "ResourceName": null,
           "Children": [
@@ -269432,6 +268989,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -273815,7 +273373,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHW2022",
           "ResourceName": null,
           "Children": [
@@ -274667,6 +274224,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -278522,7 +278080,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHW2023",
           "ResourceName": null,
           "Children": [
@@ -279374,6 +278931,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -283315,7 +282873,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHW2024",
           "ResourceName": null,
           "Children": [
@@ -284167,6 +283724,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -288470,7 +288028,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "AKLDHW2020",
           "ResourceName": null,
           "Children": [
@@ -289322,6 +288879,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -293658,7 +293216,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "AKLDHW2021",
           "ResourceName": null,
           "Children": [
@@ -294510,6 +294067,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -298376,7 +297934,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "AKLDHW2022",
           "ResourceName": null,
           "Children": [
@@ -299228,6 +298785,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -303367,7 +302925,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "AKLDHW2023",
           "ResourceName": null,
           "Children": [
@@ -304219,6 +303776,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -308085,7 +307643,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "AKLDHW2024",
           "ResourceName": null,
           "Children": [
@@ -308937,6 +308494,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -313069,7 +312627,6 @@
       "Children": [
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "TPHW2016_2024",
           "ResourceName": null,
           "Children": [
@@ -313906,6 +313463,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -318916,7 +318474,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "KKHW2020_2024",
           "ResourceName": null,
           "Children": [
@@ -319753,6 +319310,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -323913,7 +323471,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "AKLDHW2020_2024",
           "ResourceName": null,
           "Children": [
@@ -324750,6 +324307,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -328392,7 +327950,6 @@
       "Children": [
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerA2023",
           "ResourceName": null,
           "Children": [
@@ -329214,6 +328771,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -332730,7 +332288,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerA2024",
           "ResourceName": null,
           "Children": [
@@ -333552,6 +333109,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -337068,7 +336626,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerA2025",
           "ResourceName": null,
           "Children": [
@@ -337890,6 +337447,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -341406,7 +340964,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerB2023",
           "ResourceName": null,
           "Children": [
@@ -342228,6 +341785,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -345744,7 +345302,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerB2024",
           "ResourceName": null,
           "Children": [
@@ -346566,6 +346123,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -350082,7 +349640,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerB2025",
           "ResourceName": null,
           "Children": [
@@ -350904,6 +350461,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -354420,7 +353978,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerC2023",
           "ResourceName": null,
           "Children": [
@@ -355242,6 +354799,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -358758,7 +358316,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerC2024",
           "ResourceName": null,
           "Children": [
@@ -359580,6 +359137,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -363096,7 +362654,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerC2025",
           "ResourceName": null,
           "Children": [
@@ -363918,6 +363475,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -367434,7 +366992,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerD2023",
           "ResourceName": null,
           "Children": [
@@ -368256,6 +367813,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -371772,7 +371330,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerE2024",
           "ResourceName": null,
           "Children": [
@@ -372594,6 +372151,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -376110,7 +375668,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerE2025",
           "ResourceName": null,
           "Children": [
@@ -376932,6 +376489,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -380448,7 +380006,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerF2023",
           "ResourceName": null,
           "Children": [
@@ -381270,6 +380827,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -384786,7 +384344,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerF2024",
           "ResourceName": null,
           "Children": [
@@ -385608,6 +385165,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -389124,7 +388682,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "GrowerF2025",
           "ResourceName": null,
           "Children": [
@@ -389946,6 +389503,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -393462,7 +393020,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWTP20172018NotGirdled",
           "ResourceName": null,
           "Children": [
@@ -394306,6 +393863,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -397822,7 +397380,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWTP20172018Girdled",
           "ResourceName": null,
           "Children": [
@@ -398666,6 +398223,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -402182,7 +401740,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWTP20192020NotGirdled",
           "ResourceName": null,
           "Children": [
@@ -403026,6 +402583,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -406542,7 +406100,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWTP20162017NotGirdled",
           "ResourceName": null,
           "Children": [
@@ -407386,6 +406943,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -411135,7 +410693,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWTP20162017Girdled",
           "ResourceName": null,
           "Children": [
@@ -411979,6 +411536,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -416104,7 +415662,6 @@
         },
         {
           "$type": "Models.Core.Simulation, Models",
-          "Descriptors": null,
           "Name": "HWTP20132014",
           "ResourceName": null,
           "Children": [
@@ -416948,6 +416505,7 @@
                       "$type": "Models.Soils.SoilTemp.SoilTemperature, Models",
                       "Thickness": null,
                       "InitialValues": null,
+                      "InteractionsPerDay": 8,
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
@@ -421515,6 +421073,7 @@
                       "OptTemp": 21.8,
                       "MaxTemp": 24.5,
                       "RefTemp": 21.8,
+                      "Beta": 1.0,
                       "MaximumTemperatureWeighting": 0.0,
                       "Units": "GDH",
                       "Name": "Response",
@@ -421547,6 +421106,7 @@
                       "OptTemp": 25.68,
                       "MaxTemp": 31.5,
                       "RefTemp": 25.68,
+                      "Beta": 1.0,
                       "MaximumTemperatureWeighting": 0.0,
                       "Units": "GDH",
                       "Name": "Response",
@@ -421588,6 +421148,7 @@
                       "OptTemp": 19.0,
                       "MaxTemp": 33.0,
                       "RefTemp": 19.0,
+                      "Beta": 1.0,
                       "MaximumTemperatureWeighting": 0.0,
                       "Units": "GDH",
                       "Name": "Response",
@@ -421685,9 +421246,9 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "[AgriChemical].Sprayed",
-                  "ReSetEvent": null,
-                  "SetStage": null,
-                  "ReSetStage": "FruitMature",
+                  "ReSetEvent": "[BiomassRemovalEvents].Cutting",
+                  "SetStage": "[AgriChemical].Sprayed",
+                  "ReSetStage": "FruitHarvest",
                   "Name": "ChillingAtHC",
                   "ResourceName": null,
                   "Children": [
@@ -421794,9 +421355,9 @@
                             {
                               "$type": "Models.Functions.OnEventFunction, Models",
                               "SetEvent": "[AgriChemical].Sprayed",
-                              "ReSetEvent": null,
-                              "SetStage": null,
-                              "ReSetStage": "FruitMature",
+                              "ReSetEvent": "[BiomassRemovalEvents].Cutting",
+                              "SetStage": "[AgriChemical].Sprayed",
+                              "ReSetStage": "",
                               "Name": "HCReduction",
                               "ResourceName": null,
                               "Children": [
@@ -421888,9 +421449,9 @@
                         {
                           "$type": "Models.Functions.OnEventFunction, Models",
                           "SetEvent": "[AgriChemical].Sprayed",
-                          "ReSetEvent": null,
-                          "SetStage": null,
-                          "ReSetStage": "FruitMature",
+                          "ReSetEvent": "[BiomassRemovalEvents].Cutting",
+                          "SetStage": "[AgriChemical].Sprayed",
+                          "ReSetStage": "",
                           "Name": "HCReduction",
                           "ResourceName": null,
                           "Children": [
@@ -422059,9 +421620,9 @@
                         {
                           "$type": "Models.Functions.OnEventFunction, Models",
                           "SetEvent": "[AgriChemical].Sprayed",
-                          "ReSetEvent": null,
-                          "SetStage": null,
-                          "ReSetStage": "FruitMature",
+                          "ReSetEvent": "[BiomassRemovalEvents].Cutting",
+                          "SetStage": "[AgriChemical].Sprayed",
+                          "ReSetStage": "",
                           "Name": "HCReduction",
                           "ResourceName": null,
                           "Children": [
@@ -423002,7 +422563,7 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "",
-                  "ReSetEvent": "",
+                  "ReSetEvent": "[BiomassRemovalEvents].Cutting",
                   "SetStage": "BudBreak",
                   "ReSetStage": "EndFlowering",
                   "Name": "BudBurstDOY",
@@ -423034,7 +422595,7 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "",
-                  "ReSetEvent": "",
+                  "ReSetEvent": "[BiomassRemovalEvents].Cutting",
                   "SetStage": "StartFlowering",
                   "ReSetStage": "EndFlowering",
                   "Name": "FloweringDOY",
@@ -423066,9 +422627,9 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "",
-                  "ReSetEvent": "",
+                  "ReSetEvent": "[BiomassRemovalEvents].Cutting",
                   "SetStage": "EndFlowering",
-                  "ReSetStage": "FruitHarvest",
+                  "ReSetStage": "StartFruitGrowth",
                   "Name": "FullBloomDOY",
                   "ResourceName": null,
                   "Children": [
@@ -423107,9 +422668,9 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "",
-                  "ReSetEvent": "",
-                  "SetStage": "EndFlowering",
-                  "ReSetStage": "FruitHarvest",
+                  "ReSetEvent": "[BiomassRemovalEvents].Cutting",
+                  "SetStage": "FruitMature",
+                  "ReSetStage": "",
                   "Name": "MaxBB",
                   "ResourceName": null,
                   "Children": [
@@ -429868,7 +429429,6 @@
                 },
                 {
                   "$type": "Models.PMF.RootNetwork, Models",
-                  "ZoneNamesToGrowRootsIn": [],
                   "klByLayer": null,
                   "WaterTakenUp": null,
                   "NitrogenTakenUp": null,
@@ -431822,7 +431382,7 @@
                     {
                       "$type": "Models.Functions.PhaseLookupValue, Models",
                       "Start": "EndFlowering",
-                      "End": "BareVine",
+                      "End": "FruitHarvest",
                       "FixedValue": "NaN",
                       "Name": "FruitingPhase",
                       "ResourceName": null,
@@ -432135,9 +431695,9 @@
                 {
                   "$type": "Models.Functions.OnEventFunction, Models",
                   "SetEvent": "",
-                  "ReSetEvent": "",
+                  "ReSetEvent": "[BiomassRemovalEvents].Cutting",
                   "SetStage": "FruitMature",
-                  "ReSetStage": "BareVine",
+                  "ReSetStage": "",
                   "Name": "MaxSingleBerryDMC",
                   "ResourceName": null,
                   "Children": [
@@ -432201,6 +431761,7 @@
                       "OptTemp": 10.0,
                       "MaxTemp": 16.0,
                       "RefTemp": 10.0,
+                      "Beta": 1.0,
                       "MaximumTemperatureWeighting": 0.0,
                       "Units": "GDH",
                       "Name": "Response",
@@ -433494,7 +433055,7 @@
               "Inverted": false,
               "CrossesAtZero": false,
               "LabelOnOneLine": false,
-              "Minimum": 10.0,
+              "Minimum": 0.0,
               "Maximum": 25.0,
               "Interval": null
             }
