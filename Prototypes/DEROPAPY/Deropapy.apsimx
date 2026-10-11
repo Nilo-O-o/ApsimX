@@ -88551,40 +88551,6 @@
                 {
                   "$type": "Models.Factorial.Factor, Models",
                   "Specification": "",
-                  "Name": "Irrigation",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Factorial.CompositeFactor, Models",
-                      "Specifications": [
-                        "[AutomaticIrrigation].Script.allowIrrigation = FALSE"
-                      ],
-                      "CustomDescriptors": [],
-                      "Name": "Rainfed",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": false,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Factorial.CompositeFactor, Models",
-                      "Specifications": [
-                        "[AutomaticIrrigation].Script.allowIrrigation = TRUE"
-                      ],
-                      "CustomDescriptors": [],
-                      "Name": "Irrigated",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": false,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": false,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Factorial.Factor, Models",
-                  "Specification": "",
                   "Name": "Location",
                   "ResourceName": null,
                   "Children": [
@@ -90750,14 +90716,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 0.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -90766,17 +90732,17 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
               ],
-              "LegendPosition": 1,
+              "LegendPosition": 5,
               "LegendOrientation": 0,
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Wheat",
+              "Name": "North",
               "ResourceName": null,
               "Children": [
                 {
@@ -90785,9 +90751,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
@@ -90801,7 +90767,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Wheat\"",
+                  "Filter": "Location = \"North_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -90818,14 +90784,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -90834,17 +90800,17 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
               ],
-              "LegendPosition": 1,
+              "LegendPosition": 5,
               "LegendOrientation": 0,
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Hemp",
+              "Name": "Lincoln",
               "ResourceName": null,
               "Children": [
                 {
@@ -90853,9 +90819,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
@@ -90869,7 +90835,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Hemp\"",
+                  "Filter": "Location = \"Lincoln_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -90886,14 +90852,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -90902,17 +90868,17 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
               ],
-              "LegendPosition": 1,
+              "LegendPosition": 5,
               "LegendOrientation": 0,
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "OSR",
+              "Name": "South",
               "ResourceName": null,
               "Children": [
                 {
@@ -90921,9 +90887,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
@@ -90937,7 +90903,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"OSR\"",
+                  "Filter": "Location = \"South_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
