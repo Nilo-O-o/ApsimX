@@ -92812,7 +92812,7 @@
                 },
                 {
                   "$type": "Models.PMF.SimplePlantModels.DEROPAPY, Models",
-                  "CoefficientFile": "C:\\github\\ApsimX\\Prototypes\\DEROPAPY\\CropParametersBlueberryTest.csv",
+                  "CoefficientFile": "CropParametersBlueberryTest.csv",
                   "CurrentCropName": "Maize",
                   "Name": "ThisDero",
                   "ResourceName": null,
