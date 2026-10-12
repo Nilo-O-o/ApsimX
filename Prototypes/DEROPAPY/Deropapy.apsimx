@@ -90648,74 +90648,6 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 1,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Maize",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "AboveGround_kgPerHa",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Maize\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
                   "Title": null,
                   "Position": 0,
                   "Inverted": false,
@@ -90921,7 +90853,7 @@
         {
           "$type": "Models.Core.Folder, Models",
           "ShowInDocs": false,
-          "Name": "ATLAS_Biomass_Perenials",
+          "Name": "ATLAS_Fertiliser",
           "ResourceName": null,
           "Children": [
             {
@@ -90930,14 +90862,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -90946,7 +90878,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -90956,7 +90888,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Grapevine",
+              "Name": "North",
               "ResourceName": null,
               "Children": [
                 {
@@ -90965,23 +90897,23 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
                   "LineThickness": 1,
                   "TableName": "Output",
                   "XFieldName": "Year",
-                  "YFieldName": "ProductFresh_kgPerHa",
+                  "YFieldName": "FertiliserN_Cum",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Grapevine\"",
+                  "Filter": "Location = \"North_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -90998,14 +90930,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -91014,7 +90946,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -91024,7 +90956,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Macadamia",
+              "Name": "Lincoln",
               "ResourceName": null,
               "Children": [
                 {
@@ -91033,23 +90965,23 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
                   "LineThickness": 1,
                   "TableName": "Output",
                   "XFieldName": "Year",
-                  "YFieldName": "ProductFresh_kgPerHa",
+                  "YFieldName": "FertiliserN_Cum",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Macadamia\"",
+                  "Filter": "Location = \"Lincoln_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -91066,14 +90998,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -91082,7 +91014,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -91092,7 +91024,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Lemon",
+              "Name": "South",
               "ResourceName": null,
               "Children": [
                 {
@@ -91101,91 +91033,23 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
                   "LineThickness": 1,
                   "TableName": "Output",
                   "XFieldName": "Year",
-                  "YFieldName": "ProductFresh_kgPerHa",
+                  "YFieldName": "FertiliserN_Cum",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Lemon\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Avocado",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "ProductFresh_kgPerHa",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Avocado\"",
+                  "Filter": "Location = \"South_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -91203,7 +91067,7 @@
         {
           "$type": "Models.Core.Folder, Models",
           "ShowInDocs": false,
-          "Name": "ATLAS_Fertiliser_Perenials",
+          "Name": "ATLAS_Irrigation",
           "ResourceName": null,
           "Children": [
             {
@@ -91212,14 +91076,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -91228,7 +91092,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -91238,7 +91102,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Grapevine",
+              "Name": "North",
               "ResourceName": null,
               "Children": [
                 {
@@ -91247,291 +91111,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FertiliserN_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Grapevine\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Macadamia",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FertiliserN_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Macadamia\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Lemon",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FertiliserN_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Lemon\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Avocado",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FertiliserN_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Avocado\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            }
-          ],
-          "Enabled": true,
-          "ReadOnly": false
-        },
-        {
-          "$type": "Models.Core.Folder, Models",
-          "ShowInDocs": false,
-          "Name": "ATLAS_Irrigation_Perenials",
-          "ResourceName": null,
-          "Children": [
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 1,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Grapevine",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
@@ -91545,7 +91127,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Grapevine\"",
+                  "Filter": "Location = \"North_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -91562,14 +91144,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -91578,7 +91160,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -91588,7 +91170,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Macadamia",
+              "Name": "Lincoln",
               "ResourceName": null,
               "Children": [
                 {
@@ -91597,9 +91179,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
@@ -91613,7 +91195,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Macadamia\"",
+                  "Filter": "Location = \"Lincoln_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -91630,14 +91212,14 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
                   "Maximum": "NaN",
-                  "Interval": null
+                  "Interval": "NaN"
                 },
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
@@ -91646,7 +91228,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": "NaN",
+                  "Minimum": 1977.0,
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -91656,7 +91238,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Lemon",
+              "Name": "South",
               "ResourceName": null,
               "Children": [
                 {
@@ -91665,9 +91247,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 4,
@@ -91681,75 +91263,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Crop = \"Lemon\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Avocado",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "Irrigation_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Avocado\"",
+                  "Filter": "Location = \"South_RCPpast\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -92589,288 +92103,6 @@
                   "TableName": "Output",
                   "XFieldName": "Year",
                   "YFieldName": "ProductFresh_kgPerHa",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Lemon\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            }
-          ],
-          "Enabled": true,
-          "ReadOnly": false
-        },
-        {
-          "$type": "Models.Core.Folder, Models",
-          "ShowInDocs": false,
-          "Name": "ATLAS_Produce_Perenials1",
-          "ResourceName": null,
-          "Children": [
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 1,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Grapevine",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FrostDays",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Grapevine\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 1,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Avocado",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FrostDays",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Avocado\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 1,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Macadamia",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FrostDays",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Crop = \"Macadamia\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 1,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "Lemon",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
-                  "FactorToVaryMarkers": "Location",
-                  "FactorToVaryLines": null,
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FrostDays",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
