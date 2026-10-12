@@ -85,3 +85,4 @@ Tests/Validation/Wheat/Dookie2024/.ipynb_checkpoints
 
 # Stop tracking the mutex related errors file.
 errors.txt
+Prototypes/DEROPAPY/CropParametersBlueberryTest.csv
