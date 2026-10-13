@@ -6774,15 +6774,15 @@
                   "Name": "Crop",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -6798,7 +6798,7 @@
               "Name": "Weather",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -6808,7 +6808,7 @@
               "Name": "Clock",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -6817,7 +6817,7 @@
               "Name": "Summary",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -6825,7 +6825,7 @@
               "Name": "Soil Arbitrator",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -6929,7 +6929,7 @@
                       "Name": "FactorLabels",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7101,7 +7101,7 @@
                       "Name": "AutomaticFertiliser",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7285,11 +7285,11 @@
                       "Name": "WaterStatus",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7304,7 +7304,7 @@
                   "Name": "Report",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7313,7 +7313,7 @@
                   "Name": "DEROPAPY",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7321,7 +7321,7 @@
                   "Name": "Fertiliser",
                   "ResourceName": "Fertiliser",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7337,7 +7337,7 @@
                   "Name": "SurfaceOrganicMatter",
                   "ResourceName": "SurfaceOrganicMatter",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7345,7 +7345,7 @@
                   "Name": "Irrigation",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7355,7 +7355,7 @@
                   "Name": "ThisDero",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7371,7 +7371,7 @@
                   "Name": "MicroClimate",
                   "ResourceName": "MicroClimate",
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7384,7 +7384,7 @@
                   "Name": "OnDefoliate",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7397,7 +7397,7 @@
                   "Name": "OnHarvestAndPrune",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7410,7 +7410,7 @@
                   "Name": "OnEndCrop",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7462,7 +7462,7 @@
                   "Name": "ReportOnEvents",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7545,7 +7545,7 @@
                   "Name": "Reset on date",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7560,7 +7560,7 @@
                   "Name": "Stages",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -7603,7 +7603,7 @@
                       "Name": "LayerStructure",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7636,7 +7636,7 @@
                       "Name": "Chemical",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7663,7 +7663,7 @@
                       "Name": "Water",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7716,7 +7716,7 @@
                       "Name": "SoilWater",
                       "ResourceName": "WaterBalance",
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7776,7 +7776,7 @@
                       "Name": "Organic",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7792,7 +7792,7 @@
                       "Name": "OutputLayers",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7826,7 +7826,7 @@
                       "Name": "NO3",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7860,7 +7860,7 @@
                       "Name": "NH4",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -7894,7 +7894,7 @@
                       "Name": "Urea",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -8016,11 +8016,11 @@
                           "Name": "DEROPAPYSoil",
                           "ResourceName": null,
                           "Children": [],
-                          "Enabled": true,
+                          "Enabled": false,
                           "ReadOnly": false
                         }
                       ],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -8028,7 +8028,7 @@
                       "Name": "Nutrient",
                       "ResourceName": "Nutrient",
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -8039,11 +8039,11 @@
                       "Name": "Temperature",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -8135,7 +8135,7 @@
                   "Name": "FrostFighting",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -8354,15 +8354,15 @@
                   "Name": "AutomaticIrrigation",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -8426,7 +8426,7 @@
               "Name": "EndReproductive",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8455,7 +8455,7 @@
               "Name": "StartReproductive",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8484,7 +8484,7 @@
               "Name": "StartFlowering",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8513,7 +8513,7 @@
               "Name": "Waiting",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8542,7 +8542,7 @@
               "Name": "Maturity",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8571,7 +8571,7 @@
               "Name": "StartSenescence",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8600,7 +8600,7 @@
               "Name": "FullCanopy",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8629,7 +8629,7 @@
               "Name": "StartGrowth",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8658,11 +8658,11 @@
               "Name": "Dormancy",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -8726,7 +8726,7 @@
               "Name": "EndReproductive",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8755,7 +8755,7 @@
               "Name": "StartReproductive",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8784,7 +8784,7 @@
               "Name": "StartFlowering",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8813,7 +8813,7 @@
               "Name": "Waiting",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8842,7 +8842,7 @@
               "Name": "Maturity",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8871,7 +8871,7 @@
               "Name": "StartSenescence",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8900,7 +8900,7 @@
               "Name": "FullCanopy",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8929,7 +8929,7 @@
               "Name": "StartGrowth",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -8958,11 +8958,11 @@
               "Name": "Dormancy",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9026,11 +9026,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9094,11 +9094,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9162,11 +9162,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9230,11 +9230,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9298,11 +9298,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9366,11 +9366,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9441,15 +9441,15 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9513,11 +9513,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9581,11 +9581,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9649,11 +9649,11 @@
               "Name": "Stage",
               "ResourceName": null,
               "Children": [],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -9723,7 +9723,7 @@
                   "Name": "Supply",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -9752,11 +9752,11 @@
                   "Name": "Demand",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -9820,11 +9820,11 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -9888,11 +9888,11 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -9956,11 +9956,11 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10024,11 +10024,11 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10092,11 +10092,11 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10166,11 +10166,11 @@
                       "Name": "Leaf",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10234,11 +10234,11 @@
                       "Name": "Leaf",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10302,11 +10302,11 @@
                       "Name": "Leaf",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10370,19 +10370,19 @@
                       "Name": "Leaf",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -10452,7 +10452,7 @@
                   "Name": "PS",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10488,15 +10488,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10560,11 +10560,11 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10628,7 +10628,7 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10657,7 +10657,7 @@
                   "Name": "Storage",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10686,11 +10686,11 @@
                   "Name": "Structural",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10754,11 +10754,11 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10833,7 +10833,7 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10862,11 +10862,11 @@
                   "Name": "IsReproductive",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -10930,7 +10930,7 @@
                   "Name": "DM",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -10959,11 +10959,11 @@
                   "Name": "Senesced",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -11040,15 +11040,15 @@
                           "Name": "EventNamesOnGraph",
                           "ResourceName": null,
                           "Children": [],
-                          "Enabled": true,
+                          "Enabled": false,
                           "ReadOnly": false
                         }
                       ],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -11119,11 +11119,11 @@
                           "Name": "EventNamesOnGraph",
                           "ResourceName": null,
                           "Children": [],
-                          "Enabled": true,
+                          "Enabled": false,
                           "ReadOnly": false
                         }
                       ],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -11152,7 +11152,7 @@
                       "Name": "Allometric",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -11181,7 +11181,7 @@
                       "Name": "FruitNumber",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     },
                     {
@@ -11210,11 +11210,11 @@
                       "Name": "total",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -11285,15 +11285,15 @@
                           "Name": "EventNamesOnGraph",
                           "ResourceName": null,
                           "Children": [],
-                          "Enabled": true,
+                          "Enabled": false,
                           "ReadOnly": false
                         }
                       ],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -11357,15 +11357,15 @@
                       "Name": "Leaf",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -11447,11 +11447,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -11480,15 +11480,15 @@
                   "Name": "TotalCAllocated",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -11565,15 +11565,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -11644,15 +11644,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -11723,11 +11723,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -11756,7 +11756,7 @@
                   "Name": "AgeSenes",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -11785,11 +11785,11 @@
                   "Name": "Frosted",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -11860,15 +11860,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -11939,15 +11939,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12018,19 +12018,19 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -12107,15 +12107,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12186,15 +12186,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12265,15 +12265,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12344,15 +12344,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12416,7 +12416,7 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12445,7 +12445,7 @@
                   "Name": "2",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12454,7 +12454,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12474,7 +12474,7 @@
                   "Name": "3",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12483,7 +12483,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12503,7 +12503,7 @@
                   "Name": "4",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12512,7 +12512,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12532,7 +12532,7 @@
                   "Name": "5",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12541,7 +12541,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12561,7 +12561,7 @@
                   "Name": "6",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12570,7 +12570,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12590,7 +12590,7 @@
                   "Name": "7",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12599,7 +12599,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12619,7 +12619,7 @@
                   "Name": "8",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12628,7 +12628,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12648,7 +12648,7 @@
                   "Name": "9",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -12657,7 +12657,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12677,11 +12677,11 @@
                   "Name": "10",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12725,7 +12725,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12745,11 +12745,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12793,7 +12793,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12813,11 +12813,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12861,7 +12861,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12881,11 +12881,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12929,7 +12929,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -12949,11 +12949,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -12997,7 +12997,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -13017,11 +13017,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13065,7 +13065,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -13085,11 +13085,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13133,7 +13133,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -13153,11 +13153,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13201,7 +13201,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -13221,11 +13221,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13269,7 +13269,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -13289,11 +13289,11 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13337,7 +13337,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -13357,15 +13357,15 @@
                   "Name": "1",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -13442,15 +13442,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13521,15 +13521,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13600,15 +13600,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13679,15 +13679,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13742,7 +13742,7 @@
                   "XAxis": 3,
                   "YAxis": 2,
                   "ColourArgb": -16747854,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -13769,11 +13769,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -13802,11 +13802,11 @@
                   "Name": "MinT",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -13881,7 +13881,7 @@
                   "Name": "MaxT",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -13910,15 +13910,15 @@
                   "Name": "StressFactor",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -13988,7 +13988,7 @@
                   "Name": "IsVegetative",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -14017,7 +14017,7 @@
                   "Name": "IsFlowering",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -14046,7 +14046,7 @@
                   "Name": "IsReproductive",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -14082,15 +14082,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -14154,11 +14154,11 @@
                   "Name": "Stage",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -14202,7 +14202,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16736653,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": "Experiment",
                   "Marker": 11,
@@ -14222,11 +14222,11 @@
                   "Name": "DryWeightPerFruit",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -14290,7 +14290,7 @@
                   "Name": "IsVegetative",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -14319,7 +14319,7 @@
                   "Name": "IsFlowering",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -14348,7 +14348,7 @@
                   "Name": "IsReproductive",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -14377,15 +14377,15 @@
                   "Name": "Stage",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         },
         {
@@ -14435,7 +14435,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -14462,15 +14462,15 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             },
             {
@@ -14541,11 +14541,11 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 },
                 {
@@ -14554,7 +14554,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -14574,19 +14574,19 @@
                   "Name": "Transpiration",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
-              "Enabled": true,
+              "Enabled": false,
               "ReadOnly": false
             }
           ],
-          "Enabled": true,
+          "Enabled": false,
           "ReadOnly": false
         }
       ],
-      "Enabled": true,
+      "Enabled": false,
       "ReadOnly": false
     },
     {
@@ -29697,7 +29697,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -29765,7 +29765,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -29833,7 +29833,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -29901,7 +29901,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -29979,7 +29979,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30047,7 +30047,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30115,7 +30115,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30183,7 +30183,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30261,7 +30261,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30329,7 +30329,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30397,7 +30397,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30465,7 +30465,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30543,7 +30543,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30611,7 +30611,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30679,7 +30679,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30747,7 +30747,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30825,7 +30825,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30893,7 +30893,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -30961,7 +30961,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31029,7 +31029,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31107,7 +31107,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31175,7 +31175,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31243,7 +31243,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31311,7 +31311,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31389,7 +31389,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31457,7 +31457,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31525,7 +31525,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31593,7 +31593,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31671,7 +31671,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31739,7 +31739,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31807,7 +31807,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31875,7 +31875,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -31953,7 +31953,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32021,7 +32021,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32089,7 +32089,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32157,7 +32157,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32235,7 +32235,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32303,7 +32303,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32371,7 +32371,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32439,7 +32439,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32517,7 +32517,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32585,7 +32585,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32653,7 +32653,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32721,7 +32721,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32799,7 +32799,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32867,7 +32867,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -32935,7 +32935,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33003,7 +33003,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33081,7 +33081,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33149,7 +33149,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33217,7 +33217,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33285,7 +33285,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33363,7 +33363,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33431,7 +33431,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33499,7 +33499,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33567,7 +33567,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33645,7 +33645,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33713,7 +33713,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33781,7 +33781,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33849,7 +33849,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33927,7 +33927,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -33995,7 +33995,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -34063,7 +34063,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -34131,7 +34131,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": "Location",
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95385,7 +95385,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Location",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -95462,9 +95462,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -95543,7 +95543,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Location",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -95620,9 +95620,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -95649,7 +95649,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95678,7 +95678,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95707,7 +95707,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95736,7 +95736,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95765,7 +95765,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95794,7 +95794,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95823,7 +95823,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95852,7 +95852,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95881,7 +95881,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": null,
                   "Marker": 11,
@@ -95949,9 +95949,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96017,9 +96017,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96085,9 +96085,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96153,9 +96153,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96221,9 +96221,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96289,9 +96289,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96357,9 +96357,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96425,9 +96425,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96493,9 +96493,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96561,9 +96561,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96641,7 +96641,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "IrrigationManagement",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96720,7 +96720,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "IrrigationManagement",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96799,7 +96799,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Location",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96878,7 +96878,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Location",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -96966,9 +96966,9 @@
                   "XAxis": 3,
                   "YAxis": 2,
                   "ColourArgb": -16747854,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -97008,7 +97008,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -97087,7 +97087,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -97114,9 +97114,9 @@
                   "XAxis": 3,
                   "YAxis": 2,
                   "ColourArgb": -2793984,
-                  "FactorToVaryColours": null,
+                  "FactorToVaryColours": "Irrigation",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 1,
@@ -97192,9 +97192,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16736653,
-                  "FactorToVaryColours": null,
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 2,
                   "Line": 4,
@@ -97223,7 +97223,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 2,
                   "Line": 4,
@@ -97250,9 +97250,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -2793984,
-                  "FactorToVaryColours": null,
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 2,
                   "Line": 4,
@@ -97281,7 +97281,7 @@
                   "ColourArgb": -16744448,
                   "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 2,
                   "Line": 4,
@@ -97358,9 +97358,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "SimulationName",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 2,
                   "Line": 4,
@@ -97426,9 +97426,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16736653,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 2,
                   "Line": 4,
@@ -97444,161 +97444,6 @@
                   "CumulativeX": false,
                   "Filter": "",
                   "Name": "DryWeightPerFruit",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 0,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "ParallelPhenology1",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16736653,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
-                  "Marker": 11,
-                  "MarkerSize": 2,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Report",
-                  "XFieldName": "Deropapy.Phenology.AccumulatedEmergedTT",
-                  "YFieldName": "DeroPapy.Phenology.Vegetative.IsInPhase",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": true,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "",
-                  "Name": "IsVegetative",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
-                  "Marker": 11,
-                  "MarkerSize": 2,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Report",
-                  "XFieldName": "Deropapy.Phenology.AccumulatedEmergedTT",
-                  "YFieldName": "DeroPapy.Phenology.Flowering.IsInPhase",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": true,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "",
-                  "Name": "IsFlowering",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -2793984,
-                  "FactorToVaryColours": null,
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
-                  "Marker": 11,
-                  "MarkerSize": 2,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Report",
-                  "XFieldName": "Deropapy.Phenology.AccumulatedEmergedTT",
-                  "YFieldName": "DeroPapy.Phenology.Reproductive.IsInPhase",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": true,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "",
-                  "Name": "IsReproductive",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Experiment",
-                  "Marker": 11,
-                  "MarkerSize": 2,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Report",
-                  "XFieldName": "Deropapy.Phenology.AccumulatedEmergedTT",
-                  "YFieldName": "Deropapy.Phenology.Stage",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "",
-                  "Name": "Stage",
                   "ResourceName": null,
                   "Children": [],
                   "Enabled": true,
@@ -97659,9 +97504,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -97738,9 +97583,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -3376729,
-                  "FactorToVaryColours": null,
+                  "FactorToVaryColours": "Irrigation",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -97778,9 +97623,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Irrigation",
+                  "FactorToVaryColours": "Crop",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
