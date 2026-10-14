@@ -217,7 +217,7 @@
                     },
                     {
                       "$type": "Models.Functions.VariableReference, Models",
-                      "VariableName": "[Phenology].ThermalTime",
+                      "VariableName": "[Phenology].Chill",
                       "Name": "Progression",
                       "ResourceName": null,
                       "Children": [],
@@ -6612,6 +6612,7 @@
             "[DEROPAPY].Phenology.Reproductive.FractionComplete",
             "[DeroPapy].Phenology.Reproductive.IsInPhase",
             "[DEROPAPY].Phenology.Reproductive.ProgressThroughPhase",
+            "[DEROPAPY].Phenology.Dormant.ProgressThroughPhase",
             "[Deropapy].Phenology.Stage",
             "[Deropapy].Phenology.ThermalTime",
             "[DeroPapy].Phenology.Vegetative.IsInPhase",
