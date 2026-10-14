@@ -6,7 +6,7 @@
   "Children": [
     {
       "$type": "Models.Memo, Models",
-      "Text": "Things we need to improve for next run:\n\n1. Reset soil at StartGrowth for each crop\n\n2. Tailor soil parameters to each crops (now it's single SCRUM s-map set up)\n\n3. Output DOY when key events occur (Sowing | Flowering | Harvest)\n\n4. Done: Output explaining variables: Cycle length | Light Interception | RUE | FlowerNumber | ProductSize\n\n5. N dynamics in soil/plant and N fertiliser application in response - not present - \n\n",
+      "Text": "Things we need to improve for next run:\n\n1. Reset soil at StartGrowth for each crop\n\n2. Tailor soil parameters to each crops (now it's single SCRUM s-map set up)\n\n3. Output DOY when key events occur (Sowing | Flowering | Harvest)\n\n4. Done: Output explaining variables: Cycle length | Light Interception | RUE | FlowerNumber | ProductSize\n\n5. N dynamics in soil/plant and N fertiliser application in response - not present - test\n\n",
       "Name": "ToDoList",
       "ResourceName": null,
       "Children": [],
