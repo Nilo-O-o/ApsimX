@@ -86230,10 +86230,10 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[ThisDero].CurrentCropName =  Grapevine"
+                        "[ThisDero].CurrentCropName =  Blueberry_Rabbiteye_NZ"
                       ],
                       "CustomDescriptors": [],
-                      "Name": "Grapevine",
+                      "Name": "Rabbiteye",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -86242,10 +86242,10 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[ThisDero].CurrentCropName =  Blueberry_Duke"
+                        "[ThisDero].CurrentCropName =  Blueberry_Highbush_NZ"
                       ],
                       "CustomDescriptors": [],
-                      "Name": "Duke",
+                      "Name": "Highbush",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -86254,22 +86254,10 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[ThisDero].CurrentCropName =  Blueberry_Tifblue"
+                        "[ThisDero].CurrentCropName =  Blueberry_Lowbush_NZ"
                       ],
                       "CustomDescriptors": [],
-                      "Name": "Tifblue",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Factorial.CompositeFactor, Models",
-                      "Specifications": [
-                        "[ThisDero].CurrentCropName =  Blueberry_Misty"
-                      ],
-                      "CustomDescriptors": [],
-                      "Name": "Misty",
+                      "Name": "Lowbush",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -94020,10 +94008,10 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[ThisDero].CurrentCropName =  Grapevine"
+                        "[ThisDero].CurrentCropName =  Blueberry_Rabbiteye_NZ"
                       ],
                       "CustomDescriptors": [],
-                      "Name": "Grapevine",
+                      "Name": "Rabbiteye",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -94032,10 +94020,10 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[ThisDero].CurrentCropName =  Blueberry_Duke"
+                        "[ThisDero].CurrentCropName =  Blueberry_Highbush_NZ"
                       ],
                       "CustomDescriptors": [],
-                      "Name": "Duke",
+                      "Name": "Highbush",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -94044,22 +94032,10 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[ThisDero].CurrentCropName =  Blueberry_Tifblue"
+                        "[ThisDero].CurrentCropName =  Blueberry_Lowbush_NZ"
                       ],
                       "CustomDescriptors": [],
-                      "Name": "Tifblue",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Factorial.CompositeFactor, Models",
-                      "Specifications": [
-                        "[ThisDero].CurrentCropName =  Blueberry_Misty"
-                      ],
-                      "CustomDescriptors": [],
-                      "Name": "Misty",
+                      "Name": "Lowbush",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -95961,7 +95937,7 @@
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
-                  "Maximum": 3000.0,
+                  "Maximum": 5000.0,
                   "Interval": "NaN"
                 },
                 {
