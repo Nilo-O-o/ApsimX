@@ -86262,6 +86262,18 @@
                       "Children": [],
                       "Enabled": true,
                       "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Factorial.CompositeFactor, Models",
+                      "Specifications": [
+                        "[ThisDero].CurrentCropName =  Blueberry_Northern_Highbush_NZ"
+                      ],
+                      "CustomDescriptors": [],
+                      "Name": "NorthernHighbush",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
                     }
                   ],
                   "Enabled": true,
