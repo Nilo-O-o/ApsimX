@@ -698,7 +698,7 @@
                     {
                       "$type": "Models.Functions.AccumulateFunction, Models",
                       "StartStageName": "Dormancy",
-                      "EndStageName": "Waiting",
+                      "EndStageName": "StartGrowth",
                       "ResetStageName": "StartGrowth",
                       "FractionRemovedOnCut": 0.0,
                       "FractionRemovedOnHarvest": 0.0,
@@ -979,7 +979,7 @@
                   "$type": "Models.Functions.AccumulateFunction, Models",
                   "StartStageName": "StartGrowth",
                   "EndStageName": "Maturity",
-                  "ResetStageName": "Waiting",
+                  "ResetStageName": "StartGrowth",
                   "FractionRemovedOnCut": 0.0,
                   "FractionRemovedOnHarvest": 0.0,
                   "FractionRemovedOnGraze": 0.0,
