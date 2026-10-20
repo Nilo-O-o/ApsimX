@@ -123,9 +123,6 @@ namespace Models.PMF.SimplePlantModels
         [Link(Type = LinkType.Scoped)]
         private EnergyBalance canopy = null;
 
-        [Link(Type = LinkType.Scoped, ByName = true)]
-        private Organ leaf = null;
-
         [Link(Type = LinkType.Ancestor)]
         private Zone zone = null;
 
@@ -303,34 +300,6 @@ namespace Models.PMF.SimplePlantModels
             HasStartedGrowthhisSeason = false;
         }
 
-        /// <summary>
-        /// Procedures that occur when new growth cycle starts.  initial biomass etc
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        [EventSubscribe("NewGrowthPhaseStarting")]
-        private void onStartNewGrowthCycle(object sender, EventArgs e)
-        {
-            //Reset leaf biomass so it is ready for new growth
-            if (CurrentCropParams["DefoliateOrDevelop"] == "FullCover")
-            {
-                leaf.initialiseBiomass();
-                HasRewondThisSeason = false;
-                HasStartedGrowthhisSeason = true;
-            }
-        }
-
-        /// <summary>
-        /// Procedures that occur for crops that go into the Graze Phase
-        /// </summary>
-        /// <param name="e"></param>
-        /// <param name="sender"></param>
-        [EventSubscribe("Grazing")]
-        private void onGrazing(object sender, EventArgs e)
-        {
-
-        }
-
 
 
         /// <summary>
@@ -348,7 +317,6 @@ namespace Models.PMF.SimplePlantModels
             thisDero["TT_Temp_X"] += clean(CurrentCropParams["TT_Temp_X"]);
             thisDero["TT_Acc_Y"] += clean(CurrentCropParams["TT_Acc_Y"]);
             thisDero["Tt_Growing_01"] += clean(CurrentCropParams["Tt_Growing_01"]);
-            thisDero["DefoliateOrDevelop"] += clean(CurrentCropParams["DefoliateOrDevelop"]);
             thisDero["Pp_FullCover_02"] += clean(CurrentCropParams["Pp_FullCover_02"]);
             thisDero["Tt_FullCover_02"] += clean(CurrentCropParams["Tt_FullCover_02"]);
             thisDero["Tt_Senescent_03"] += clean(CurrentCropParams["Tt_Senescent_03"]);
@@ -464,7 +432,6 @@ namespace Models.PMF.SimplePlantModels
             {"TT_Temp_X","[DEROPAPY].Phenology.ThermalTime.XYPairs.X = " },
             {"TT_Acc_Y","[DEROPAPY].Phenology.ThermalTime.XYPairs.Y = " },
             {"Tt_Growing_01","[DEROPAPY].Phenology.Growing.Target.FixedValue = " },
-            {"DefoliateOrDevelop","[DEROPAPY].Phenology.DefoliateOrDevelop.PhaseNameToGoto = "},
             {"Pp_FullCover_02","[DEROPAPY].Phenology.FullCover.Target.XYPairs.X = " },
             {"Tt_FullCover_02","[DEROPAPY].Phenology.FullCover.Target.XYPairs.Y = " },
             {"Tt_Senescent_03","[DEROPAPY].Phenology.Senescent.Target.FixedValue = " },
