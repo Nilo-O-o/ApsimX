@@ -323,40 +323,6 @@
                   "ReadOnly": false
                 },
                 {
-                  "$type": "Models.PMF.Phen.GotoPhase, Models",
-                  "Start": "FullCanopy",
-                  "IsEmerged": true,
-                  "PhaseNameToGoto": "Graze",
-                  "RemovalType": 5,
-                  "Name": "DefoliateOrDevelop",
-                  "ResourceName": null,
-                  "Children": [
-                    {
-                      "$type": "Models.Memo, Models",
-                      "Text": "\nFor a pasture crop the PhaseToGoTo is set to \"Graize\" so phenology will jump over all later phases to grazing which will remove biomass and wind phenology back to \"Growing\".  For other crops PhaseToGoTo is set to \"Flowering\" so phenology and growth carries on uninterupted\n\n",
-                      "Name": "Param value set at establishment",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    }
-                  ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.PMF.Phen.GotoPhase, Models",
-                  "Start": "ReadyToGraze",
-                  "IsEmerged": true,
-                  "PhaseNameToGoto": "Waiting",
-                  "RemovalType": 1,
-                  "Name": "Graze",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
                   "$type": "Models.PMF.Phen.GenericPhase, Models",
                   "Start": "FullCanopy",
                   "End": "StartSenescence",
@@ -86890,19 +86856,6 @@
                 {
                   "$type": "Models.Management.BiomassRemovalEvents, Models",
                   "NameOfPlantToRemoveFrom": "DEROPAPY",
-                  "RemovalType": 1,
-                  "StageToSet": null,
-                  "RemovalDates": null,
-                  "BiomassRemovalFractions": null,
-                  "Name": "OnDefoliate",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Management.BiomassRemovalEvents, Models",
-                  "NameOfPlantToRemoveFrom": "DEROPAPY",
                   "RemovalType": 2,
                   "StageToSet": null,
                   "RemovalDates": null,
@@ -94183,8 +94136,6 @@
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
                         "[Weather].FileName  = Lincoln_WS_1950_2022.met",
-                        "[Clock].Start = 1/5/1975",
-                        "[Clock].End = 1/6/2005",
                         "[FactorLabels].Script.GCM = Had",
                         "[FactorLabels].Script.RCP = RCPpast",
                         "[FactorLabels].Script.TS = Past"
@@ -95949,7 +95900,7 @@
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
-                  "Maximum": 2.0,
+                  "Maximum": "NaN",
                   "Interval": "NaN"
                 },
                 {
@@ -95959,7 +95910,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -95969,7 +95920,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -95994,7 +95945,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96017,7 +95968,7 @@
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
-                  "Maximum": 2.0,
+                  "Maximum": "NaN",
                   "Interval": "NaN"
                 },
                 {
@@ -96027,7 +95978,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96062,75 +96013,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": 2.0,
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "ProductFreshWeight_GPerUnit",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96163,7 +96046,7 @@
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
-                  "Maximum": 5000.0,
+                  "Maximum": "NaN",
                   "Interval": "NaN"
                 },
                 {
@@ -96173,7 +96056,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96183,7 +96066,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -96208,7 +96091,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96231,7 +96114,7 @@
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
                   "Minimum": "NaN",
-                  "Maximum": 3000.0,
+                  "Maximum": "NaN",
                   "Interval": "NaN"
                 },
                 {
@@ -96241,7 +96124,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96276,75 +96159,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": 3000.0,
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "ProductNumber_PerM2",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96387,7 +96202,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96397,7 +96212,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -96422,7 +96237,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96455,7 +96270,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96490,75 +96305,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "AboveGround_kgPerHa",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96601,7 +96348,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96611,7 +96358,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -96636,7 +96383,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96669,7 +96416,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96704,75 +96451,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "FertiliserN_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96815,7 +96494,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96825,7 +96504,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -96850,7 +96529,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96883,7 +96562,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -96918,75 +96597,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "Irrigation_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97029,7 +96640,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97039,7 +96650,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -97064,7 +96675,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97097,7 +96708,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97132,75 +96743,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "Transpiration_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97243,7 +96786,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97253,7 +96796,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -97278,7 +96821,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97311,7 +96854,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97346,75 +96889,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "LeachNO3_Cum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97457,7 +96932,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97467,7 +96942,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -97492,7 +96967,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97525,7 +97000,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97560,75 +97035,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "RUEa_mean",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97671,7 +97078,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97681,7 +97088,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "North",
+              "Name": "Te Puke",
               "ResourceName": null,
               "Children": [
                 {
@@ -97706,7 +97113,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"North_RCPpast\"",
+                  "Filter": "Location = \"Te Puke\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97739,7 +97146,7 @@
                   "Inverted": false,
                   "CrossesAtZero": false,
                   "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
+                  "Minimum": "NaN",
                   "Maximum": "NaN",
                   "Interval": null
                 }
@@ -97774,75 +97181,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Lincoln_RCPpast\"",
-                  "Name": "out",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                }
-              ],
-              "Enabled": true,
-              "ReadOnly": false
-            },
-            {
-              "$type": "Models.Graph, Models",
-              "Caption": null,
-              "Axis": [
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 0,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": "NaN",
-                  "Maximum": "NaN",
-                  "Interval": "NaN"
-                },
-                {
-                  "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": null,
-                  "Position": 3,
-                  "Inverted": false,
-                  "CrossesAtZero": false,
-                  "LabelOnOneLine": false,
-                  "Minimum": 1977.0,
-                  "Maximum": "NaN",
-                  "Interval": null
-                }
-              ],
-              "LegendPosition": 5,
-              "LegendOrientation": 0,
-              "AnnotationLocation": 0,
-              "DisabledSeries": [],
-              "LegendOutsideGraph": false,
-              "Name": "South",
-              "ResourceName": null,
-              "Children": [
-                {
-                  "$type": "Models.Series, Models",
-                  "Type": 1,
-                  "XAxis": 3,
-                  "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
-                  "Marker": 11,
-                  "MarkerSize": 1,
-                  "Line": 4,
-                  "LineThickness": 1,
-                  "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "IntLight_sum",
-                  "X2FieldName": null,
-                  "Y2FieldName": null,
-                  "ShowInLegend": true,
-                  "IncludeSeriesNameInLegend": false,
-                  "Cumulative": false,
-                  "CumulativeX": false,
-                  "Filter": "Location = \"South_RCPpast\"",
+                  "Filter": "Location = \"Lincoln\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
