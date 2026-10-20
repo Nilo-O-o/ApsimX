@@ -86180,7 +86180,7 @@
     },
     {
       "$type": "Models.Factorial.Experiment, Models",
-      "DisabledSimNames": null,
+      "DisabledSimNames": [],
       "Name": "Blueberry_PhenoTest",
       "ResourceName": null,
       "Children": [
@@ -86271,7 +86271,7 @@
                       "Name": "Rain",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": false,
+                      "Enabled": true,
                       "ReadOnly": false
                     },
                     {
@@ -86283,11 +86283,11 @@
                       "Name": "Irrig",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": false,
+                      "Enabled": true,
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": false,
+                  "Enabled": true,
                   "ReadOnly": false
                 }
               ],
@@ -88977,13 +88977,13 @@
               "XAxis": 3,
               "YAxis": 0,
               "ColourArgb": -16744448,
-              "FactorToVaryColours": "Crop",
+              "FactorToVaryColours": "SimulationName",
               "FactorToVaryMarkers": null,
               "FactorToVaryLines": "Irrigation",
               "Marker": 11,
               "MarkerSize": 2,
               "Line": 4,
-              "LineThickness": 1,
+              "LineThickness": 0,
               "TableName": "Report",
               "XFieldName": "Clock.Today",
               "YFieldName": "Deropapy.Product.FlowerNumber",
