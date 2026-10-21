@@ -1872,7 +1872,7 @@
                                         {
                                           "$type": "Models.Functions.XYPairs, Models",
                                           "X": [
-                                            3.0,
+                                            2.0,
                                             3.2,
                                             4.0
                                           ],
@@ -86272,7 +86272,7 @@
             {
               "$type": "Models.Climate.Weather, Models",
               "ConstantsFile": null,
-              "FileName": "20993_Lincoln_Had_RCPpast.met",
+              "FileName": "Lincoln_WS_1950_2022.met",
               "ExcelWorkSheetName": "",
               "Name": "Weather",
               "ResourceName": null,
@@ -87595,7 +87595,7 @@
                   "Parameters": [
                     {
                       "Key": "ProtectionAvaialable",
-                      "Value": "True"
+                      "Value": "False"
                     }
                   ],
                   "Name": "FrostFighting",
@@ -89303,6 +89303,164 @@
               "Name": "Root",
               "ResourceName": null,
               "Children": [],
+              "Enabled": true,
+              "ReadOnly": false
+            }
+          ],
+          "Enabled": true,
+          "ReadOnly": false
+        },
+        {
+          "$type": "Models.Graph, Models",
+          "Caption": null,
+          "Axis": [
+            {
+              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+              "Title": null,
+              "Position": 0,
+              "Inverted": false,
+              "CrossesAtZero": false,
+              "LabelOnOneLine": false,
+              "Minimum": "NaN",
+              "Maximum": "NaN",
+              "Interval": null
+            },
+            {
+              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+              "Title": null,
+              "Position": 3,
+              "Inverted": false,
+              "CrossesAtZero": false,
+              "LabelOnOneLine": false,
+              "Minimum": "NaN",
+              "Maximum": "NaN",
+              "Interval": null
+            }
+          ],
+          "LegendPosition": 5,
+          "LegendOrientation": 0,
+          "AnnotationLocation": 0,
+          "DisabledSeries": [],
+          "LegendOutsideGraph": true,
+          "Name": "FreshWtPerFruit",
+          "ResourceName": null,
+          "Children": [
+            {
+              "$type": "Models.Series, Models",
+              "Type": 1,
+              "XAxis": 3,
+              "YAxis": 0,
+              "ColourArgb": -16744448,
+              "FactorToVaryColours": "SimulationName",
+              "FactorToVaryMarkers": null,
+              "FactorToVaryLines": "Irrigation",
+              "Marker": 11,
+              "MarkerSize": 2,
+              "Line": 4,
+              "LineThickness": 0,
+              "TableName": "Report",
+              "XFieldName": "Clock.Today",
+              "YFieldName": "Deropapy.Product.FreshWeightPerFruit",
+              "X2FieldName": null,
+              "Y2FieldName": null,
+              "ShowInLegend": true,
+              "IncludeSeriesNameInLegend": false,
+              "Cumulative": false,
+              "CumulativeX": false,
+              "Filter": "",
+              "Name": "Stage",
+              "ResourceName": null,
+              "Children": [
+                {
+                  "$type": "Models.EventNamesOnGraph, Models",
+                  "ColumnName": "Deropapy.Phenology.CurrentStageName",
+                  "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationIrrig",
+                  "Name": "EventNamesOnGraph",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                }
+              ],
+              "Enabled": true,
+              "ReadOnly": false
+            }
+          ],
+          "Enabled": true,
+          "ReadOnly": false
+        },
+        {
+          "$type": "Models.Graph, Models",
+          "Caption": null,
+          "Axis": [
+            {
+              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+              "Title": null,
+              "Position": 0,
+              "Inverted": false,
+              "CrossesAtZero": false,
+              "LabelOnOneLine": false,
+              "Minimum": "NaN",
+              "Maximum": "NaN",
+              "Interval": null
+            },
+            {
+              "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
+              "Title": null,
+              "Position": 3,
+              "Inverted": false,
+              "CrossesAtZero": false,
+              "LabelOnOneLine": false,
+              "Minimum": "NaN",
+              "Maximum": "NaN",
+              "Interval": null
+            }
+          ],
+          "LegendPosition": 5,
+          "LegendOrientation": 0,
+          "AnnotationLocation": 0,
+          "DisabledSeries": [],
+          "LegendOutsideGraph": true,
+          "Name": "DryWtPerFruit",
+          "ResourceName": null,
+          "Children": [
+            {
+              "$type": "Models.Series, Models",
+              "Type": 1,
+              "XAxis": 3,
+              "YAxis": 0,
+              "ColourArgb": -16744448,
+              "FactorToVaryColours": "SimulationName",
+              "FactorToVaryMarkers": null,
+              "FactorToVaryLines": "Irrigation",
+              "Marker": 11,
+              "MarkerSize": 2,
+              "Line": 4,
+              "LineThickness": 0,
+              "TableName": "Report",
+              "XFieldName": "Clock.Today",
+              "YFieldName": "Deropapy.Product.DryWeightPerFruit",
+              "X2FieldName": null,
+              "Y2FieldName": null,
+              "ShowInLegend": true,
+              "IncludeSeriesNameInLegend": false,
+              "Cumulative": false,
+              "CumulativeX": false,
+              "Filter": "",
+              "Name": "Stage",
+              "ResourceName": null,
+              "Children": [
+                {
+                  "$type": "Models.EventNamesOnGraph, Models",
+                  "ColumnName": "Deropapy.Phenology.CurrentStageName",
+                  "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationLincoln_RCPpastIrrigationRain",
+                  "Name": "EventNamesOnGraph",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                }
+              ],
               "Enabled": true,
               "ReadOnly": false
             }
@@ -93622,7 +93780,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16736653,
-                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryColours": null,
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
@@ -93650,8 +93808,8 @@
                   "Type": 1,
                   "XAxis": 3,
                   "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
+                  "ColourArgb": -3376729,
+                  "FactorToVaryColours": null,
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
@@ -93679,8 +93837,8 @@
                   "Type": 1,
                   "XAxis": 3,
                   "YAxis": 0,
-                  "ColourArgb": -2793984,
-                  "FactorToVaryColours": "Crop",
+                  "ColourArgb": -16747854,
+                  "FactorToVaryColours": null,
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
@@ -94182,7 +94340,7 @@
             {
               "$type": "Models.Climate.Weather, Models",
               "ConstantsFile": null,
-              "FileName": "20993_Lincoln_Had_RCPpast.met",
+              "FileName": "Lincoln_WS_1950_2022.met",
               "ExcelWorkSheetName": "",
               "Name": "Weather",
               "ResourceName": null,
@@ -94192,7 +94350,7 @@
             },
             {
               "$type": "Models.Clock, Models",
-              "Start": "2000-07-01T00:00:00",
+              "Start": "2000-05-01T00:00:00",
               "End": "2005-06-30T00:00:00",
               "Name": "Clock",
               "ResourceName": null,
@@ -97260,7 +97418,7 @@
                 {
                   "$type": "Models.EventNamesOnGraph, Models",
                   "ColumnName": "Deropapy.Phenology.CurrentStageName",
-                  "SimulationName": "Blueberry_MultiYearTestCropNorthernHighbushLocationLincoln_RCPpast",
+                  "SimulationName": "Blueberry_MultiYearTestCropNorthernHighbushLocationTe Puke",
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
