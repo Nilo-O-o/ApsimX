@@ -340,7 +340,6 @@ namespace Models.PMF.SimplePlantModels
             thisDero["SeasonalDimensionPattern"] += clean(CurrentCropParams["SeasonalDimensionPattern"]);
             thisDero["Gsmax350"] += clean(CurrentCropParams["Gsmax350"]);
             thisDero["R50"] += clean(CurrentCropParams["R50"]);
-            thisDero["RelSlowLAI"] += clean(CurrentCropParams["RelSlowLAI"]);
             thisDero["LAIbase"] += clean(CurrentCropParams["LAIbase"]);
             thisDero["LAIbaseInitial"] += clean(CurrentCropParams["LAIbase"]);
             thisDero["LAIAnnualGrowth"] += clean(CurrentCropParams["LAIAnnualGrowth"]);
@@ -455,7 +454,6 @@ namespace Models.PMF.SimplePlantModels
             {"SeasonalDimensionPattern","[DEROPAPY].RelativeSeasonalDimension.XYPairs.Y = " },
             {"Gsmax350", "[DEROPAPY].Leaf.Canopy.Gsmax350 = " },
             {"R50", "[DEROPAPY].Leaf.Canopy.R50 = " },
-            {"RelSlowLAI",  "[DEROPAPY].Leaf.Canopy.ExpandedGreenArea.Expansion.Delta.Integral.GrowthPattern.XYPairs.X[2] = "},
             {"LAIbase","[DEROPAPY].Leaf.Canopy.GreenAreaIndex.WinterBase.PrunThreshold.FixedValue = " },
             {"LAIbaseInitial", "[DEROPAPY].Leaf.Canopy.GreenAreaIndex.WinterBase.GAICarryover.PreEventValue.FixedValue = "},
             {"LAIAnnualGrowth","[DEROPAPY].Leaf.Canopy.ExpandedGreenArea.Expansion.Delta.Integral.LAIAnnualGrowth.FixedValue = " },
