@@ -501,7 +501,7 @@
                   "Start": "ReStart",
                   "IsEmerged": true,
                   "PhaseNameToGoto": "HarvestAndPrune",
-                  "RemovalType": 5,
+                  "RemovalType": 2,
                   "Name": "EndOrHarvest",
                   "ResourceName": null,
                   "Children": [
@@ -521,8 +521,8 @@
                 {
                   "$type": "Models.PMF.Phen.GotoPhase, Models",
                   "Start": "HarvestAndPrune",
-                  "IsEmerged": false,
-                  "PhaseNameToGoto": "Dormant",
+                  "IsEmerged": true,
+                  "PhaseNameToGoto": "EndCrop",
                   "RemovalType": 2,
                   "Name": "HarvestAndPrune",
                   "ResourceName": null,
@@ -628,10 +628,22 @@
                       "ReadOnly": false
                     },
                     {
-                      "$type": "Models.Functions.AccumulateFunction, Models",
-                      "StartStageName": "FullCanopy",
-                      "EndStageName": "Maturity",
-                      "ResetStageName": "StartGrowth",
+                      "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
+                      "AccumulateToday": false,
+                      "AccumulateEventName": "[Clock].DoReport",
+                      "NameOfPlantToLink": "DEROPAPY",
+                      "StartStageName": null,
+                      "EndStageName": "StartGrowth",
+                      "StartEventName": null,
+                      "EndEventName": null,
+                      "StartDate": "01-May",
+                      "EndDate": null,
+                      "ReduceStageName": "StartGrowth",
+                      "FractionRemovedOnStage": 1.0,
+                      "ReduceEventName": null,
+                      "FractionRemovedOnEvent": 0.0,
+                      "ReduceDates": null,
+                      "FractionRemovedOnDate": 0.0,
                       "FractionRemovedOnCut": 0.0,
                       "FractionRemovedOnHarvest": 0.0,
                       "FractionRemovedOnGraze": 0.0,
@@ -924,6 +936,31 @@
                       "FixedValue": 1.0,
                       "Units": null,
                       "Name": "Constant",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.AccumulateFunction, Models",
+                  "StartStageName": "StartGrowth",
+                  "EndStageName": "FullCanopy",
+                  "ResetStageName": "Dormancy",
+                  "FractionRemovedOnCut": 0.0,
+                  "FractionRemovedOnHarvest": 0.0,
+                  "FractionRemovedOnGraze": 0.0,
+                  "FractionRemovedOnPrune": 0.0,
+                  "Name": "GrowingAccTT",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Phenology].ThermalTime",
+                      "Name": "TT",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -1856,7 +1893,7 @@
                                   "Children": [
                                     {
                                       "$type": "Models.Functions.Constant, Models",
-                                      "FixedValue": 5.0,
+                                      "FixedValue": 0.0,
                                       "Units": null,
                                       "Name": "LAIAnnualGrowth",
                                       "ResourceName": null,
@@ -1872,14 +1909,16 @@
                                         {
                                           "$type": "Models.Functions.XYPairs, Models",
                                           "X": [
-                                            2.0,
-                                            3.2,
-                                            4.0
+                                            0.0,
+                                            500.0,
+                                            1000.0,
+                                            1500.0
                                           ],
                                           "Y": [
                                             0.0,
-                                            0.1,
-                                            1.0
+                                            0.4,
+                                            0.3,
+                                            0.1
                                           ],
                                           "Name": "XYPairs",
                                           "ResourceName": null,
@@ -1889,7 +1928,7 @@
                                         },
                                         {
                                           "$type": "Models.Functions.VariableReference, Models",
-                                          "VariableName": "[Deropapy].Phenology.Stage",
+                                          "VariableName": "[Phenology].GrowingAccTT",
                                           "Name": "XValue",
                                           "ResourceName": null,
                                           "Children": [],
@@ -3980,8 +4019,17 @@
                 {
                   "$type": "Models.Functions.Constant, Models",
                   "FixedValue": 0.1,
-                  "Units": "/d",
+                  "Units": "",
                   "Name": "MatureWt",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Functions.VariableReference, Models",
+                  "VariableName": "[Leaf].senescenceRate",
+                  "Name": "senescenceRate",
                   "ResourceName": null,
                   "Children": [],
                   "Enabled": true,
@@ -4101,15 +4149,6 @@
                       "ReadOnly": false
                     }
                   ],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Functions.VariableReference, Models",
-                  "VariableName": "[Leaf].senescenceRate",
-                  "Name": "senescenceRate",
-                  "ResourceName": null,
-                  "Children": [],
                   "Enabled": true,
                   "ReadOnly": false
                 },
@@ -4687,8 +4726,8 @@
                   "$type": "Models.PMF.Library.BiomassRemoval, Models",
                   "HarvestFractionLiveToRemove": 0.0,
                   "HarvestFractionDeadToRemove": 0.0,
-                  "HarvestFractionLiveToResidue": 1.0,
-                  "HarvestFractionDeadToResidue": 1.0,
+                  "HarvestFractionLiveToResidue": 0.0,
+                  "HarvestFractionDeadToResidue": 0.0,
                   "Name": "BiomassRemovalDefaults",
                   "ResourceName": null,
                   "Children": [],
@@ -4708,7 +4747,7 @@
                         {
                           "$type": "Models.Functions.Constant, Models",
                           "FixedValue": 0.01,
-                          "Units": "/d",
+                          "Units": "0.01/d",
                           "Name": "RateControl",
                           "ResourceName": null,
                           "Children": [],
@@ -5514,8 +5553,8 @@
                 },
                 {
                   "$type": "Models.PMF.Library.BiomassRemoval, Models",
-                  "HarvestFractionLiveToRemove": 0.0,
-                  "HarvestFractionDeadToRemove": 0.0,
+                  "HarvestFractionLiveToRemove": 1.0,
+                  "HarvestFractionDeadToRemove": 1.0,
                   "HarvestFractionLiveToResidue": 1.0,
                   "HarvestFractionDeadToResidue": 1.0,
                   "Name": "BiomassRemovalDefaults",
@@ -86856,10 +86895,51 @@
                 {
                   "$type": "Models.Management.BiomassRemovalEvents, Models",
                   "NameOfPlantToRemoveFrom": "DEROPAPY",
-                  "RemovalType": 2,
+                  "RemovalType": 0,
                   "StageToSet": null,
                   "RemovalDates": null,
-                  "BiomassRemovalFractions": null,
+                  "BiomassRemovalFractions": [
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Leaf",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Root",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Trunk",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Product",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    }
+                  ],
                   "Name": "OnHarvestAndPrune",
                   "ResourceName": null,
                   "Children": [],
@@ -86872,7 +86952,48 @@
                   "RemovalType": 4,
                   "StageToSet": null,
                   "RemovalDates": null,
-                  "BiomassRemovalFractions": null,
+                  "BiomassRemovalFractions": [
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Leaf",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Root",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Trunk",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Product",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    }
+                  ],
                   "Name": "OnEndCrop",
                   "ResourceName": null,
                   "Children": [],
@@ -89100,7 +89221,7 @@
                 {
                   "$type": "Models.EventNamesOnGraph, Models",
                   "ColumnName": "Deropapy.Phenology.CurrentStageName",
-                  "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationLincoln_RCPpastIrrigationRain",
+                  "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationIrrig",
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
@@ -90546,7 +90667,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryColours": "SimulationName",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
@@ -90565,7 +90686,18 @@
                   "Filter": null,
                   "Name": "DM",
                   "ResourceName": null,
-                  "Children": [],
+                  "Children": [
+                    {
+                      "$type": "Models.EventNamesOnGraph, Models",
+                      "ColumnName": "Deropapy.Phenology.CurrentStageName",
+                      "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationRain",
+                      "Name": "EventNamesOnGraph",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
                   "Enabled": true,
                   "ReadOnly": false
                 }
