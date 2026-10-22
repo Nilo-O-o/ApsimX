@@ -603,31 +603,6 @@
                   "ResourceName": null,
                   "Children": [
                     {
-                      "$type": "Models.Functions.AccumulateFunction, Models",
-                      "StartStageName": "Dormancy",
-                      "EndStageName": "StartGrowth",
-                      "ResetStageName": "StartGrowth",
-                      "FractionRemovedOnCut": 0.0,
-                      "FractionRemovedOnHarvest": 0.0,
-                      "FractionRemovedOnGraze": 0.0,
-                      "FractionRemovedOnPrune": 0.0,
-                      "Name": "ChillDuringDormancy",
-                      "ResourceName": null,
-                      "Children": [
-                        {
-                          "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[DEROPAPY].Phenology.DailyChill",
-                          "Name": "DailyChill",
-                          "ResourceName": null,
-                          "Children": [],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        }
-                      ],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
                       "$type": "Models.Functions.AccumulateFunctionGeneral, Models",
                       "AccumulateToday": false,
                       "AccumulateEventName": "[Clock].DoReport",
@@ -649,6 +624,31 @@
                       "FractionRemovedOnGraze": 0.0,
                       "FractionRemovedOnPrune": 0.0,
                       "Name": "ChillBeforeDormancy",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.VariableReference, Models",
+                          "VariableName": "[DEROPAPY].Phenology.DailyChill",
+                          "Name": "DailyChill",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.AccumulateFunction, Models",
+                      "StartStageName": "Dormancy",
+                      "EndStageName": "StartGrowth",
+                      "ResetStageName": "StartGrowth",
+                      "FractionRemovedOnCut": 0.0,
+                      "FractionRemovedOnHarvest": 0.0,
+                      "FractionRemovedOnGraze": 0.0,
+                      "FractionRemovedOnPrune": 0.0,
+                      "Name": "ChillDuringDormancy",
                       "ResourceName": null,
                       "Children": [
                         {
@@ -779,6 +779,36 @@
                 },
                 {
                   "$type": "Models.PMF.Phen.ParallelPhaseStart, Models",
+                  "StartStage": 1.01,
+                  "IsInPhase": false,
+                  "Name": "DormancyParallel",
+                  "ResourceName": null,
+                  "Children": [
+                    {
+                      "$type": "Models.Functions.VariableReference, Models",
+                      "VariableName": "[Phenology].Chill",
+                      "Name": "Progression",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.Constant, Models",
+                      "FixedValue": 1500.0,
+                      "Units": "<sup>o</sup>Cd",
+                      "Name": "Target",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    }
+                  ],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.PMF.Phen.ParallelPhaseStart, Models",
                   "StartStage": 2.01,
                   "IsInPhase": false,
                   "Name": "Vegetative",
@@ -826,7 +856,7 @@
                         },
                         {
                           "$type": "Models.Functions.VariableReference, Models",
-                          "VariableName": "[DEROPAPY].Phenology.PhotoPeriod",
+                          "VariableName": "[DEROPAPY].Phenology.Photoperiod",
                           "Name": "XValue",
                           "ResourceName": null,
                           "Children": [],
@@ -5752,6 +5782,58 @@
                     },
                     {
                       "$type": "Models.Functions.ParallelPhaseValue, Models",
+                      "ParallelPhaseName": "DormancyParallel",
+                      "Name": "StressDuringDormancy",
+                      "ResourceName": null,
+                      "Children": [
+                        {
+                          "$type": "Models.Functions.Constant, Models",
+                          "FixedValue": 1.0,
+                          "Units": "number",
+                          "Name": "StartValue",
+                          "ResourceName": null,
+                          "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.WeightedTemperatureFunction, Models",
+                          "MaximumTemperatureWeighting": 1.0,
+                          "Name": "MaxTempStress",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.XYPairs, Models",
+                              "X": [
+                                0.0,
+                                28.0,
+                                29.0,
+                                35.0,
+                                40.0
+                              ],
+                              "Y": [
+                                1.0,
+                                1.0,
+                                0.9,
+                                0.5,
+                                0.1
+                              ],
+                              "Name": "XYPairs",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        }
+                      ],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Functions.ParallelPhaseValue, Models",
                       "ParallelPhaseName": "Flowering",
                       "Name": "StressDuringFlowering",
                       "ResourceName": null,
@@ -5763,6 +5845,34 @@
                           "Name": "StartValue",
                           "ResourceName": null,
                           "Children": [],
+                          "Enabled": true,
+                          "ReadOnly": false
+                        },
+                        {
+                          "$type": "Models.Functions.WeightedTemperatureFunction, Models",
+                          "MaximumTemperatureWeighting": 0.0,
+                          "Name": "MinTempStress",
+                          "ResourceName": null,
+                          "Children": [
+                            {
+                              "$type": "Models.Functions.XYPairs, Models",
+                              "X": [
+                                0.0,
+                                10.0,
+                                15.0
+                              ],
+                              "Y": [
+                                0.0,
+                                1.0,
+                                1.0
+                              ],
+                              "Name": "XYPairs",
+                              "ResourceName": null,
+                              "Children": [],
+                              "Enabled": true,
+                              "ReadOnly": false
+                            }
+                          ],
                           "Enabled": true,
                           "ReadOnly": false
                         },
@@ -5809,66 +5919,6 @@
                               "$type": "Models.Functions.VariableReference, Models",
                               "VariableName": "[Leaf].Canopy.Fw",
                               "Name": "XValue",
-                              "ResourceName": null,
-                              "Children": [],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            }
-                          ],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
-                          "$type": "Models.Functions.WeightedTemperatureFunction, Models",
-                          "MaximumTemperatureWeighting": 0.0,
-                          "Name": "MinTempStress",
-                          "ResourceName": null,
-                          "Children": [
-                            {
-                              "$type": "Models.Functions.XYPairs, Models",
-                              "X": [
-                                0.0,
-                                10.0,
-                                15.0
-                              ],
-                              "Y": [
-                                0.0,
-                                1.0,
-                                1.0
-                              ],
-                              "Name": "XYPairs",
-                              "ResourceName": null,
-                              "Children": [],
-                              "Enabled": true,
-                              "ReadOnly": false
-                            }
-                          ],
-                          "Enabled": true,
-                          "ReadOnly": false
-                        },
-                        {
-                          "$type": "Models.Functions.WeightedTemperatureFunction, Models",
-                          "MaximumTemperatureWeighting": 1.0,
-                          "Name": "MaxTempStress",
-                          "ResourceName": null,
-                          "Children": [
-                            {
-                              "$type": "Models.Functions.XYPairs, Models",
-                              "X": [
-                                0.0,
-                                28.0,
-                                29.0,
-                                35.0,
-                                40.0
-                              ],
-                              "Y": [
-                                1.0,
-                                1.0,
-                                0.9,
-                                0.5,
-                                0.1
-                              ],
-                              "Name": "XYPairs",
                               "ResourceName": null,
                               "Children": [],
                               "Enabled": true,
@@ -6507,7 +6557,7 @@
             "Sum of ([Fertiliser].NitrogenApplied) from [Output].DayAfterLastOutput to [Clock].Today as FertiliserN_Cum",
             "Sum of ([Deropapy].Leaf.Canopy.Transpiration) from [Output].DayAfterLastOutput to [Clock].Today as Transpiration_Cum",
             "[Deropapy].Leaf.Canopy.DeadAreaIndex.FrostedLAI as FrostStress_Sum",
-            "Sum of (1-[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.MaxTempStress) from [Output].DayAfterLastOutput to [Clock].Today as HeatStress_Sum",
+            "Sum of (1-[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.MinTempStress) from [Output].DayAfterLastOutput to [Clock].Today as HeatStress_Sum",
             "Sum of (1-[DEROPAPY].Leaf.Canopy.ExpandedGreenArea.Expansion.WaterStressFactor) from [Output].DayAfterLastOutput to [Clock].Today as WaterStress_Sum",
             "Sum of (1-[DEROPAPY].Leaf.Photosynthesis.FN) from [Output].DayAfterLastOutput to [Clock].Today as NStress_Sum",
             "Mean of ([Weather].MeanT) from [Output].DayAfterLastOutput to [Clock].Today as Temperature_Av",
@@ -6579,6 +6629,7 @@
             "[Deropapy].Phenology.CurrentPhaseName",
             "[Deropapy].Phenology.CurrentStageName",
             "[DeroPapy].Phenology.Emerged",
+            "[DeroPapy].Phenology.DormancyParallel.IsInPhase",
             "[DeroPapy].Phenology.Flowering.IsInPhase",
             "[DEROPAPY].Phenology.Photoperiod",
             "[DEROPAPY].Phenology.Reproductive.FractionComplete",
@@ -6604,7 +6655,6 @@
             "[Deropapy].Product.DryWeightPerFruit",
             "[Deropapy].Product.Carbon.Demands.Total",
             "[Deropapy].Product.Carbon.DemandsAllocated.Total",
-            "[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.MaxTempStress",
             "[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.MinTempStress",
             "[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.WaterStress",
             "[Deropapy].RelativeAnnualDimension",
@@ -6683,7 +6733,6 @@
             "[Weather].CO2",
             "[Weather].MeanT",
             "Sum of ([Deropapy].Leaf.Canopy.Transpiration) from [ReportSensitivity].DayAfterLastOutput to [Clock].Today as Transpiration_Cum",
-            "Sum of [DEROPAPY].Product.FlowerNumber.StressDuringFlowering.MaxTempStress",
             "Min of [Deropapy].Product.FlowerNumber.StressDuringFlowering from [ReportSensitivity].DayAfterLastOutput to [Clock].Today as RelativeFlowerNumber",
             "[FrostFighting].Script.FrostDays",
             "[FrostFighting].Script.MostSevereFrost"
@@ -6708,7 +6757,6 @@
             "[Weather].MeanT",
             "[Weather].MaxT",
             "[Weather].MinT",
-            "[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.MaxTempStress",
             "[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.WaterStress",
             "[DEROPAPY].Product.FlowerNumber.StressDuringFlowering.MinTempStress",
             "[DEROPAPY].Product.FlowerNumber",
@@ -86185,7 +86233,13 @@
     },
     {
       "$type": "Models.Factorial.Experiment, Models",
-      "DisabledSimNames": [],
+      "DisabledSimNames": [
+        "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationRain",
+        "Blueberry_PhenoTestCropNorthernHighbushLocationKerikeriIrrigationRain",
+        "Blueberry_PhenoTestCropNorthernHighbushLocationLincolnIrrigationIrrig",
+        "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationIrrig",
+        "Blueberry_PhenoTestCropNorthernHighbushLocationKerikeriIrrigationIrrig"
+      ],
       "Name": "Blueberry_PhenoTest",
       "ResourceName": null,
       "Children": [
@@ -86256,6 +86310,21 @@
                       "Children": [],
                       "Enabled": true,
                       "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Factorial.CompositeFactor, Models",
+                      "Specifications": [
+                        "[Weather].FileName  = Kerikeri.met",
+                        "[FactorLabels].Script.GCM = Had",
+                        "[FactorLabels].Script.RCP = RCPpast",
+                        "[FactorLabels].Script.TS = Past"
+                      ],
+                      "CustomDescriptors": [],
+                      "Name": "Kerikeri",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
                     }
                   ],
                   "Enabled": true,
@@ -86321,8 +86390,8 @@
             },
             {
               "$type": "Models.Clock, Models",
-              "Start": "1994-05-01T00:00:00",
-              "End": "2005-06-30T00:00:00",
+              "Start": "2007-05-01T00:00:00",
+              "End": "2020-06-30T00:00:00",
               "Name": "Clock",
               "ResourceName": null,
               "Children": [],
@@ -89221,7 +89290,7 @@
                 {
                   "$type": "Models.EventNamesOnGraph, Models",
                   "ColumnName": "Deropapy.Phenology.CurrentStageName",
-                  "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationIrrig",
+                  "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationKerikeriIrrigationIrrig",
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
@@ -90757,7 +90826,7 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -1663232,
-                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryColours": "SimulationName",
                   "FactorToVaryMarkers": null,
                   "FactorToVaryLines": "Irrigation",
                   "Marker": 11,
@@ -90806,7 +90875,7 @@
                   "Name": "IsReproductive",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
@@ -93877,7 +93946,7 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
@@ -93906,6 +93975,35 @@
               "Name": "ParallelPhenology",
               "ResourceName": null,
               "Children": [
+                {
+                  "$type": "Models.Series, Models",
+                  "Type": 1,
+                  "XAxis": 3,
+                  "YAxis": 0,
+                  "ColourArgb": -11094807,
+                  "FactorToVaryColours": null,
+                  "FactorToVaryMarkers": null,
+                  "FactorToVaryLines": "Irrigation",
+                  "Marker": 11,
+                  "MarkerSize": 2,
+                  "Line": 4,
+                  "LineThickness": 0,
+                  "TableName": "Report",
+                  "XFieldName": "Clock.Today",
+                  "YFieldName": "DeroPapy.Phenology.DormancyParallel.IsInPhase",
+                  "X2FieldName": null,
+                  "Y2FieldName": null,
+                  "ShowInLegend": true,
+                  "IncludeSeriesNameInLegend": true,
+                  "Cumulative": false,
+                  "CumulativeX": false,
+                  "Filter": "",
+                  "Name": "IsDormant",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
                 {
                   "$type": "Models.Series, Models",
                   "Type": 1,
@@ -94022,7 +94120,7 @@
                     {
                       "$type": "Models.EventNamesOnGraph, Models",
                       "ColumnName": "Deropapy.Phenology.CurrentStageName",
-                      "SimulationName": "SimpleTestCropWheat",
+                      "SimulationName": "Blueberry_PhenoTestCropNorthernHighbushLocationLincolnIrrigationRain",
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
