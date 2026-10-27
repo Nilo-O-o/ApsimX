@@ -86564,51 +86564,6 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[Weather].FileName  = Te Puke_1994_2024.met",
-                        "[FactorLabels].Script.GCM = Had",
-                        "[FactorLabels].Script.RCP = RCPpast",
-                        "[FactorLabels].Script.TS = Past"
-                      ],
-                      "CustomDescriptors": [],
-                      "Name": "Te Puke",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Factorial.CompositeFactor, Models",
-                      "Specifications": [
-                        "[Weather].FileName  = Kerikeri.met",
-                        "[FactorLabels].Script.GCM = Had",
-                        "[FactorLabels].Script.RCP = RCPpast",
-                        "[FactorLabels].Script.TS = Past"
-                      ],
-                      "CustomDescriptors": [],
-                      "Name": "Kerikeri",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Factorial.CompositeFactor, Models",
-                      "Specifications": [
-                        "[Weather].FileName  = Gisborne.met",
-                        "[FactorLabels].Script.GCM = Had",
-                        "[FactorLabels].Script.RCP = RCPpast",
-                        "[FactorLabels].Script.TS = Past"
-                      ],
-                      "CustomDescriptors": [],
-                      "Name": "Gisborne",
-                      "ResourceName": null,
-                      "Children": [],
-                      "Enabled": true,
-                      "ReadOnly": false
-                    },
-                    {
-                      "$type": "Models.Factorial.CompositeFactor, Models",
-                      "Specifications": [
                         "[Weather].FileName  = Nelson.met",
                         "[FactorLabels].Script.GCM = Had",
                         "[FactorLabels].Script.RCP = RCPpast",
@@ -95071,13 +95026,13 @@
                     {
                       "$type": "Models.Factorial.CompositeFactor, Models",
                       "Specifications": [
-                        "[Weather].FileName  = Te Puke_1994_2024.met",
+                        "[Weather].FileName  = Nelson.met",
                         "[FactorLabels].Script.GCM = Had",
                         "[FactorLabels].Script.RCP = RCPpast",
                         "[FactorLabels].Script.TS = Past"
                       ],
                       "CustomDescriptors": [],
-                      "Name": "Te Puke",
+                      "Name": "Nelson",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
@@ -95113,8 +95068,8 @@
             },
             {
               "$type": "Models.Clock, Models",
-              "Start": "2000-05-01T00:00:00",
-              "End": "2005-06-30T00:00:00",
+              "Start": "2010-05-01T00:00:00",
+              "End": "2019-06-30T00:00:00",
               "Name": "Clock",
               "ResourceName": null,
               "Children": [],
@@ -96571,6 +96526,114 @@
                   "ReadOnly": false
                 },
                 {
+                  "$type": "Models.Management.BiomassRemovalEvents, Models",
+                  "NameOfPlantToRemoveFrom": "DEROPAPY",
+                  "RemovalType": 0,
+                  "StageToSet": null,
+                  "RemovalDates": null,
+                  "BiomassRemovalFractions": [
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Leaf",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Root",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Trunk",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Product",
+                      "TypeString": "Cutting",
+                      "LiveToRemove": 1.0,
+                      "DeadToRemove": 1.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    }
+                  ],
+                  "Name": "OnHarvestAndPrune",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Management.BiomassRemovalEvents, Models",
+                  "NameOfPlantToRemoveFrom": "DEROPAPY",
+                  "RemovalType": 4,
+                  "StageToSet": null,
+                  "RemovalDates": null,
+                  "BiomassRemovalFractions": [
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Leaf",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Root",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Trunk",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 0.0,
+                      "DeadToRemove": 0.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    },
+                    {
+                      "$type": "Models.Management.BiomassRemovalOfPlantOrganType, Models",
+                      "PlantName": "DEROPAPY",
+                      "OrganName": "Product",
+                      "TypeString": "EndCrop",
+                      "LiveToRemove": 1.0,
+                      "DeadToRemove": 1.0,
+                      "LiveToResidue": 0.0,
+                      "DeadToResidue": 0.0
+                    }
+                  ],
+                  "Name": "OnEndCrop",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
                   "$type": "Models.Surface.SurfaceOrganicMatter, Models",
                   "SurfOM": [],
                   "Canopies": [],
@@ -96633,47 +96696,6 @@
                   "ReferenceHeight": 2.0,
                   "Name": "MicroClimate",
                   "ResourceName": "MicroClimate",
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Management.BiomassRemovalEvents, Models",
-                  "NameOfPlantToRemoveFrom": "DEROPAPY",
-                  "RemovalType": 2,
-                  "StageToSet": null,
-                  "RemovalDates": null,
-                  "BiomassRemovalFractions": null,
-                  "Name": "OnHarvestAndPrune",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Management.BiomassRemovalEvents, Models",
-                  "NameOfPlantToRemoveFrom": "DEROPAPY",
-                  "RemovalType": 4,
-                  "StageToSet": null,
-                  "RemovalDates": null,
-                  "BiomassRemovalFractions": null,
-                  "Name": "OnEndCrop",
-                  "ResourceName": null,
-                  "Children": [],
-                  "Enabled": true,
-                  "ReadOnly": false
-                },
-                {
-                  "$type": "Models.Report, Models",
-                  "VariableNames": [
-                    ""
-                  ],
-                  "EventNames": [
-                    "[Clock].EndOfYear"
-                  ],
-                  "GroupByVariableName": null,
-                  "Name": "Output",
-                  "ResourceName": null,
                   "Children": [],
                   "Enabled": true,
                   "ReadOnly": false
@@ -96794,6 +96816,90 @@
                   "Children": [],
                   "Enabled": true,
                   "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Manager, Models",
+                  "CodeArray": [
+                    "using Models.Core;",
+                    "using System;",
+                    "using Models.PMF.Phen;",
+                    "",
+                    "namespace Models",
+                    "{",
+                    "    [Serializable]",
+                    "    public class Script : Model",
+                    "    {",
+                    "        //> Links to other Apsim models",
+                    "        [Link(ByName = true)] Report stages; ",
+                    "        ",
+                    "        public string StageName {get; set;}",
+                    "        ",
+                    "        private void setAndOutput(PhaseChangedType change)",
+                    "        {",
+                    "           StageName = change.StageName;",
+                    "    \t   stages.DoOutput();",
+                    "        }",
+                    "        ",
+                    "        [EventSubscribe(\"PhaseChanged\")]",
+                    "        private void OnPhaseChanged(object sender, PhaseChangedType change)",
+                    "        {",
+                    "        \tif (change.StageName == \"Waiting\") {setAndOutput(change);}",
+                    "        \tif (change.StageName == \"StartGrowth\") {setAndOutput(change);}",
+                    "        \tif (change.StageName == \"FullCanopy\") {setAndOutput(change);}",
+                    "        \tif (change.StageName == \"StartSenescence\") {setAndOutput(change);}",
+                    "        \tif (change.StageName == \"Maturity\") {setAndOutput(change);}",
+                    "        \tif (change.StageName == \"ReStart\") {setAndOutput(change);}",
+                    "        \tif (change.StageName == \"StartEndo\") {setAndOutput(change);}",
+                    "        \tif (change.StageName == \"StartEco\") {setAndOutput(change);}",
+                    "        }",
+                    "        ",
+                    "        [EventSubscribe(\"ParallelPhaseChanged\")]",
+                    "        private void OnParallelPhaseChanged(object sender, PhaseChangedType change)",
+                    "        {",
+                    "        \tif (change.StageName == \"StartFlowering\"){setAndOutput(change);}",
+                    "        \tif (change.StageName == \"StartReproductive\"){setAndOutput(change);}",
+                    "        \tif (change.StageName == \"EndReproductive\"){setAndOutput(change);}",
+                    "        }",
+                    "\t}",
+                    "}"
+                  ],
+                  "Parameters": [],
+                  "Name": "ReportOnEvents",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Report, Models",
+                  "VariableNames": [
+                    ""
+                  ],
+                  "EventNames": [
+                    ""
+                  ],
+                  "GroupByVariableName": null,
+                  "Name": "Stages",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
+                },
+                {
+                  "$type": "Models.Report, Models",
+                  "VariableNames": [
+                    ""
+                  ],
+                  "EventNames": [
+                    "[OnHarvestAndPrune].Harvesting",
+                    "[OnEndCrop].EndCrop"
+                  ],
+                  "GroupByVariableName": null,
+                  "Name": "Output",
+                  "ResourceName": null,
+                  "Children": [],
+                  "Enabled": true,
+                  "ReadOnly": false
                 }
               ],
               "Enabled": true,
@@ -96815,7 +96921,7 @@
               "Axis": [
                 {
                   "$type": "APSIM.Shared.Graphing.Axis, APSIM.Shared",
-                  "Title": "",
+                  "Title": null,
                   "Position": 0,
                   "Inverted": false,
                   "CrossesAtZero": false,
@@ -96841,7 +96947,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -96850,23 +96956,23 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
-                  "FactorToVaryMarkers": "Crop",
-                  "FactorToVaryLines": "Crop",
+                  "FactorToVaryColours": "SimulationName",
+                  "FactorToVaryMarkers": null,
+                  "FactorToVaryLines": null,
                   "Marker": 11,
                   "MarkerSize": 1,
-                  "Line": 4,
+                  "Line": 0,
                   "LineThickness": 1,
                   "TableName": "Output",
-                  "XFieldName": "Year",
-                  "YFieldName": "ProductFreshWeight_GPerUnit",
+                  "XFieldName": "Clock.Today",
+                  "YFieldName": "Deropapy.Product.FlowerNumber",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -96987,7 +97093,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -97012,7 +97118,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
