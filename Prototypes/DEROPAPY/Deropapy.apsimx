@@ -6887,7 +6887,7 @@
             "[FrostFighting].Script.MostSevereFrost as FrostSeverity"
           ],
           "EventNames": [
-            "[OnHarvestAndPrune].Harvesting",
+            "[OnHarvestAndPrune].Cutting",
             "[OnEndCrop].EndCrop"
           ],
           "GroupByVariableName": null,
@@ -96891,7 +96891,7 @@
                     ""
                   ],
                   "EventNames": [
-                    "[OnHarvestAndPrune].Harvesting",
+                    "[OnHarvestAndPrune].Cutting",
                     "[OnEndCrop].EndCrop"
                   ],
                   "GroupByVariableName": null,
@@ -96964,8 +96964,8 @@
                   "Line": 0,
                   "LineThickness": 1,
                   "TableName": "Output",
-                  "XFieldName": "Clock.Today",
-                  "YFieldName": "Deropapy.Product.FlowerNumber",
+                  "XFieldName": "Year",
+                  "YFieldName": "ProductFreshWeight_GPerUnit",
                   "X2FieldName": null,
                   "Y2FieldName": null,
                   "ShowInLegend": true,
@@ -97239,7 +97239,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -97264,7 +97264,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97385,7 +97385,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -97410,7 +97410,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97531,7 +97531,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -97556,7 +97556,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97677,7 +97677,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -97702,7 +97702,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97823,7 +97823,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -97848,7 +97848,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -97969,7 +97969,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -97994,7 +97994,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
@@ -98115,7 +98115,7 @@
               "AnnotationLocation": 0,
               "DisabledSeries": [],
               "LegendOutsideGraph": false,
-              "Name": "Te Puke",
+              "Name": "Nelson",
               "ResourceName": null,
               "Children": [
                 {
@@ -98140,7 +98140,7 @@
                   "IncludeSeriesNameInLegend": false,
                   "Cumulative": false,
                   "CumulativeX": false,
-                  "Filter": "Location = \"Te Puke\"",
+                  "Filter": "Location = \"Nelson\"",
                   "Name": "out",
                   "ResourceName": null,
                   "Children": [],
