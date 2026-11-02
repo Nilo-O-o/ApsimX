@@ -86535,6 +86535,18 @@
                       "Children": [],
                       "Enabled": true,
                       "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Factorial.CompositeFactor, Models",
+                      "Specifications": [
+                        "[ThisDero].CurrentCropName =  Blueberry_Southern_Highbush_NZ"
+                      ],
+                      "CustomDescriptors": [],
+                      "Name": "SouthernHighbush",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
                     }
                   ],
                   "Enabled": true,
@@ -94993,6 +95005,18 @@
                       ],
                       "CustomDescriptors": [],
                       "Name": "NorthernHighbush",
+                      "ResourceName": null,
+                      "Children": [],
+                      "Enabled": true,
+                      "ReadOnly": false
+                    },
+                    {
+                      "$type": "Models.Factorial.CompositeFactor, Models",
+                      "Specifications": [
+                        "[ThisDero].CurrentCropName =  Blueberry_Southern_Highbush_NZ"
+                      ],
+                      "CustomDescriptors": [],
+                      "Name": "SouthernHighbush",
                       "ResourceName": null,
                       "Children": [],
                       "Enabled": true,
