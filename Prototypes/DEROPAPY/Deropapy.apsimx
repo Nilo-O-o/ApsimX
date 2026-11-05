@@ -86496,12 +86496,17 @@
     {
       "$type": "Models.Factorial.Experiment, Models",
       "DisabledSimNames": [
+        "Blueberry_PhenoTestCropNorthernHighbushLocationNelsonIrrigationRain",
         "Blueberry_PhenoTestCropNorthernHighbushLocationNelsonIrrigationIrrig",
+        "Blueberry_PhenoTestCropNorthernHighbushLocationLincolnIrrigationIrrig",
+        "Blueberry_PhenoTestCropSouthernHighbushLocationLincolnIrrigationIrrig",
+        "Blueberry_PhenoTestCropSouthernHighbushLocationNelsonIrrigationIrrig",
+        "Blueberry_PhenoTestCropSouthernHighbushLocationNelsonIrrigationRain",
+        "Blueberry_PhenoTestCropSouthernHighbushLocationLincolnIrrigationRain",
         "Blueberry_PhenoTestCropNorthernHighbushLocationGisborneIrrigationRain",
         "Blueberry_PhenoTestCropNorthernHighbushLocationGisborneIrrigationIrrig",
         "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationRain",
         "Blueberry_PhenoTestCropNorthernHighbushLocationKerikeriIrrigationRain",
-        "Blueberry_PhenoTestCropNorthernHighbushLocationLincolnIrrigationIrrig",
         "Blueberry_PhenoTestCropNorthernHighbushLocationTe PukeIrrigationIrrig",
         "Blueberry_PhenoTestCropNorthernHighbushLocationKerikeriIrrigationIrrig"
       ],
@@ -87235,8 +87240,8 @@
                       "PlantName": "DEROPAPY",
                       "OrganName": "Leaf",
                       "TypeString": "Cutting",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
+                      "LiveToRemove": 1.0,
+                      "DeadToRemove": 1.0,
                       "LiveToResidue": 0.0,
                       "DeadToResidue": 0.0
                     },
@@ -90039,7 +90044,7 @@
                   "Name": "EventNamesOnGraph",
                   "ResourceName": null,
                   "Children": [],
-                  "Enabled": true,
+                  "Enabled": false,
                   "ReadOnly": false
                 }
               ],
@@ -93955,7 +93960,7 @@
                       "Name": "EventNamesOnGraph",
                       "ResourceName": null,
                       "Children": [],
-                      "Enabled": true,
+                      "Enabled": false,
                       "ReadOnly": false
                     }
                   ],
@@ -96561,8 +96566,8 @@
                       "PlantName": "DEROPAPY",
                       "OrganName": "Leaf",
                       "TypeString": "Cutting",
-                      "LiveToRemove": 0.0,
-                      "DeadToRemove": 0.0,
+                      "LiveToRemove": 1.0,
+                      "DeadToRemove": 1.0,
                       "LiveToResidue": 0.0,
                       "DeadToResidue": 0.0
                     },
