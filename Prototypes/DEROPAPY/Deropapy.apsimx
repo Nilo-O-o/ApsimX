@@ -2795,10 +2795,10 @@
                         {
                           "$type": "Models.Functions.XYPairs, Models",
                           "X": [
-                            0.0,
-                            14.100662607203542,
-                            30.0,
-                            45.0
+                            5.0,
+                            10.0,
+                            32.0,
+                            40.0
                           ],
                           "Y": [
                             0.0,
@@ -86496,7 +86496,6 @@
     {
       "$type": "Models.Factorial.Experiment, Models",
       "DisabledSimNames": [
-        "Blueberry_PhenoTestCropNorthernHighbushLocationNelsonIrrigationRain",
         "Blueberry_PhenoTestCropNorthernHighbushLocationNelsonIrrigationIrrig",
         "Blueberry_PhenoTestCropNorthernHighbushLocationLincolnIrrigationIrrig",
         "Blueberry_PhenoTestCropSouthernHighbushLocationLincolnIrrigationIrrig",
@@ -94260,9 +94259,9 @@
                   "XAxis": 3,
                   "YAxis": 2,
                   "ColourArgb": -16747854,
-                  "FactorToVaryColours": "Location",
+                  "FactorToVaryColours": "SimulationName",
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Irrigation",
+                  "FactorToVaryLines": null,
                   "Marker": 11,
                   "MarkerSize": 0,
                   "Line": 0,
@@ -94277,7 +94276,7 @@
                   "Cumulative": false,
                   "CumulativeX": false,
                   "Filter": null,
-                  "Name": "Stage",
+                  "Name": "FrostFraction",
                   "ResourceName": null,
                   "Children": [
                     {
@@ -94299,13 +94298,13 @@
                   "Type": 1,
                   "XAxis": 3,
                   "YAxis": 0,
-                  "ColourArgb": -16744448,
-                  "FactorToVaryColours": "Crop",
+                  "ColourArgb": -11094807,
+                  "FactorToVaryColours": null,
                   "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": "Irrigation",
+                  "FactorToVaryLines": "SimulationName",
                   "Marker": 11,
                   "MarkerSize": 0,
-                  "Line": 0,
+                  "Line": 4,
                   "LineThickness": 0,
                   "TableName": "Report",
                   "XFieldName": "Clock.Today",
@@ -97413,9 +97412,9 @@
                   "XAxis": 3,
                   "YAxis": 0,
                   "ColourArgb": -16744448,
-                  "FactorToVaryColours": "SimulationName",
-                  "FactorToVaryMarkers": null,
-                  "FactorToVaryLines": null,
+                  "FactorToVaryColours": "Crop",
+                  "FactorToVaryMarkers": "Crop",
+                  "FactorToVaryLines": "Crop",
                   "Marker": 11,
                   "MarkerSize": 1,
                   "Line": 0,
